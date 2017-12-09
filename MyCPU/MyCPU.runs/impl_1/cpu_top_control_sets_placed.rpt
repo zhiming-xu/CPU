@@ -1,0 +1,101 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
+| Date         : Sat Dec 09 11:51:00 2017
+| Host         : stu49c824 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file cpu_top_control_sets_placed.rpt
+| Design       : cpu_top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    36 |
+| Unused register locations in slices containing registers |    86 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              27 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             119 |           36 |
+| Yes          | No                    | No                     |              73 |           48 |
+| Yes          | No                    | Yes                    |              60 |           29 |
+| Yes          | Yes                   | No                     |             195 |           88 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+
+|              Clock Signal             |             Enable Signal            |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++---------------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+
+|  MyCPU/PC/pc_value_reg[5]_LDC_i_1_n_0 |                                      | MyCPU/PC/pc_value_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  MyCPU/PC/pc_value_reg[6]_LDC_i_1_n_0 |                                      | MyCPU/PC/pc_value_reg[6]_LDC_i_2_n_0 |                1 |              1 |
+| ~clock4_OBUF_BUFG                     |                                      |                                      |                1 |              1 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/pc_value_reg[0]             | MyCPU/PC/pc_value_reg[6]_LDC_i_1_n_0 |                1 |              1 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/pc_value_reg[0]             | MyCPU/PC/pc_value_reg[6]_LDC_i_2_n_0 |                1 |              1 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/pc_value_reg[0]             | MyCPU/PC/pc_value_reg[5]_LDC_i_1_n_0 |                1 |              1 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/pc_value_reg[0]             | MyCPU/PC/pc_value_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  clkin_IBUF_BUFG                      |                                      |                                      |                1 |              2 |
+|  clk1                                 |                                      | MyCPU/CU/out                         |                3 |              8 |
+|  clk1                                 | MyCPU/CU/flag_value_reg[7][0]        | MyCPU/REGARRAY/register_reg[1][0]_0  |                6 |              8 |
+|  clock4_OBUF_BUFG                     |                                      | MyCPU/CUCON/SR[0]                    |                6 |             13 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/pc_value_reg[0]             | MyCPU/REGARRAY/register_reg[1][0]_0  |                4 |             14 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/sp_value_reg[15]            | MyCPU/REGARRAY/register_reg[1][0]_0  |                4 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/E[0]                        | MyCPU/REGARRAY/register_reg[1][0]_0  |                6 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/mar_addr_reg[15][0]         | MyCPU/REGARRAY/register_reg[1][0]_0  |                6 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/register_reg[7][15][0]      | MyCPU/REGARRAY/register_reg[1][0]_0  |                6 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/INSREG/E[0]                    | MyCPU/REGARRAY/register_reg[1][0]_0  |                6 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/INSREG/register_reg[0][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                9 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/INSREG/register_reg[1][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                8 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/INSREG/register_reg[2][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                9 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/INSREG/register_reg[3][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                8 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/INSREG/register_reg[4][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                9 |             16 |
+| ~clock4_OBUF_BUFG                     | MyCPU/INSREG/register_reg[6][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                7 |             16 |
+|  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[0]     |                                      |                4 |             16 |
+|  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[0]_0   |                                      |                4 |             16 |
+|  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[15]    |                                      |                4 |             16 |
+|  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[15]_0  |                                      |                4 |             16 |
+|  clock4_OBUF_BUFG                     | MyCPU/CU/ir_ena_i_2_n_0              | MyCPU/CUCON/SR[0]                    |               10 |             19 |
+|  clk1                                 |                                      |                                      |               12 |             24 |
+|  clkin_IBUF_BUFG                      |                                      | MyCPU/DIVIDER/clkout                 |                8 |             31 |
+|  clkin_IBUF_BUFG                      |                                      | DISCON/index[31]_i_1_n_0             |                9 |             32 |
+|  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[11]    |                                      |                8 |             32 |
+| ~clock4_OBUF_BUFG                     |                                      | MyCPU/REGARRAY/register_reg[1][0]_0  |                8 |             33 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/reg_out2_retimed_reg[15][0] |                                      |               16 |             33 |
+| ~clock4_OBUF_BUFG                     | MyCPU/CU/reg_out_retimed_reg[15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |               15 |             34 |
+|  clk1                                 | MyCPU/CU/alu_out_reg[15]             |                                      |               32 |             40 |
++---------------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     7 |
+| 2      |                     1 |
+| 8      |                     2 |
+| 13     |                     1 |
+| 14     |                     1 |
+| 16+    |                    24 |
++--------+-----------------------+
+
+
