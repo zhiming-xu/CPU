@@ -2,33 +2,26 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Sun Dec 10 14:32:58 2017
-# Process ID: 5012
+# Start of session at: Sat Dec 09 13:33:39 2017
+# Process ID: 5100
 # Current directory: C:/Users/User/Desktop/MyCPU
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5772 C:\Users\User\Desktop\MyCPU\MyCPU.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1308 C:\Users\User\Desktop\MyCPU\MyCPU.xpr
 # Log file: C:/Users/User/Desktop/MyCPU/vivado.log
 # Journal file: C:/Users/User/Desktop/MyCPU\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/User/Desktop/MyCPU/MyCPU.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/steve/Desktop/MyCPU' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
-open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 747.313 ; gain = 119.750
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 730.258 ; gain = 109.020
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Sun Dec 10 14:46:15 2017] Launched synth_1...
+[Sat Dec 09 13:39:54 2017] Launched synth_1...
 Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/runme.log
-[Sun Dec 10 14:46:15 2017] Launched impl_1...
-Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Sun Dec 10 14:46:41 2017] Launched synth_1...
-Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/runme.log
-[Sun Dec 10 14:46:41 2017] Launched impl_1...
+[Sat Dec 09 13:39:54 2017] Launched impl_1...
 Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/runme.log
 open_hw
 connect_hw_server
@@ -41,6 +34,7 @@ INFO: [Labtools 27-2221] Launch Output:
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
 
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 797.707 ; gain = 9.457
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210274505408A
 set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/cpu_top.bit} [lindex [get_hw_devices xc7a100t_0] 0]
@@ -61,5 +55,51 @@ WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
 WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
 WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
 WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+disconnect_hw_server localhost:3121
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Dec 09 13:53:43 2017] Launched synth_1...
+Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/runme.log
+[Sat Dec 09 13:53:43 2017] Launched impl_1...
+Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Dec 09 13:55:31 2017] Launched synth_1...
+Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/runme.log
+[Sat Dec 09 13:55:31 2017] Launched impl_1...
+Run output will be captured here: C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/runme.log
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.4
+  **** Build date : Dec 14 2016-22:58:11
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 974.266 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210274505408A
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/cpu_top.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+current_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/cpu_top.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+disconnect_hw_server localhost:3121
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 10 14:53:48 2017...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 09 14:21:33 2017...

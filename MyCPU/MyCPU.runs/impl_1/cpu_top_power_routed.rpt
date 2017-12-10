@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date             : Sun Dec 10 14:26:29 2017
-| Host             : Steven-Surface running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
+| Date             : Sun Dec 10 14:48:20 2017
+| Host             : stu49c877 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file cpu_top_power_routed.rpt -pb cpu_top_power_summary_routed.pb -rpx cpu_top_power_routed.rpx
 | Design           : cpu_top
 | Device           : xc7a100tcsg324-1
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.107 |
+| Total On-Chip Power (W)  | 0.108 |
 | Dynamic (W)              | 0.010 |
 | Device Static (W)        | 0.097 |
 | Effective TJA (C/W)      | 4.6   |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     2025 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1088 |     63400 |            1.72 |
-|   CARRY4                 |    <0.001 |      136 |     15850 |            0.86 |
+| Slice Logic              |    <0.001 |     1966 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1016 |     63400 |            1.60 |
+|   CARRY4                 |    <0.001 |      131 |     15850 |            0.83 |
 |   Register               |    <0.001 |      479 |    126800 |            0.38 |
-|   Others                 |     0.000 |       24 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |       67 |     63400 |            0.11 |
+|   F7/F8 Muxes            |    <0.001 |       64 |     63400 |            0.10 |
+|   Others                 |     0.000 |       23 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       96 |     19000 |            0.51 |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
-| Signals                  |    <0.001 |     1558 |       --- |             --- |
+| Signals                  |    <0.001 |     1486 |       --- |             --- |
 | DSPs                     |     0.000 |        1 |       240 |            0.42 |
 | I/O                      |     0.009 |       35 |       210 |           16.67 |
 | Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.107 |          |           |                 |
+| Total                    |     0.108 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -144,8 +144,8 @@ Table of Contents
 | cpu_top                   |     0.010 |
 |   DISCON                  |    <0.001 |
 |   MyCPU                   |    <0.001 |
-|     ALU                   |     0.000 |
-|     ALUCON                |     0.000 |
+|     ALU                   |    <0.001 |
+|     ALUCON                |    <0.001 |
 |     CLOCK                 |    <0.001 |
 |     CU                    |     0.000 |
 |     CUCON                 |     0.000 |
