@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date         : Sat Dec 09 11:50:56 2017
-| Host         : stu49c824 running 64-bit Service Pack 1  (build 7601)
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Sun Dec 10 14:25:41 2017
+| Host         : Steven-Surface running 64-bit major release  (build 9200)
 | Command      : report_drc -file cpu_top_drc_opted.rpt
 | Design       : cpu_top
 | Device       : xc7a100tcsg324-1
@@ -72,7 +72,7 @@ Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT ir_ena_reg_i_3 is driving clock pin of 80 cells. This could lead to large hold time violations. First few involved cells are:
+A LUT FSM_onehot_state_reg[8]_i_2 is driving clock pin of 80 cells. This could lead to large hold time violations. First few involved cells are:
     MyCPU/ALU/alu_out_reg[0] {FDRE}
     MyCPU/ALU/alu_out_reg[10] {FDRE}
     MyCPU/ALU/alu_out_reg[11] {FDRE}

@@ -42,7 +42,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
@@ -53,12 +52,12 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/User/Desktop/MyCPU/MyCPU.cache/wt [current_project]
-  set_property parent.project_path C:/Users/User/Desktop/MyCPU/MyCPU.xpr [current_project]
-  set_property ip_output_repo C:/Users/User/Desktop/MyCPU/MyCPU.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/steve/Desktop/MyCPU/MyCPU.cache/wt [current_project]
+  set_property parent.project_path C:/Users/steve/Desktop/MyCPU/MyCPU.xpr [current_project]
+  set_property ip_output_repo C:/Users/steve/Desktop/MyCPU/MyCPU.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/cpu_top.dcp
-  read_xdc C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/cpu_cons.xdc
+  add_files -quiet C:/Users/steve/Desktop/MyCPU/MyCPU.runs/synth_1/cpu_top.dcp
+  read_xdc C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/cpu_cons.xdc
   link_design -top cpu_top -part xc7a100tcsg324-1
   write_hwdef -file cpu_top.hwdef
   close_msg_db -file init_design.pb

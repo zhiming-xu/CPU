@@ -22,7 +22,7 @@
 
 module risc_cpu(clkin, reset, addr, indata, outdata, wr_m, rd_m, hlt, io,
 //The following variables are used for debug
- cu_ena, sw, pc, ir, fetch, pc_ena, clk);
+ cu_ena, sw, pc, ir, fetch, pc_ena, clk, mar_ena, mdr_ena, ir_ena, state);
 input clkin;
 input  reset;
 input [15:0] indata;
@@ -31,6 +31,7 @@ output [15:0] outdata;
 output [15:0] addr;
 output wr_m, rd_m, hlt;
 output [1:0] io;
+output ir_ena;
 //The following variables are used for debug
 output cu_ena;
 output [15:0] pc;
@@ -38,6 +39,9 @@ output [15:0] ir;
 output pc_ena;
 output fetch;
 output clk;
+output mar_ena;
+output mdr_ena;
+output [3:0] state;
 
 wire clkin, clk, clk1, reset, fetch;
 wire pc_inc, pc_ena, ir_ena, reg_read1, reg_read2, reg_write1, reg_write2, alu_data_set;
@@ -75,7 +79,7 @@ cu CU(.clk(clk1), .cu_ena(cu_ena), .flag_in(flag_in), .op(ir_out[15:11]), .pc_in
 .pc_ena(pc_ena), .ir_ena(ir_ena), .reg_read1(reg_read1), .reg_read2(reg_read2), 
 .reg_write1(reg_write1), .reg_write2(reg_write2), .alu_data_sel(alu_data_sel), .flag_set(flag_set),
 .wr_m(wr_m), .rd_m(rd_m), .sp_pop(sp_pop), .sp_push(sp_push), .mar_sel(mar_sel), .mar_ena(mar_ena),
-.mdr_sel(mdr_sel), .mdr_ena(mdr_ena), .alu_ena(alu_ena), .hlt(hlt), .io(io)
+.mdr_sel(mdr_sel), .mdr_ena(mdr_ena), .alu_ena(alu_ena), .hlt(hlt), .io(io), .state(state)
 );
 //instruction register
 instreg INSREG(.ir_out(ir_out), .data(mem_out), .ir_ena(ir_ena), .clk(clk1), .rst(reset));
@@ -105,4 +109,5 @@ alu ALU(.data_a(data_a), .data_b(data_b), .alu_ena(alu_ena), .alu_opr(ir_out[15:
 //alu control unit
 alu_in_contrl ALUCON(.clk(clk1), .in_a(a), .in_b(b), .data_a(data_a), .data_b(data_b),
 .alu_sel(alu_data_sel), .imm(ir_out[7:0]));
+
 endmodule

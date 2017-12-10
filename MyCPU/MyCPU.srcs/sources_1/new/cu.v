@@ -44,9 +44,10 @@ module cu(
     output reg reg_read1,//register read signals
     output reg reg_read2,
     output reg reg_write1,//register write signals
-    output reg reg_write2
+    output reg reg_write2,
+    output reg [3:0] state
     );
-    reg [3:0] state;
+    //reg [3:0] state;
     
     //opcode for each operation
     parameter adc=5'b00000,
@@ -86,7 +87,7 @@ module cu(
     begin
         if(!cu_ena)//cu_ena=0, initialize all output ports to 0
         begin
-            state=3'b000;
+            state=4'b0000;
             {pc_inc, pc_ena, ir_ena, reg_read1, reg_read2,
             reg_write1, reg_write2, alu_data_sel}=8'h00;
             

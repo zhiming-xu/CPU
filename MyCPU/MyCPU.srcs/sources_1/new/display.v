@@ -22,6 +22,7 @@
 
 module display_control(
     input [15:0] pc,
+    input [15:0] ir,
     input clk,
     output reg [7:0] seg_sel,
     output reg [3:0] dis
@@ -41,15 +42,23 @@ module display_control(
     
     always @ (index)
     begin
-        case(index[18:17])
-        2'b00:
+        case(index[18:16])
+        3'b000:
         begin seg_sel=8'b11111110; dis=pc[3:0]; end
-        2'b01:
+        3'b001:
         begin seg_sel=8'b11111101; dis=pc[7:4]; end
-        2'b10:
+        3'b010:
         begin seg_sel=8'b11111011; dis=pc[11:8]; end
-        2'b11:
+        3'b011:
         begin seg_sel=8'b11110111; dis=pc[15:12]; end
+        3'b100:
+        begin seg_sel=8'b11101111; dis=ir[3:0]; end
+        3'b101:
+        begin seg_sel=8'b11011111; dis=ir[7:4]; end
+        3'b110:
+        begin seg_sel=8'b10111111; dis=ir[11:8]; end
+        3'b111:
+        begin seg_sel=8'b01111111; dis=ir[15:12]; end
         endcase
     end
 endmodule
