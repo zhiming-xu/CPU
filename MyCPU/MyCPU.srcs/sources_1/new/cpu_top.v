@@ -76,7 +76,7 @@ rom ROM(.data(indata), .addr(addr), .read(rd), .ena(rom_sel));
 
 ram RAM(.indata(outdata), .outdata(indata), .addr(addr), .ena(ram_sel), .read(rd), .write(wr));
 
-display_control DISCON(.clk(clkin), .dis(dis), .seg_sel(an), .pc(counter), .ir(addr));
+display_control DISCON(.clk(clkin), .dis(dis), .seg_sel(an), .pc(counter), .ir(instr));
 
 display DISPLAY(.dis(dis), .seg(seg));
 

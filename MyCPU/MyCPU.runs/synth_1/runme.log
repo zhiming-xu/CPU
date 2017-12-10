@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4124 
+INFO: Helper process launched with PID 5600 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 285.055 ; gain = 74.590
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 285.121 ; gain = 74.516
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'cpu_top' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cpu_top.v:23]
 INFO: [Synth 8-638] synthesizing module 'risc_cpu' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
@@ -142,7 +142,7 @@ WARNING: [Synth 8-3331] design cu has unconnected port flag_in[4]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[1]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 323.000 ; gain = 112.535
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 323.039 ; gain = 112.434
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -152,7 +152,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 323.000 ; gain = 112.535
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 323.039 ; gain = 112.434
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -168,22 +168,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 640.641 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 641.465 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 640.641 ; gain = 430.176
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 641.465 ; gain = 430.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 640.641 ; gain = 430.176
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 641.465 ; gain = 430.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 640.641 ; gain = 430.176
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 641.465 ; gain = 430.859
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -243,7 +243,7 @@ INFO: [Synth 8-5545] ROM "index" won't be mapped to RAM because address size (32
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'cu'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 640.641 ; gain = 430.176
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 641.465 ; gain = 430.859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -440,69 +440,69 @@ WARNING: [Synth 8-3331] design cu has unconnected port flag_in[5]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[4]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[1]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[0]
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_193' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_191' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_189' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_187' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_185' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_183' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_201' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_199' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_197' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_195' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_181' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_175' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out2_reg__0i_62' (FDE) to 'reg_out2_reg__0i_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_30' (FDE) to 'REGARRAYi_51'
 INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_177' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_171' (FDPE) to 'reg_out_reg__0i_173'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_173' (FDPE) to 'reg_out_reg__0i_179'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_129' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_127' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_125' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_123' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_121' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_119' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_137' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_135' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_133' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_131' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_117' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_111' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_113' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_107' (FDPE) to 'mem_out_reg__0i_109'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_109' (FDPE) to 'mem_out_reg__0i_115'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_21' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_53' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_29' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_61' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_25' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_57' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_33' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_65' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_20' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_52' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_28' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_60' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_24' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_56' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_193' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_185' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_201' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_175' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_191' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_183' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_199' (FDPE) to 'reg_out_reg__0i_173'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_173' (FDPE) to 'reg_out_reg__0i_181'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_189' (FDPE) to 'reg_out_reg__0i_181'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_181' (FDPE) to 'reg_out_reg__0i_197'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_197' (FDPE) to 'reg_out_reg__0i_195'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_171' (FDPE) to 'reg_out_reg__0i_195'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_187' (FDPE) to 'reg_out_reg__0i_195'
 INFO: [Synth 8-3886] merging instance 'REGARRAYi_32' (FDE) to 'REGARRAYi_51'
 INFO: [Synth 8-3886] merging instance 'REGARRAYi_64' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_33' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_65' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_31' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_63' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_179' (FDPE) to 'reg_out_reg__0i_195'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_29' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_61' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_28' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_60' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_27' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_59' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_26' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_58' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_25' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_57' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_24' (FDE) to 'REGARRAYi_51'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_56' (FDE) to 'REGARRAYi_51'
 INFO: [Synth 8-3886] merging instance 'REGARRAYi_19' (FDE) to 'REGARRAYi_51'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_51' (FDE) to 'REGARRAYi_55'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_27' (FDE) to 'REGARRAYi_55'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_59' (FDE) to 'REGARRAYi_55'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_51' (FDE) to 'REGARRAYi_53'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_18' (FDE) to 'REGARRAYi_53'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_50' (FDE) to 'REGARRAYi_53'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_20' (FDE) to 'REGARRAYi_53'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_52' (FDE) to 'REGARRAYi_53'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_21' (FDE) to 'REGARRAYi_53'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_53' (FDE) to 'REGARRAYi_55'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_22' (FDE) to 'REGARRAYi_55'
+INFO: [Synth 8-3886] merging instance 'REGARRAYi_54' (FDE) to 'REGARRAYi_55'
 INFO: [Synth 8-3886] merging instance 'REGARRAYi_23' (FDE) to 'REGARRAYi_55'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_55' (FDE) to 'REGARRAYi_63'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_31' (FDE) to 'REGARRAYi_63'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_63' (FDE) to 'REGARRAYi_30'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_18' (FDE) to 'REGARRAYi_30'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_50' (FDE) to 'REGARRAYi_30'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_26' (FDE) to 'REGARRAYi_30'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_58' (FDE) to 'REGARRAYi_30'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_22' (FDE) to 'REGARRAYi_30'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_54' (FDE) to 'REGARRAYi_30'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_30' (FDE) to 'REGARRAYi_62'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_113' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_129' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_121' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_137' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_111' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_127' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_119' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_135' (FDPE) to 'mem_out_reg__0i_109'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_109' (FDPE) to 'mem_out_reg__0i_117'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_125' (FDPE) to 'mem_out_reg__0i_117'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_117' (FDPE) to 'mem_out_reg__0i_133'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_133' (FDPE) to 'mem_out_reg__0i_131'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_107' (FDPE) to 'mem_out_reg__0i_131'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_123' (FDPE) to 'mem_out_reg__0i_131'
+INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_115' (FDPE) to 'mem_out_reg__0i_131'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 640.641 ; gain = 430.176
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 641.465 ; gain = 430.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -541,10 +541,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 649.020 ; gain = 438.555
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 648.152 ; gain = 437.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 660.539 ; gain = 450.074
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 659.813 ; gain = 449.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -556,7 +556,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -580,7 +580,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -593,7 +593,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -605,25 +605,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -640,15 +640,15 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |BUFG      |     3|
-|2     |CARRY4    |   131|
+|2     |CARRY4    |   136|
 |3     |DSP48E1   |     1|
-|4     |LUT1      |   167|
-|5     |LUT2      |   245|
-|6     |LUT3      |   317|
-|7     |LUT4      |   109|
-|8     |LUT5      |   209|
+|4     |LUT1      |   150|
+|5     |LUT2      |   263|
+|6     |LUT3      |   325|
+|7     |LUT4      |   103|
+|8     |LUT5      |   244|
 |9     |LUT6      |   237|
-|10    |MUXF7     |    48|
+|10    |MUXF7     |    51|
 |11    |RAM128X1S |    16|
 |12    |RAM16X1S  |    32|
 |13    |RAM32X1S  |    16|
@@ -666,33 +666,33 @@ Report Instance Areas:
 +------+-------------+----------------+------+
 |      |Instance     |Module          |Cells |
 +------+-------------+----------------+------+
-|1     |top          |                |  2055|
+|1     |top          |                |  2101|
 |2     |  DISCON     |display_control |    89|
-|3     |  MyCPU      |risc_cpu        |  1828|
-|4     |    ALU      |alu             |   462|
-|5     |    ALUCON   |alu_in_contrl   |   275|
+|3     |  MyCPU      |risc_cpu        |  1874|
+|4     |    ALU      |alu             |   453|
+|5     |    ALUCON   |alu_in_contrl   |   402|
 |6     |    CLOCK    |clock           |   114|
-|7     |    CU       |cu              |   102|
+|7     |    CU       |cu              |    67|
 |8     |    CUCON    |cu_contrl       |     3|
 |9     |    DIVIDER  |divider         |    83|
 |10    |    FLAGS    |flags           |    15|
-|11    |    INSREG   |instreg         |   217|
-|12    |    MAR      |mar             |   120|
+|11    |    INSREG   |instreg         |   194|
+|12    |    MAR      |mar             |   101|
 |13    |    MDR      |mdr             |    64|
 |14    |    PC       |pc              |    36|
 |15    |    REGARRAY |regarray        |   321|
-|16    |    SP       |sp              |    16|
+|16    |    SP       |sp              |    21|
 |17    |  RAM        |ram__4          |    96|
 +------+-------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 678.199 ; gain = 467.594
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 678.645 ; gain = 150.133
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 678.199 ; gain = 148.109
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 678.199 ; gain = 467.594
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 218 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 223 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -706,7 +706,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 192 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 678.645 ; gain = 468.180
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 678.199 ; gain = 467.594
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/cpu_top.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 678.645 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 10 14:47:18 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 678.199 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 10 16:03:52 2017...

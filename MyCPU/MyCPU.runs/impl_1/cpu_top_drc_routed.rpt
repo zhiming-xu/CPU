@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date         : Sun Dec 10 14:48:19 2017
+| Date         : Sun Dec 10 16:04:51 2017
 | Host         : stu49c877 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc -file cpu_top_drc_routed.rpt -pb cpu_top_drc_routed.pb -rpx cpu_top_drc_routed.rpx
 | Design       : cpu_top
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 10
+             Violations found: 9
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
@@ -34,7 +34,6 @@ Table of Contents
 | DPOP-2      | Warning  | MREG Output pipelining                                      | 1          |
 | PDRC-153    | Warning  | Gated clock check                                           | 3          |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
-| RTSTAT-10   | Warning  | No routable loads                                           | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -96,11 +95,6 @@ A LUT FSM_onehot_state_reg[8]_i_2 is driving clock pin of 80 cells. This could l
     MyCPU/ALU/alu_out_reg[12] {FDRE}
     MyCPU/ALU/alu_out_reg[13] {FDRE}
 
-Related violations: <none>
-
-RTSTAT-10#1 Warning
-No routable loads  
-2 net(s) have no routable loads. The problem bus(es) and/or net(s) are MyCPU/CU/io_reg_n_0_[0], MyCPU/CU/io_reg_n_0_[1].
 Related violations: <none>
 
 

@@ -107,7 +107,7 @@ module cu(
             {pc_inc, pc_ena, ir_ena, reg_read1,
             reg_read2, reg_write1, reg_write2, alu_data_sel}=8'h00;
             {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b0000000;
-            {sp_pop, sp_push, mar_sel, mar_ena, mdr_ena, mdr_sel}=8'h00;
+            {sp_pop, sp_push, mar_sel, mar_ena, mdr_ena, mdr_sel}=8'b00001000;
             state=4'b0001;
         end
         4'b0001:
@@ -123,7 +123,7 @@ module cu(
             {pc_inc, pc_ena, ir_ena, reg_read1,
             reg_read2, reg_write1, reg_write2, alu_data_sel}=8'h00;
             {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b0000001;
-            {sp_pop, sp_push, mar_sel, mar_ena, mdr_ena, mdr_sel}=8'h07;
+            {sp_pop, sp_push, mar_sel, mar_ena, mdr_ena, mdr_sel}=8'h07;//111
             state=4'b0011;
         end
         4'b0011:
