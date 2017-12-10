@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module risc_cpu(clkin, reset, addr, indata, outdata, wr_m, rd_m, hlt, io,
+module risc_cpu(clkin, reset, addr, indata, outdata, wr_m, rd_m, hlt, io, clkcon,
 //The following variables are used for debug
  cu_ena, sw, pc, ir, fetch, pc_ena, clk, mar_ena, mdr_ena, ir_ena, state);
 input clkin;
 input  reset;
+input [1:0] clkcon;
 input [15:0] indata;
 input [1:0] sw;
 output [15:0] outdata;
@@ -70,7 +71,7 @@ wire [15:0] outdata;
 assign pc=pc_addr;
 assign ir=ir_out;
 //clock signal 
-divider DIVIDER(.clkin(clkin), .clkout(clk));
+divider DIVIDER(.clkin(clkin), .clkout(clk), .clkcon(clkcon));
 clock CLOCK(.clk(clk), .clk_r(clk1), .reset(reset), .fetch(fetch));
 //controller
 cu_contrl  CUCON(.clk(clk1), .cu_ena(cu_ena), .fetch(fetch), .rst(reset));

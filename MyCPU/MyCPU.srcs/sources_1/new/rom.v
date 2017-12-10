@@ -34,7 +34,7 @@ module rom(
         rom[8'h2d]=16'b10100_100_000_00000;
         rom[8'h2e]=16'b01011_000_000_00000;
         rom[8'h2f]=16'b11001_100_000_00010;
-        rom[8'h2e]=16'b10111_100_000_00100;
+        rom[8'h30]=16'b10111_100_000_00100;
     end
     assign data=(read&&ena)?rom[addr]:16'hzzzz;
 endmodule

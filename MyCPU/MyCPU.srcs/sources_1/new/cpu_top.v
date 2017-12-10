@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module cpu_top(clkin, reset, hlt, sw,
+module cpu_top(clkin, reset, hlt, sw, seg, an,/*This is seg_sel*/
  //for debug
-pc_ena, cu_ena, fetch, clock4, seg, an/*This is seg_sel*/,
+pc_ena, cu_ena, fetch, clock4,
 rd, wr, ram_sel, rom_sel, mar_ena, mdr_ena, ir_ena, state);
 input clkin, reset;
 //output [6:0] seg;
