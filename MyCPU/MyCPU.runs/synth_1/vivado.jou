@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Sun Dec 10 21:50:16 2017
-# Process ID: 3904
+# Start of session at: Mon Dec 11 11:01:14 2017
+# Process ID: 7160
 # Current directory: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1
 # Command line: vivado.exe -log testtop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source testtop.tcl
 # Log file: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.vds

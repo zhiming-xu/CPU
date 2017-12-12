@@ -67,6 +67,9 @@ module cu(
               mov=5'b01110,
             movil=5'b01111,
             movih=5'b10000,
+              clc=5'b11100,//clear carry
+              stc=5'b11101,//set carry to 1
+               
                in=5'b10001,
               out=5'b10010,
              load=5'b10011,
@@ -78,8 +81,6 @@ module cu(
              jrnc=5'b11001,//jmp if not carry
               jrz=5'b11010,//jmp if equal
              jrnz=5'b11011,//jmp if not equal
-              clc=5'b11100,//clear carry
-              stc=5'b11101,//set carry to 1
               nop=5'b11110,
              halt=5'b11111;
              
@@ -244,7 +245,7 @@ module cu(
             begin
                 {pc_inc, pc_ena, ir_ena, reg_read1,
                 reg_read2, reg_write1, reg_write2, alu_data_sel}=8'h00;
-                {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b0000000;
+                {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b1000000;
                 {sp_pop, sp_push, mar_sel, mar_ena, mdr_ena, mdr_sel}=8'h00;
             end
             //else if(op==jr||op==jrc||op==jrnc||op==jrz||op==jrnz)

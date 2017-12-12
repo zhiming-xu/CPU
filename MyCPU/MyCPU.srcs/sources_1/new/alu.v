@@ -74,8 +74,8 @@ module alu(data_a,data_b,alu_ena,alu_opr,clk,flag_in,alu_out,flag_out,hi);
 						begin
 							alu_out = data_a - data_b - flag_in[3];
 							if (alu_out == 16'b0000_0000_0000_0000) 
-							flag_out = 8'b0000_0100;
-								else
+							    flag_out = 8'b0000_0100;
+							else
 								flag_out = 8'b0000_0000;
 						end
 					mul:
@@ -128,7 +128,7 @@ module alu(data_a,data_b,alu_ena,alu_opr,clk,flag_in,alu_out,flag_out,hi);
 						end
 					andd:	alu_out = data_a & data_b;
 					orr:	alu_out = data_a | data_b;
-					nott:	alu_out =~data_a;
+					nott:	alu_out = ~data_a;
 					xorr:	alu_out = data_a^data_b;
 					test:
 						begin

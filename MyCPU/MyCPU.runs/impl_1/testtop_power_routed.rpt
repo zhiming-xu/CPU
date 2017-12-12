@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date             : Sun Dec 10 21:51:48 2017
-| Host             : stu49c877 running 64-bit Service Pack 1  (build 7601)
+| Date             : Mon Dec 11 11:02:55 2017
+| Host             : stu7d134c running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file testtop_power_routed.rpt -pb testtop_power_summary_routed.pb -rpx testtop_power_routed.rpx
 | Design           : testtop
 | Device           : xc7a100tcsg324-1
@@ -50,15 +50,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     2018 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1074 |     63400 |            1.69 |
+| Slice Logic              |    <0.001 |     2023 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1079 |     63400 |            1.70 |
 |   CARRY4                 |    <0.001 |      136 |     15850 |            0.86 |
 |   Register               |    <0.001 |      489 |    126800 |            0.39 |
 |   Others                 |     0.000 |       24 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       67 |     63400 |            0.11 |
 |   LUT as Distributed RAM |     0.000 |       96 |     19000 |            0.51 |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
-| Signals                  |    <0.001 |     1566 |       --- |             --- |
+| Signals                  |    <0.001 |     1570 |       --- |             --- |
 | DSPs                     |     0.000 |        1 |       240 |            0.42 |
 | I/O                      |     0.009 |       36 |       210 |           17.14 |
 | Static Power             |     0.097 |          |           |                 |

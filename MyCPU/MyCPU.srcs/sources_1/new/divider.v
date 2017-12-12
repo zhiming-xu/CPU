@@ -27,7 +27,7 @@ module divider(
     output reg clkout=0   //?Hz
     );
     integer cnt=0;
-    integer num=70_00000;
+    integer num=30_00000;
     
     always @ (posedge clkin)
     begin
