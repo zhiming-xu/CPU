@@ -135,7 +135,7 @@ module alu(data_a,data_b,alu_ena,alu_opr,clk,flag_in,alu_out,flag_out,hi);
 							if((data_a & data_b) == 0)
 								flag_out = {5'b00000,1'b1,2'b00};
 							else
-								flag_out = {5'b00000,1'b0,2'b00};	//wtf?
+								flag_out = {5'b00000,1'b0,2'b00};	
 						end
 					shl:
 						begin
@@ -150,7 +150,8 @@ module alu(data_a,data_b,alu_ena,alu_opr,clk,flag_in,alu_out,flag_out,hi);
 					sar:
 						begin
 							alu_out = data_a >> 1;
-							flag_out = flag_in;
+							alu_out[15] = data_a[15];
+							flag_out = {4'b0000, 1'b0, (alu_out==16'b0), 1'b0, alu_out[15]};
 						end
 					mov:	alu_out = data_b;
 					movil:
@@ -168,7 +169,7 @@ module alu(data_a,data_b,alu_ena,alu_opr,clk,flag_in,alu_out,flag_out,hi);
 							alu_out = 16'bxxxx_xxxx_xxxx_xxxx;
 							hi = 16'bxxxx_xxxx_xxxx_xxxx;
 							flag_out = 8'bxxxx_xxxx;
-						end
+						end//
 				endcase
 			end
 	end

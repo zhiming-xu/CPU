@@ -17,7 +17,6 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/User/Desktop/MyCPU/MyCPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v
@@ -25,6 +24,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v
+  C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v
   C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v

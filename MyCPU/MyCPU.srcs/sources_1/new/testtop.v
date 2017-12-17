@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module testtop(clkin, reset, hlt, sw, seg, an, clkcon,/*This is seg_sel*/
+module testtop(clkin, reset, hlt, sw, seg, an, clkcon,/*This is seg_sel*/run,
  //for debug
 //pc_ena, cu_ena, fetch, clock4,
 //rd, wr, ram_sel, rom_sel, mar_ena, mdr_ena, ir_ena, state);
@@ -30,7 +30,7 @@ input [1:0] clkcon;
 //output [6:0] seg;
 
 //output [7:0] seg_sel; 
-output hlt;
+output hlt, run;
 output [6:0] seg;
 output [7:0] an;
 //output [1:0] io;
@@ -47,7 +47,7 @@ wire [15:0] addr;
 
 wire rd, wr;
 wire ram_sel, rom_sel;
-wire hlt;
+wire hlt, run;
 //for debug
 wire [15:0] instr;
 wire [15:0] counter;//temporarily set to 8-bit, should be 16-bit
@@ -62,7 +62,7 @@ wire [3:0] state;
 assign led=outdata;
 
 risc_cpu MyCPU(.clkin(clkin), .reset(reset), .addr(addr), .indata(indata), .outdata(outdata),
-.wr_m(wr), .rd_m(rd), .hlt(hlt), .io(io), .sw(sw), .clkcon(clkcon),
+.wr_m(wr), .rd_m(rd), .hlt(hlt), .io(io), .sw(sw), .clkcon(clkcon), .run(run),
 //for debug 
 .pc(counter), .ir(instr), .cu_ena(cu_ena), .fetch(fetch), .pc_ena(pc_ena), .clk(clock4),
 .mar_ena(mar_ena), .mdr_ena(mdr_ena), .ir_ena(ir_ena), .state(state));

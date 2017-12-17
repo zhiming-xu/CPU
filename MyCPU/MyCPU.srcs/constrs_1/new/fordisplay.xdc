@@ -10,7 +10,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports reset]
 #CPU halt
 set_property PACKAGE_PIN K5 [get_ports hlt]
 set_property IOSTANDARD LVCMOS33 [get_ports hlt]
-
+#CPU run
+set_property PACKAGE_PIN F6 [get_ports run]
+set_property IOSTANDARD LVCMOS33 [get_ports run]
 #switches, which program
 set_property PACKAGE_PIN R7 [get_ports {sw[0]}]					
 set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]

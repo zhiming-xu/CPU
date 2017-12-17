@@ -32,6 +32,7 @@ module cu(
     output reg flag_set,//set eflags
     output reg pc_inc,  //PC increment
     output reg hlt, //halt signal
+    output reg run,
     output reg rd_m,//memory read signal
 (* DONT_TOUCH= "1" *)    output reg [1:0] io,//I/O control signal
     output reg wr_m,//memory write signal
@@ -48,7 +49,6 @@ module cu(
     output reg [3:0] state
     );
     //reg [3:0] state;
-    
     //opcode for each operation
     parameter adc=5'b00000,
               sbb=5'b00001,
@@ -105,6 +105,7 @@ module cu(
         casex(state)
         4'b0000:
         begin
+            run=1;
             {pc_inc, pc_ena, ir_ena, reg_read1,
             reg_read2, reg_write1, reg_write2, alu_data_sel}=8'h00;
             {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b0000000;
@@ -226,6 +227,7 @@ module cu(
             //else if(op==halt)
             halt:
             begin
+                run=0;
                 {pc_inc, pc_ena, ir_ena, reg_read1,
                 reg_read2, reg_write1, reg_write2, alu_data_sel}=8'h00;
                 {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b0100000;

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module risc_cpu(clkin, reset, addr, indata, outdata, wr_m, rd_m, hlt, io, clkcon,
+module risc_cpu(clkin, reset, addr, indata, outdata, wr_m, rd_m, hlt, io, clkcon, run,
 //The following variables are used for debug
  cu_ena, sw, pc, ir, fetch, pc_ena, clk, mar_ena, mdr_ena, ir_ena, state);
 input clkin;
@@ -30,7 +30,7 @@ input [15:0] indata;
 input [1:0] sw;
 output [15:0] outdata;
 output [15:0] addr;
-output wr_m, rd_m, hlt;
+output wr_m, rd_m, hlt, run;
 output [1:0] io;
 output ir_ena;
 //The following variables are used for debug
@@ -71,7 +71,8 @@ wire [15:0] outdata;
 assign pc=pc_addr;
 assign ir=ir_out;
 //clock signal 
-divider DIVIDER(.clkin(clkin), .clkout(clk), .clkcon(clkcon));
+divider DIVIDER(.clkin(clkin), .clkout(clk), .rst(reset), .clkcon(clkcon));
+
 clock CLOCK(.clk(clk), .clk_r(clk1), .reset(reset), .fetch(fetch));
 //controller
 cu_contrl  CUCON(.clk(clk1), .cu_ena(cu_ena), .fetch(fetch), .rst(reset));
@@ -80,7 +81,7 @@ cu CU(.clk(clk1), .cu_ena(cu_ena), .flag_in(flag_in), .op(ir_out[15:11]), .pc_in
 .pc_ena(pc_ena), .ir_ena(ir_ena), .reg_read1(reg_read1), .reg_read2(reg_read2), 
 .reg_write1(reg_write1), .reg_write2(reg_write2), .alu_data_sel(alu_data_sel), .flag_set(flag_set),
 .wr_m(wr_m), .rd_m(rd_m), .sp_pop(sp_pop), .sp_push(sp_push), .mar_sel(mar_sel), .mar_ena(mar_ena),
-.mdr_sel(mdr_sel), .mdr_ena(mdr_ena), .alu_ena(alu_ena), .hlt(hlt), .io(io), .state(state)
+.mdr_sel(mdr_sel), .mdr_ena(mdr_ena), .alu_ena(alu_ena), .hlt(hlt), .io(io), .state(state), .run(run)
 );
 //instruction register
 instreg INSREG(.ir_out(ir_out), .data(mem_out), .ir_ena(ir_ena), .clk(clk1), .rst(reset));

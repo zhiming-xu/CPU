@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date         : Mon Dec 11 11:02:26 2017
-| Host         : stu7d134c running 64-bit Service Pack 1  (build 7601)
+| Date         : Sun Dec 17 16:27:58 2017
+| Host         : stu49c877 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file testtop_control_sets_placed.rpt
 | Design       : testtop
 | Device       : xc7a100t
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    36 |
-| Unused register locations in slices containing registers |    87 |
+| Number of unique control sets                            |    38 |
+| Unused register locations in slices containing registers |    98 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              27 |           13 |
+| No           | No                    | No                     |              26 |            9 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             119 |           37 |
-| Yes          | No                    | No                     |              73 |           50 |
-| Yes          | No                    | Yes                    |              76 |           34 |
-| Yes          | Yes                   | No                     |             194 |           84 |
+| No           | Yes                   | No                     |             120 |           31 |
+| Yes          | No                    | No                     |              86 |           46 |
+| Yes          | No                    | Yes                    |              76 |           32 |
+| Yes          | Yes                   | No                     |             194 |           67 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -50,49 +50,51 @@ Table of Contents
 +---------------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+
 |  MyCPU/PC/pc_value_reg[5]_LDC_i_1_n_0 |                                      | MyCPU/PC/pc_value_reg[5]_LDC_i_2_n_0 |                1 |              1 |
 |  MyCPU/PC/pc_value_reg[6]_LDC_i_1_n_0 |                                      | MyCPU/PC/pc_value_reg[6]_LDC_i_2_n_0 |                1 |              1 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[5]_LDC_i_1_n_0 |                1 |              1 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[5]_LDC_i_2_n_0 |                1 |              1 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[6]_LDC_i_1_n_0 |                1 |              1 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[6]_LDC_i_2_n_0 |                1 |              1 |
-| ~cnt_reg[31]_i_3_n_0                  |                                      |                                      |                1 |              1 |
-|  clkin_IBUF_BUFG                      |                                      |                                      |                1 |              2 |
-|  clk1                                 |                                      | MyCPU/CU/out                         |                3 |              8 |
-|  clk1                                 | MyCPU/CU/flag_value_reg[7][0]        | MyCPU/REGARRAY/register_reg[1][0]_0  |                6 |              8 |
-|  cnt_reg[31]_i_3_n_0                  |                                      | MyCPU/CUCON/SR[0]                    |                8 |             13 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/REGARRAY/register_reg[1][0]_0  |                4 |             14 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/INSREG/register_reg[4][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                8 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/INSREG/register_reg[6][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                7 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  |                                      |                                      |                1 |              1 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[6]_LDC_i_2_n_0 |                1 |              1 |
+|  clkin_IBUF_BUFG                      |                                      |                                      |                1 |              1 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[5]_LDC_i_1_n_0 |                1 |              1 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/PC/pc_value_reg[6]_LDC_i_1_n_0 |                1 |              1 |
+|  cnt_reg[31]_i_2_n_0                  | MyCPU/CU/run0_out                    |                                      |                1 |              1 |
+|  clk1                                 |                                      | MyCPU/CU/out                         |                2 |              8 |
+|  clk1                                 | MyCPU/CU/flag_value_reg[7][0]        | MyCPU/REGARRAY/register_reg[0][0]_0  |                4 |              8 |
+|  clkin_IBUF_BUFG                      | MyCPU/REGARRAY/register_reg[0][0]_0  |                                      |                4 |             12 |
+|  cnt_reg[31]_i_2_n_0                  |                                      | MyCPU/CUCON/SR[0]                    |                3 |             13 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/pc_value_reg[5]_P           | MyCPU/REGARRAY/register_reg[0][0]_0  |                4 |             14 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/sp_value_reg[0]             | MyCPU/REGARRAY/register_reg[0][0]_0  |                4 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[0][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                7 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[5][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                6 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/E[0]                        | MyCPU/REGARRAY/register_reg[0][0]_0  |                5 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/mar_addr_reg[0][0]          | MyCPU/REGARRAY/register_reg[0][0]_0  |                7 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[2][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                4 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[3][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                7 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[4][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                4 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[6][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                5 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[7][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                4 |             16 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/register_reg[1][0][0]       | MyCPU/REGARRAY/register_reg[0][0]_0  |                7 |             16 |
 |  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[0]     |                                      |                4 |             16 |
 |  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[0]_0   |                                      |                4 |             16 |
 |  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[15]    |                                      |                4 |             16 |
 |  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[15]_0  |                                      |                4 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/sp_value_reg[15]            | MyCPU/REGARRAY/register_reg[1][0]_0  |                4 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/E[0]                        | MyCPU/REGARRAY/register_reg[1][0]_0  |                5 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/mar_addr_reg[0][0]          | MyCPU/REGARRAY/register_reg[1][0]_0  |                5 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/register_reg[7][15][0]      | MyCPU/REGARRAY/register_reg[1][0]_0  |               10 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/INSREG/E[0]                    | MyCPU/REGARRAY/register_reg[1][0]_0  |                8 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/INSREG/register_reg[0][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                7 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/INSREG/register_reg[1][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                8 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/INSREG/register_reg[2][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                7 |             16 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/INSREG/register_reg[3][15][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |                6 |             16 |
-|  cnt_reg[31]_i_3_n_0                  | MyCPU/CU/ir_ena_i_1_n_0              | MyCPU/CUCON/SR[0]                    |                9 |             18 |
-|  clk1                                 |                                      |                                      |               11 |             24 |
-|  clkin_IBUF_BUFG                      |                                      | MyCPU/DIVIDER/clkout                 |                8 |             31 |
+|  cnt_reg[31]_i_2_n_0                  | MyCPU/CU/ir_ena_i_1_n_0              | MyCPU/CUCON/SR[0]                    |                7 |             18 |
+|  clk1                                 |                                      |                                      |                7 |             24 |
+|  clkin_IBUF_BUFG                      |                                      | MyCPU/DIVIDER/cnt[0]_i_1_n_0         |                8 |             32 |
 |  clkin_IBUF_BUFG                      |                                      | DISCON/index[31]_i_1_n_0             |                9 |             32 |
 |  wr_BUFG                              | MyCPU/MAR/mem_out_retimed_reg[3]     |                                      |                8 |             32 |
-| ~cnt_reg[31]_i_3_n_0                  |                                      | MyCPU/REGARRAY/register_reg[1][0]_0  |                7 |             33 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/reg_out2_retimed_reg[15][0] |                                      |               18 |             33 |
-|  clk1                                 | MyCPU/CU/alu_out_reg[15]             |                                      |               32 |             40 |
-| ~cnt_reg[31]_i_3_n_0                  | MyCPU/CU/reg_out_retimed_reg[14][0]  | MyCPU/REGARRAY/register_reg[1][0]_0  |               20 |             50 |
+| ~cnt_reg[31]_i_2_n_0                  |                                      | MyCPU/REGARRAY/register_reg[0][0]_0  |                7 |             33 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/reg_out2_retimed_reg[15][0] |                                      |               17 |             33 |
+|  clk1                                 | MyCPU/CU/alu_out_reg[15]             |                                      |               24 |             40 |
+| ~cnt_reg[31]_i_2_n_0                  | MyCPU/CU/reg_out_retimed_reg[14][0]  | MyCPU/REGARRAY/register_reg[0][0]_0  |               20 |             50 |
 +---------------------------------------+--------------------------------------+--------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     7 |
-| 2      |                     1 |
+| 1      |                     9 |
 | 8      |                     2 |
+| 12     |                     1 |
 | 13     |                     1 |
 | 14     |                     1 |
 | 16+    |                    24 |

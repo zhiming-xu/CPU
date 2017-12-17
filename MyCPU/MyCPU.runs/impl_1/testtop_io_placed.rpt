@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date         : Mon Dec 11 11:02:26 2017
-| Host         : stu7d134c running 64-bit Service Pack 1  (build 7601)
+| Date         : Sun Dec 17 16:27:58 2017
+| Host         : stu49c877 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_io -file testtop_io_placed.rpt
 | Design       : testtop
 | Device       : xc7a100t
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            38 |
+|            39 |
 +---------------+
 
 
@@ -128,7 +128,7 @@ Table of Contents
 | F3         |             | High Range | IO_L13N_T2_MRCC_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |
 | F4         |             | High Range | IO_L13P_T2_MRCC_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |
 | F5         |             | High Range | IO_0_35                      | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |
-| F6         |             | High Range | IO_L19N_T3_VREF_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |
+| F6         | run         | High Range | IO_L19N_T3_VREF_35           | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | F7         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | F8         |             |            | VCCINT                       | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
 | F9         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
