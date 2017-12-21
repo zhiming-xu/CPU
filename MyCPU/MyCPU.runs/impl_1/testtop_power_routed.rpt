@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date             : Thu Dec 21 09:43:19 2017
+| Date             : Thu Dec 21 20:59:40 2017
 | Host             : Steven-Surface running 64-bit major release  (build 9200)
 | Command          : report_power -file testtop_power_routed.rpt -pb testtop_power_summary_routed.pb -rpx testtop_power_routed.rpx
 | Design           : testtop
@@ -50,15 +50,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.002 |        3 |       --- |             --- |
-| Slice Logic              |     0.003 |     3291 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1930 |     63400 |            3.04 |
-|   CARRY4                 |    <0.001 |      377 |     15850 |            2.38 |
-|   Register               |    <0.001 |      605 |    126800 |            0.48 |
-|   F7/F8 Muxes            |    <0.001 |       59 |     63400 |            0.09 |
-|   Others                 |     0.000 |       26 |       --- |             --- |
+| Slice Logic              |     0.004 |     3307 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     1945 |     63400 |            3.07 |
+|   CARRY4                 |    <0.001 |      385 |     15850 |            2.43 |
+|   Register               |    <0.001 |      606 |    126800 |            0.48 |
+|   F7/F8 Muxes            |    <0.001 |       51 |     63400 |            0.08 |
+|   Others                 |     0.000 |       27 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       96 |     19000 |            0.51 |
 |   BUFG                   |     0.000 |        3 |        32 |            9.38 |
-| Signals                  |     0.003 |     2691 |       --- |             --- |
+| Signals                  |     0.003 |     2717 |       --- |             --- |
 | Block RAM                |     0.000 |      0.5 |       135 |            0.37 |
 | DSPs                     |     0.000 |        1 |       240 |            0.42 |
 | I/O                      |     0.009 |       42 |       210 |           20.00 |
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.024 |       0.009 |      0.015 |
+| Vccint    |       1.000 |     0.023 |       0.008 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -144,10 +144,10 @@ Table of Contents
 +---------------------------+-----------+
 | testtop                   |     0.017 |
 |   DISCON                  |    <0.001 |
-|   IAUD                    |     0.007 |
+|   IAUD                    |     0.006 |
 |   MyCPU                   |     0.001 |
 |     ALU                   |     0.000 |
-|     ALUCON                |    <0.001 |
+|     ALUCON                |     0.000 |
 |     CLOCK                 |    <0.001 |
 |     CU                    |     0.000 |
 |     CUCON                 |     0.000 |
@@ -157,7 +157,7 @@ Table of Contents
 |     MAR                   |     0.000 |
 |     MDR                   |     0.000 |
 |     PC                    |    <0.001 |
-|     REGARRAY              |    <0.001 |
+|     REGARRAY              |     0.000 |
 |     SP                    |     0.000 |
 |   RAM                     |     0.000 |
 |     ram_reg_0_127_0_0     |     0.000 |

@@ -34,13 +34,13 @@ module divider(
         if(!rst)
             casex(clkcon)
                 3'b000:
-                begin num=60_00000; cnt=0; end
+                begin num=80_00000; cnt=0; end
                 3'b001:
                 begin num=20_00000; cnt=0; end
                 3'b010:
                 begin num=10_00000; cnt=0; end
                 3'b011:
-                begin num=5_00000; cnt=0; end
+                begin num=4_00000; cnt=0; end
                 3'b100:
                 begin num=1_00000; cnt=0; end
                 3'b101:
