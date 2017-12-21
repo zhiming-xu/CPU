@@ -22,7 +22,7 @@
 
 module divider(
     input rst,
-    input [1:0] clkcon,
+    input [2:0] clkcon,
     input clkin,        //100MHz
     output reg clkout=0   //?Hz
     );
@@ -33,14 +33,20 @@ module divider(
     begin
         if(!rst)
             casex(clkcon)
-                2'b00:
-                begin num=5_00000; cnt=0; end
-                2'b01:
+                3'b000:
                 begin num=60_00000; cnt=0; end
-                2'b10:
+                3'b001:
                 begin num=20_00000; cnt=0; end
-                2'b11:
+                3'b010:
                 begin num=10_00000; cnt=0; end
+                3'b011:
+                begin num=5_00000; cnt=0; end
+                3'b100:
+                begin num=1_00000; cnt=0; end
+                3'b101:
+                begin num=5_0000; cnt=0; end
+                3'b110:
+                begin num=1_000; cnt=0; end
             endcase
         else
         begin

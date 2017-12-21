@@ -18,12 +18,20 @@ set_property PACKAGE_PIN R7 [get_ports {sw[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
 set_property PACKAGE_PIN R6 [get_ports {sw[1]}]					
 set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
-set_property PACKAGE_PIN U9 [get_ports {clkcon[0]}]					
+#clock speed
+set_property PACKAGE_PIN R3 [get_ports {clkcon[0]}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {clkcon[0]}]
 #Bank = 34, Pin name = IO_25_34,							Sch name = SW1
-set_property PACKAGE_PIN U8 [get_ports {clkcon[1]}]					
+set_property PACKAGE_PIN P3 [get_ports {clkcon[1]}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {clkcon[1]}]
-
+set_property PACKAGE_PIN P4 [get_ports {clkcon[2]}]					
+        set_property IOSTANDARD LVCMOS33 [get_ports {clkcon[2]}]
+#Audio
+set_property PACKAGE_PIN A11 [get_ports AUD_PWM]					
+        set_property IOSTANDARD LVCMOS33 [get_ports AUD_PWM]
+    #Bank = 15, Pin name = IO_L6P_T0_15,                        Sch name = AUD_SD
+    set_property PACKAGE_PIN D12 [get_ports AUD_SD]                        
+        set_property IOSTANDARD LVCMOS33 [get_ports AUD_SD]
 #LEDs
 #Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
 set_property PACKAGE_PIN T8 [get_ports {led[0]}]					

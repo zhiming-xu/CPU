@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module risc_cpu(clkin, reset, addr, indata, outdata, wr_m, rd_m, hlt, io, clkcon, run,
+module risc_cpu(clkin, reset, addr, indata, outdata, wr_m, rd_m, hlt, io, clkcon, run, port,
 //The following variables are used for debug
  cu_ena, sw, pc, ir, fetch, pc_ena, clk, mar_ena, mdr_ena, ir_ena, state);
 input clkin;
 input  reset;
-input [1:0] clkcon;
+input [2:0] clkcon;
 input [15:0] indata;
 input [1:0] sw;
 output [15:0] outdata;
@@ -43,6 +43,7 @@ output clk;
 output mar_ena;
 output mdr_ena;
 output [3:0] state;
+output [15:0] port;
 
 wire clkin, clk, clk1, reset, fetch;
 wire pc_inc, pc_ena, ir_ena, reg_read1, reg_read2, reg_write1, reg_write2, alu_data_set;
@@ -95,7 +96,7 @@ flags FLAGS(.clk(clk1), .rst(reset), .flag_set(flag_set), .flag_in(flag_out), .f
 //register array
 regarray REGARRAY(.clk(clk1), .rst(reset), .reg_read1(reg_read1), .reg_read2(reg_read2),
 .addr1(ir_out[10:8]), .addr2(ir_out[7:5]), .reg_write1(reg_write1), .reg_write2(reg_write2),
-.data_in1(alu_out), .data_in2(hi), .data_in3(mem_out), .reg_out1(a), .reg_out2(b)
+.data_in1(alu_out), .data_in2(hi), .data_in3(mem_out), .reg_out1(a), .reg_out2(b), .port(port)
 );
 //memory address register
 mar MAR(.clk(clk1), .rst(reset), .mar_ena(mar_ena), .mar_sel(mar_sel), .ir_addr1(a),

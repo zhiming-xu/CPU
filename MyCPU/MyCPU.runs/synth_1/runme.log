@@ -4,8 +4,8 @@
 
 
 ****** Vivado v2016.4 (64-bit)
-  **** SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
-  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
 source testtop.tcl -notrace
@@ -14,19 +14,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5288 
+INFO: Helper process launched with PID 15436 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 284.871 ; gain = 74.348
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 282.098 ; gain = 71.570
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'testtop' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
-INFO: [Synth 8-638] synthesizing module 'risc_cpu' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
-INFO: [Synth 8-638] synthesizing module 'divider' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
-INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
-INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
-INFO: [Synth 8-256] done synthesizing module 'clock' (2#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
-INFO: [Synth 8-638] synthesizing module 'cu_contrl' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
-INFO: [Synth 8-256] done synthesizing module 'cu_contrl' (3#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
-INFO: [Synth 8-638] synthesizing module 'cu' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
+INFO: [Synth 8-638] synthesizing module 'testtop' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
+INFO: [Synth 8-638] synthesizing module 'risc_cpu' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
+INFO: [Synth 8-638] synthesizing module 'divider' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:35]
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clock' (2#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
+INFO: [Synth 8-638] synthesizing module 'cu_contrl' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
+INFO: [Synth 8-256] done synthesizing module 'cu_contrl' (3#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
+INFO: [Synth 8-638] synthesizing module 'cu' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
 	Parameter adc bound to: 5'b00000 
 	Parameter sbb bound to: 5'b00001 
 	Parameter mul bound to: 5'b00010 
@@ -59,32 +60,32 @@ INFO: [Synth 8-638] synthesizing module 'cu' [C:/Users/User/Desktop/MyCPU/MyCPU.
 	Parameter jrnz bound to: 5'b11011 
 	Parameter nop bound to: 5'b11110 
 	Parameter halt bound to: 5'b11111 
-INFO: [Synth 8-256] done synthesizing module 'cu' (4#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
-INFO: [Synth 8-638] synthesizing module 'instreg' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
-INFO: [Synth 8-256] done synthesizing module 'instreg' (5#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
-INFO: [Synth 8-638] synthesizing module 'pc' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
-WARNING: [Synth 8-5788] Register pc_value_reg in module pc is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:36]
-INFO: [Synth 8-256] done synthesizing module 'pc' (6#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
-INFO: [Synth 8-638] synthesizing module 'sp' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
-INFO: [Synth 8-256] done synthesizing module 'sp' (7#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
-INFO: [Synth 8-638] synthesizing module 'flags' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
-INFO: [Synth 8-256] done synthesizing module 'flags' (8#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
-INFO: [Synth 8-638] synthesizing module 'regarray' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
+INFO: [Synth 8-256] done synthesizing module 'cu' (4#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
+INFO: [Synth 8-638] synthesizing module 'instreg' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'instreg' (5#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
+INFO: [Synth 8-638] synthesizing module 'pc' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
+WARNING: [Synth 8-5788] Register pc_value_reg in module pc is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:36]
+INFO: [Synth 8-256] done synthesizing module 'pc' (6#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
+INFO: [Synth 8-638] synthesizing module 'sp' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
+INFO: [Synth 8-256] done synthesizing module 'sp' (7#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
+INFO: [Synth 8-638] synthesizing module 'flags' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
+INFO: [Synth 8-256] done synthesizing module 'flags' (8#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
+INFO: [Synth 8-638] synthesizing module 'regarray' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
 	Parameter num bound to: 8 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:65]
-INFO: [Synth 8-256] done synthesizing module 'regarray' (9#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
-INFO: [Synth 8-638] synthesizing module 'mar' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:67]
+INFO: [Synth 8-256] done synthesizing module 'regarray' (9#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
+INFO: [Synth 8-638] synthesizing module 'mar' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
 	Parameter pc bound to: 2'b00 
 	Parameter dr bound to: 2'b01 
 	Parameter sr bound to: 2'b10 
 	Parameter sp bound to: 2'b11 
-INFO: [Synth 8-256] done synthesizing module 'mar' (10#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
-INFO: [Synth 8-638] synthesizing module 'mdr' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mar' (10#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
+INFO: [Synth 8-638] synthesizing module 'mdr' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
 	Parameter regin1 bound to: 2'b01 
 	Parameter regin2 bound to: 2'b10 
 	Parameter memin bound to: 2'b11 
-INFO: [Synth 8-256] done synthesizing module 'mdr' (11#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
-INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mdr' (11#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
 	Parameter adc bound to: 5'b00000 
 	Parameter sbb bound to: 5'b00001 
 	Parameter mul bound to: 5'b00010 
@@ -104,29 +105,32 @@ INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/User/Desktop/MyCPU/MyCPU
 	Parameter movih bound to: 5'b10000 
 	Parameter clc bound to: 5'b11100 
 	Parameter stc bound to: 5'b11101 
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:32]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:33]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:34]
-INFO: [Synth 8-256] done synthesizing module 'alu' (12#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
-INFO: [Synth 8-638] synthesizing module 'alu_in_contrl' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:29]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:30]
-INFO: [Synth 8-256] done synthesizing module 'alu_in_contrl' (13#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
-INFO: [Synth 8-256] done synthesizing module 'risc_cpu' (14#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
-INFO: [Synth 8-638] synthesizing module 'addr_decode' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
-INFO: [Synth 8-256] done synthesizing module 'addr_decode' (15#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
-INFO: [Synth 8-638] synthesizing module 'rom' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-256] done synthesizing module 'rom' (16#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-638] synthesizing module 'ram' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
-INFO: [Synth 8-256] done synthesizing module 'ram' (17#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
-INFO: [Synth 8-638] synthesizing module 'display_control' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
-WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
-WARNING: [Synth 8-567] referenced signal 'ir' should be on the sensitivity list [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
-INFO: [Synth 8-256] done synthesizing module 'display_control' (18#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
-INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
-INFO: [Synth 8-226] default block is never used [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:29]
-INFO: [Synth 8-256] done synthesizing module 'display' (19#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
-INFO: [Synth 8-256] done synthesizing module 'testtop' (20#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:32]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:33]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:34]
+INFO: [Synth 8-256] done synthesizing module 'alu' (12#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
+INFO: [Synth 8-638] synthesizing module 'alu_in_contrl' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:29]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:30]
+INFO: [Synth 8-256] done synthesizing module 'alu_in_contrl' (13#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
+INFO: [Synth 8-256] done synthesizing module 'risc_cpu' (14#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
+INFO: [Synth 8-638] synthesizing module 'addr_decode' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
+INFO: [Synth 8-256] done synthesizing module 'addr_decode' (15#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
+INFO: [Synth 8-638] synthesizing module 'rom' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
+INFO: [Synth 8-256] done synthesizing module 'rom' (16#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
+INFO: [Synth 8-638] synthesizing module 'ram' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ram' (17#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-638] synthesizing module 'display_control' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
+WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
+WARNING: [Synth 8-567] referenced signal 'ir' should be on the sensitivity list [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
+INFO: [Synth 8-256] done synthesizing module 'display_control' (18#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:29]
+INFO: [Synth 8-256] done synthesizing module 'display' (19#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
+INFO: [Synth 8-638] synthesizing module 'integralaudio' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:23]
+INFO: [Synth 8-3876] $readmem data file 'E:/steve/Documents/audio.txt' is read successfully [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:49]
+INFO: [Synth 8-256] done synthesizing module 'integralaudio' (20#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:23]
+INFO: [Synth 8-256] done synthesizing module 'testtop' (21#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
 WARNING: [Synth 8-3331] design ram has unconnected port addr[15]
 WARNING: [Synth 8-3331] design ram has unconnected port addr[14]
 WARNING: [Synth 8-3331] design ram has unconnected port addr[13]
@@ -141,7 +145,7 @@ WARNING: [Synth 8-3331] design cu has unconnected port flag_in[4]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[1]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 323.785 ; gain = 113.262
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 322.020 ; gain = 111.492
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -151,41 +155,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 323.785 ; gain = 113.262
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 322.020 ; gain = 111.492
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
-Finished Parsing XDC File [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/testtop_propImpl.xdc].
+Parsing XDC File [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
+Finished Parsing XDC File [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/testtop_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/testtop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 641.906 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 640.250 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 641.906 ; gain = 431.383
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 640.250 ; gain = 429.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 641.906 ; gain = 431.383
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 640.250 ; gain = 429.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 641.906 ; gain = 431.383
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 640.250 ; gain = 429.723
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "fetch" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-4471] merging register 'reg_read1_reg' into 'reg_read2_reg' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:92]
+INFO: [Synth 8-4471] merging register 'reg_read1_reg' into 'reg_read2_reg' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:92]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'cu'
 INFO: [Synth 8-5546] ROM "reg_write2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "reg_write1" is below threshold of ROM address width. It will be mapped to LUTs
@@ -209,10 +213,11 @@ INFO: [Synth 8-5546] ROM "sp_push" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "sp_pop" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "reg_read2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ir_ena" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "run" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:41]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:39]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:39]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:41]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:39]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:39]
 INFO: [Synth 8-5544] ROM "register_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "register_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "register_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -226,6 +231,9 @@ INFO: [Synth 8-5546] ROM "flag_out" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-5545] ROM "flag_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "index" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "n1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_48khz" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "n2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -241,7 +249,7 @@ INFO: [Synth 8-5545] ROM "index" won't be mapped to RAM because address size (32
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'cu'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 641.906 ; gain = 431.383
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 640.250 ; gain = 429.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -254,7 +262,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 10    
 	   2 Input     17 Bit       Adders := 2     
 	   3 Input     17 Bit       Adders := 2     
 	   3 Input     16 Bit       Adders := 1     
@@ -262,17 +270,19 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input     16 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 5     
 	               16 Bit    Registers := 15    
-	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---ROMs : 
+	                              ROMs := 1     
 +---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
-	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 10    
 	   2 Input     16 Bit        Muxes := 20    
 	   4 Input     16 Bit        Muxes := 12    
-	  52 Input     16 Bit        Muxes := 1     
+	  40 Input     16 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 5     
 	  20 Input      8 Bit        Muxes := 1     
@@ -283,10 +293,10 @@ Detailed RTL Component Info :
 	   9 Input      2 Bit        Muxes := 8     
 	   2 Input      2 Bit        Muxes := 2     
 	   8 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 25    
+	   8 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 26    
 	   3 Input      1 Bit        Muxes := 1     
-	   9 Input      1 Bit        Muxes := 32    
-	   8 Input      1 Bit        Muxes := 6     
+	   9 Input      1 Bit        Muxes := 33    
 	   4 Input      1 Bit        Muxes := 10    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -301,7 +311,8 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     24 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module clock 
 Detailed RTL Component Info : 
@@ -323,7 +334,7 @@ Detailed RTL Component Info :
 	   9 Input      2 Bit        Muxes := 8     
 	   2 Input      2 Bit        Muxes := 2     
 	   8 Input      2 Bit        Muxes := 1     
-	   9 Input      1 Bit        Muxes := 32    
+	   9 Input      1 Bit        Muxes := 33    
 	   8 Input      1 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 2     
 Module instreg 
@@ -396,7 +407,7 @@ Detailed RTL Component Info :
 Module rom 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  52 Input     16 Bit        Muxes := 1     
+	  40 Input     16 Bit        Muxes := 1     
 Module display_control 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -406,6 +417,19 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
+Module integralaudio 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -427,7 +451,10 @@ INFO: [Synth 8-5545] ROM "flag_out" won't be mapped to RAM because address size 
 DSP Report: Generating DSP alu_out0, operation Mode is: A*B.
 DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
 INFO: [Synth 8-5545] ROM "CLOCK/fetch" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "O120" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "O130" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "n1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_48khz" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "n2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "DISCON/index" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[7]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[6]
@@ -435,94 +462,99 @@ WARNING: [Synth 8-3331] design cu has unconnected port flag_in[5]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[4]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[1]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[0]
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[0]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[1]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[2]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[3]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[4]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[5]' (FDE) to 'MyCPU/DIVIDER/num_reg[13]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[6]' (FDE) to 'MyCPU/DIVIDER/num_reg[14]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[7]' (FDE) to 'MyCPU/DIVIDER/num_reg[10]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[9]' (FDE) to 'MyCPU/DIVIDER/num_reg[14]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[0]' (FDE) to 'MyCPU/DIVIDER/num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[1]' (FDE) to 'MyCPU/DIVIDER/num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[2]' (FDE) to 'MyCPU/DIVIDER/num_reg[12]'
 INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[11]' (FDE) to 'MyCPU/DIVIDER/num_reg[22]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[12]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[23]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[24]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[25]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[26]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[27]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[28]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[29]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[12]' (FDE) to 'MyCPU/DIVIDER/num_reg[23]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[23]' (FDE) to 'MyCPU/DIVIDER/num_reg[24]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[24]' (FDE) to 'MyCPU/DIVIDER/num_reg[25]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[25]' (FDE) to 'MyCPU/DIVIDER/num_reg[26]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[26]' (FDE) to 'MyCPU/DIVIDER/num_reg[27]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[27]' (FDE) to 'MyCPU/DIVIDER/num_reg[28]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[28]' (FDE) to 'MyCPU/DIVIDER/num_reg[29]'
+INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[29]' (FDE) to 'MyCPU/DIVIDER/num_reg[30]'
 INFO: [Synth 8-3886] merging instance 'MyCPU/DIVIDER/num_reg[30]' (FDE) to 'MyCPU/DIVIDER/num_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MyCPU/DIVIDER/num_reg[31] )
-INFO: [Synth 8-3886] merging instance 'reg_out2_reg__0i_68' (FDE) to 'reg_out2_reg__0i_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_36' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_67' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_35' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_66' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_34' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_65' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_33' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_64' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_32' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_63' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_31' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_62' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_30' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_61' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_29' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_60' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_28' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_59' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_27' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_58' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_26' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_57' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_25' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_56' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_24' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_55' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_23' (FDE) to 'REGARRAYi_54'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_54' (FDE) to 'REGARRAYi_22'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_22' (FDE) to 'REGARRAYi_21'
-INFO: [Synth 8-3886] merging instance 'REGARRAYi_53' (FDE) to 'REGARRAYi_21'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_116' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_132' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_124' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_140' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_114' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_130' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_122' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_138' (FDPE) to 'mem_out_reg__0i_112'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_112' (FDPE) to 'mem_out_reg__0i_120'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_128' (FDPE) to 'mem_out_reg__0i_120'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_120' (FDPE) to 'mem_out_reg__0i_136'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_136' (FDPE) to 'mem_out_reg__0i_134'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_110' (FDPE) to 'mem_out_reg__0i_134'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_126' (FDPE) to 'mem_out_reg__0i_134'
-INFO: [Synth 8-3886] merging instance 'mem_out_reg__0i_118' (FDPE) to 'mem_out_reg__0i_134'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_204' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_202' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_200' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_198' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_196' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_194' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_192' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_190' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_188' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_186' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_184' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_182' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_180' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_178' (FDPE) to 'reg_out_reg__0i_176'
-INFO: [Synth 8-3886] merging instance 'reg_out_reg__0i_176' (FDPE) to 'reg_out_reg__0i_174'
-WARNING: [Synth 8-3332] Sequential element (MyCPU/DIVIDER/num_reg[31]) is unused and will be removed from module testtop.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MyCPU/\DIVIDER/num_reg[31] )
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out2_reg__0i_82' (FDE) to 'MyCPU/reg_out2_reg__0i_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_50' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_81' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_49' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_80' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_48' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_79' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_47' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_78' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_46' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_77' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_45' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_76' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_44' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_75' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_43' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_74' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_42' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_73' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_41' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_72' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_40' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_71' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_39' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_70' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_38' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_69' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_37' (FDE) to 'MyCPU/REGARRAYi_68'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_68' (FDE) to 'MyCPU/REGARRAYi_36'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_36' (FDE) to 'MyCPU/REGARRAYi_35'
+INFO: [Synth 8-3886] merging instance 'MyCPU/REGARRAYi_67' (FDE) to 'MyCPU/REGARRAYi_35'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_102' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_110' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_106' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_114' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_101' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_109' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_105' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_113' (FDPE) to 'MyCPU/mem_out_reg__0i_100'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_100' (FDPE) to 'MyCPU/mem_out_reg__0i_104'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_108' (FDPE) to 'MyCPU/mem_out_reg__0i_104'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_104' (FDPE) to 'MyCPU/mem_out_reg__0i_112'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_112' (FDPE) to 'MyCPU/mem_out_reg__0i_111'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_99' (FDPE) to 'MyCPU/mem_out_reg__0i_111'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_107' (FDPE) to 'MyCPU/mem_out_reg__0i_111'
+INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_103' (FDPE) to 'MyCPU/mem_out_reg__0i_111'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_146' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_145' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_144' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_143' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_142' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_141' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_140' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_139' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_138' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_137' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_136' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_135' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_134' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_133' (FDPE) to 'MyCPU/reg_out_reg__0i_132'
+INFO: [Synth 8-3886] merging instance 'MyCPU/reg_out_reg__0i_132' (FDPE) to 'MyCPU/reg_out_reg__0i_131'
+WARNING: [Synth 8-3332] Sequential element (DIVIDER/num_reg[31]) is unused and will be removed from module risc_cpu.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 641.906 ; gain = 431.383
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 640.250 ; gain = 429.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+
+ROM:
++--------------+------------+---------------+----------------+
+|Module Name   | RTL Object | Depth x Width | Implemented As | 
++--------------+------------+---------------+----------------+
+|integralaudio | f          | 32x8          | LUT            | 
+|integralaudio | k_reg      | 256x8         | Block RAM      | 
+|integralaudio | f          | 32x8          | LUT            | 
+|integralaudio | k_reg      | 256x8         | Block RAM      | 
++--------------+------------+---------------+----------------+
+
 
 Distributed RAM: Preliminary Mapping  Report (see note below)
 +------------+-------------+-----------+----------------------+---------------------------------------------------------------+
@@ -557,10 +589,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 650.328 ; gain = 439.805
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 649.574 ; gain = 439.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 711.344 ; gain = 500.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -571,8 +603,9 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance k_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -596,7 +629,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -609,7 +642,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -621,25 +654,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -655,60 +688,62 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |BUFG      |     3|
-|2     |CARRY4    |   134|
+|1     |BUFG      |     4|
+|2     |CARRY4    |   377|
 |3     |DSP48E1   |     1|
-|4     |LUT1      |   166|
-|5     |LUT2      |   268|
-|6     |LUT3      |   309|
-|7     |LUT4      |    96|
-|8     |LUT5      |   206|
-|9     |LUT6      |   270|
-|10    |MUXF7     |    46|
+|4     |LUT1      |   236|
+|5     |LUT2      |   859|
+|6     |LUT3      |   523|
+|7     |LUT4      |   137|
+|8     |LUT5      |   228|
+|9     |LUT6      |   317|
+|10    |MUXF7     |    43|
 |11    |RAM128X1S |    16|
 |12    |RAM16X1S  |    32|
 |13    |RAM32X1S  |    16|
 |14    |RAM64X1S  |    16|
-|15    |FDCE      |    55|
-|16    |FDPE      |     5|
-|17    |FDRE      |   422|
-|18    |FDSE      |     2|
-|19    |LDC       |     2|
-|20    |IBUF      |     6|
-|21    |OBUF      |    17|
-|22    |OBUFT     |    16|
+|15    |RAMB18E1  |     1|
+|16    |FDCE      |    55|
+|17    |FDPE      |     5|
+|18    |FDRE      |   525|
+|19    |FDSE      |     2|
+|20    |LDC       |     2|
+|21    |IBUF      |     7|
+|22    |OBUF      |    19|
+|23    |OBUFT     |    16|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+-------------+----------------+------+
 |      |Instance     |Module          |Cells |
 +------+-------------+----------------+------+
-|1     |top          |                |  2104|
+|1     |top          |                |  3437|
 |2     |  DISCON     |display_control |    89|
-|3     |  MyCPU      |risc_cpu        |  1841|
-|4     |    ALU      |alu             |   206|
-|5     |    ALUCON   |alu_in_contrl   |   493|
-|6     |    CLOCK    |clock           |   114|
-|7     |    CU       |cu              |   101|
-|8     |    CUCON    |cu_contrl       |     3|
-|9     |    DIVIDER  |divider         |   110|
-|10    |    FLAGS    |flags           |    15|
-|11    |    INSREG   |instreg         |   234|
-|12    |    MAR      |mar             |   128|
-|13    |    MDR      |mdr             |    64|
-|14    |    PC       |pc              |    36|
-|15    |    REGARRAY |regarray        |   321|
-|16    |    SP       |sp              |    16|
-|17    |  RAM        |ram__4          |    97|
+|3     |  IAUD       |integralaudio   |  1303|
+|4     |  MyCPU      |risc_cpu        |  1866|
+|5     |    ALU      |alu             |   211|
+|6     |    ALUCON   |alu_in_contrl   |   494|
+|7     |    CLOCK    |clock           |   114|
+|8     |    CU       |cu              |   101|
+|9     |    CUCON    |cu_contrl       |     3|
+|10    |    DIVIDER  |divider         |   126|
+|11    |    FLAGS    |flags           |    15|
+|12    |    INSREG   |instreg         |   241|
+|13    |    MAR      |mar             |   121|
+|14    |    MDR      |mdr             |    64|
+|15    |    PC       |pc              |    36|
+|16    |    REGARRAY |regarray        |   324|
+|17    |    SP       |sp              |    16|
+|18    |  RAM        |ram__4          |    97|
 +------+-------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 712.582 ; gain = 183.156
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 712.582 ; gain = 502.059
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 713.137 ; gain = 184.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 713.137 ; gain = 502.609
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 223 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 468 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -721,9 +756,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1S => RAM64X1S (RAMS64E): 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-209 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+216 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 712.582 ; gain = 502.059
-INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 712.582 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 17 16:27:28 2017...
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 713.137 ; gain = 502.609
+INFO: [Common 17-1381] The checkpoint 'C:/Users/steve/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 713.137 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 21 09:41:52 2017...

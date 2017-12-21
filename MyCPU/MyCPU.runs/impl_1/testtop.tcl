@@ -52,12 +52,12 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/User/Desktop/MyCPU/MyCPU.cache/wt [current_project]
-  set_property parent.project_path C:/Users/User/Desktop/MyCPU/MyCPU.xpr [current_project]
-  set_property ip_output_repo C:/Users/User/Desktop/MyCPU/MyCPU.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/steve/Desktop/MyCPU/MyCPU.cache/wt [current_project]
+  set_property parent.project_path C:/Users/steve/Desktop/MyCPU/MyCPU.xpr [current_project]
+  set_property ip_output_repo C:/Users/steve/Desktop/MyCPU/MyCPU.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.dcp
-  read_xdc C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc
+  add_files -quiet C:/Users/steve/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.dcp
+  read_xdc C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc
   link_design -top testtop -part xc7a100tcsg324-1
   write_hwdef -file testtop.hwdef
   close_msg_db -file init_design.pb

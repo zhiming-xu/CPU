@@ -33,9 +33,11 @@ module regarray(
     input [15:0] data_in2,
     input [15:0] data_in3,
     output reg [15:0] reg_out1,//output data from port 1 or 2
-    output reg [15:0] reg_out2
+    output reg [15:0] reg_out2,
+    output [15:0] port
     );
     reg [15:0] register [7:0];
+    assign port = register[7];
     parameter num=8;//number of registers
     integer i;
     always @ (posedge clk)

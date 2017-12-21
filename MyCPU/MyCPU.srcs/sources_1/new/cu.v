@@ -105,7 +105,7 @@ module cu(
         casex(state)
         4'b0000:
         begin
-            run=1;
+            run=1&(op!=halt);
             {pc_inc, pc_ena, ir_ena, reg_read1,
             reg_read2, reg_write1, reg_write2, alu_data_sel}=8'h00;
             {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b0000000;
@@ -146,6 +146,7 @@ module cu(
         end
         4'b0101:
         begin
+            run=0;
             //if(op==adc||op==sbb||op==mul||op==div||op==orr||op==andd||op==xorr||
             //op==test||op==cmp||op==nott||op==shl||op==sar||op==shr||op==mov)
             casex(op)
@@ -227,7 +228,6 @@ module cu(
             //else if(op==halt)
             halt:
             begin
-                run=0;
                 {pc_inc, pc_ena, ir_ena, reg_read1,
                 reg_read2, reg_write1, reg_write2, alu_data_sel}=8'h00;
                 {alu_ena, hlt, io, flag_set, wr_m, rd_m}=7'b0100000;
