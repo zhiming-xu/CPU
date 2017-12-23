@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module testtop(clkin, reset, hlt, sw, seg, an, clkcon,/*This is seg_sel*/run,
+module testtop(clkin, reset, hlt, sw, seg, an, clkcon,/*This is seg_sel*/run, hand,
 AUD_PWM, AUD_SD,
  //for debug
 //pc_ena, cu_ena, fetch, clock4,
@@ -28,6 +28,7 @@ AUD_PWM, AUD_SD,
 led);
 input clkin, reset;
 input [2:0] clkcon; 
+input hand;
 //output [6:0] seg;
 
 //output [7:0] seg_sel; 
@@ -63,10 +64,10 @@ wire mdr_ena;
 wire ir_ena;
 wire [3:0] state;
 wire [15:0] port;
-assign led=outdata;//outdata;
+assign led=port;//outdata;
 
 risc_cpu MyCPU(.clkin(clkin), .reset(reset), .addr(addr), .indata(indata), .outdata(outdata),
-.wr_m(wr), .rd_m(rd), .hlt(hlt), .io(io), .sw(sw), .clkcon(clkcon), .run(run), .port(port),
+.wr_m(wr), .rd_m(rd), .hlt(hlt), .io(io), .sw(sw), .clkcon(clkcon), .run(run), .port(port), .hand(hand),
 //for debug 
 .pc(counter), .ir(instr), .cu_ena(cu_ena), .fetch(fetch), .pc_ena(pc_ena), .clk(clock4),
 .mar_ena(mar_ena), .mdr_ena(mdr_ena), .ir_ena(ir_ena), .state(state));
@@ -81,6 +82,6 @@ display_control DISCON(.clk(clkin), .dis(dis), .seg_sel(an), .pc(counter), .ir(i
 
 display DISPLAY(.dis(dis), .seg(seg));
 
-integralaudio IAUD(.clk(clkin), .port(port[4:0]), .AUD_PWM(AUD_PWM), .AUD_SD(AUD_SD));
+integralaudio IAUD(.clk(clkin), .portin(port[4:0]), .AUD_PWM(AUD_PWM), .AUD_SD(AUD_SD), .sw(sw));
 
 endmodule

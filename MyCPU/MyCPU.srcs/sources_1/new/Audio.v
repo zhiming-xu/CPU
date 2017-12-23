@@ -22,10 +22,13 @@
 
 module integralaudio(
     input clk,  //100MHz
-    input [4:0] port,
+    input [4:0] portin,
+    input [1:0] sw,
     output AUD_PWM,
     output AUD_SD
     );
+    wire [4:0] port;
+    assign port=(sw==2'b01)?portin:5'bzzzzz;
     //clock
     assign AUD_SD=1;
     reg clk_48khz=0;
@@ -46,7 +49,7 @@ module integralaudio(
         integer n, k;
         integer f=0;
         initial begin
-            $readmemh("E:/steve/Documents/audio.txt", sin, 0, 255);
+            $readmemh("C:/Users/User/Downloads/audio.txt", sin, 0, 255);
         end
         
         always @ (posedge clk_48khz)

@@ -2,7 +2,10 @@
 set_property PACKAGE_PIN E3 [get_ports clkin]							
 set_property IOSTANDARD LVCMOS33 [get_ports clkin]
 create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clkin]
-
+#Manual clock
+#set_property CLOCK_DEDICATED_ROUTE FALSE {get_nets hand}
+set_property PACKAGE_PIN T16 [get_ports hand]						
+	set_property IOSTANDARD LVCMOS33 [get_ports hand]
 #CPU reset
 set_property PACKAGE_PIN C12 [get_ports reset]				
 set_property IOSTANDARD LVCMOS33 [get_ports reset]

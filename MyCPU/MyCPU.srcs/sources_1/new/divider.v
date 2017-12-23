@@ -24,7 +24,7 @@ module divider(
     input rst,
     input [2:0] clkcon,
     input clkin,        //100MHz
-    output reg clkout=0   //?Hz
+    output reg clkout=0   //Hz
     );
     integer cnt=0;
     integer num=30_00000;
@@ -40,13 +40,13 @@ module divider(
                 3'b010:
                 begin num=10_00000; cnt=0; end
                 3'b011:
-                begin num=4_00000; cnt=0; end
+                begin num=3_20000; cnt=0; end
                 3'b100:
                 begin num=1_00000; cnt=0; end
                 3'b101:
                 begin num=5_0000; cnt=0; end
                 3'b110:
-                begin num=1_000; cnt=0; end
+                begin num=700; cnt=0; end
             endcase
         else
         begin
