@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date         : Thu Dec 21 20:58:11 2017
+| Date         : Fri Dec 22 15:50:30 2017
 | Host         : Steven-Surface running 64-bit major release  (build 9200)
 | Command      : report_utilization -file testtop_utilization_synth.rpt -pb testtop_utilization_synth.pb
 | Design       : testtop
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 2218 |     0 |     63400 |  3.50 |
-|   LUT as Logic             | 2122 |     0 |     63400 |  3.35 |
+| Slice LUTs*                | 2219 |     0 |     63400 |  3.50 |
+|   LUT as Logic             | 2123 |     0 |     63400 |  3.35 |
 |   LUT as Memory            |   96 |     0 |     19000 |  0.51 |
 |     LUT as Distributed RAM |   96 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
@@ -150,14 +150,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |  848 |                 LUT |
+| LUT2     |  849 |                 LUT |
 | LUT3     |  550 |                 LUT |
 | FDRE     |  526 |        Flop & Latch |
 | CARRY4   |  385 |          CarryLogic |
 | LUT6     |  313 |                 LUT |
 | LUT1     |  237 |                 LUT |
 | LUT5     |  233 |                 LUT |
-| LUT4     |  133 |                 LUT |
+| LUT4     |  132 |                 LUT |
 | FDCE     |   55 |        Flop & Latch |
 | MUXF7    |   51 |               MuxFx |
 | RAMS64E  |   48 |  Distributed Memory |
