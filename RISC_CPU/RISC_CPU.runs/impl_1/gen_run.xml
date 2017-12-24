@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1512628523">
+  <File Type="PWROPT-DRC" Name="nexys4_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="nexys4_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="nexys4_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="nexys4_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="nexys4.tcl"/>
+  <File Type="OPT-HWDEF" Name="nexys4.hwdef"/>
+  <File Type="RDI-RDI" Name="nexys4.vdi"/>
+  <File Type="OPT-DCP" Name="nexys4_opt.dcp"/>
+  <File Type="OPT-DRC" Name="nexys4_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="nexys4_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="nexys4_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="nexys4_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="nexys4_placed.dcp"/>
+  <File Type="PLACE-IO" Name="nexys4_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="nexys4_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="nexys4_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="nexys4_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="nexys4_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="nexys4_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="nexys4_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="nexys4_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="nexys4_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="nexys4_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="nexys4_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="nexys4_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="nexys4_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="nexys4_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="nexys4_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="nexys4_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="nexys4_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="nexys4_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="nexys4.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="nexys4_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="nexys4.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="nexys4_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="nexys4.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="nexys4_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="nexys4.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="nexys4_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="nexys4_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="nexys4_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="nexys4_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="nexys4_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="nexys4_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="nexys4_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="nexys4_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="nexys4_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="nexys4_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="nexys4_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="nexys4_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="nexys4_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="nexys4_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="nexys4_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="nexys4.bit"/>
+  <File Type="BITSTR-RBT" Name="nexys4.rbt"/>
+  <File Type="BITSTR-NKY" Name="nexys4.nky"/>
+  <File Type="BITSTR-BMM" Name="nexys4_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="nexys4.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="nexys4.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../CPU/reg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/ram.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/mainrom.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/decisionrom.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/controlrom.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/ulogic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/regfile.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/prog_cntr.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/memory.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/alu.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/UART_TX_CTRL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/UART_RX_CTRL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/debouncer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/cpu.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/nexys4.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CPU/nexys4_test.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="nexys4"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../CPU/Nexys4DDR_Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

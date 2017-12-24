@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Dec 22 09:55:18 2017
+# Process ID: 2296
+# Current directory: C:/Users/steve/Desktop/AudioInt/AudioInt.runs/impl_1
+# Command line: vivado.exe -log IntegralAudio.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source IntegralAudio.tcl -notrace
+# Log file: C:/Users/steve/Desktop/AudioInt/AudioInt.runs/impl_1/IntegralAudio.vdi
+# Journal file: C:/Users/steve/Desktop/AudioInt/AudioInt.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source IntegralAudio.tcl -notrace

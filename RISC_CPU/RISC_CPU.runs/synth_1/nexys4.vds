@@ -1,0 +1,766 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Dec 07 14:35:25 2017
+# Process ID: 7900
+# Current directory: C:/Users/steve/Desktop/RISC_CPU/RISC_CPU.runs/synth_1
+# Command line: vivado.exe -log nexys4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source nexys4.tcl
+# Log file: C:/Users/steve/Desktop/RISC_CPU/RISC_CPU.runs/synth_1/nexys4.vds
+# Journal file: C:/Users/steve/Desktop/RISC_CPU/RISC_CPU.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source nexys4.tcl -notrace
+Command: synth_design -top nexys4 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14772 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 282.633 ; gain = 72.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'nexys4' [C:/Users/steve/Desktop/CPU/nexys4.vhd:43]
+	Parameter ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'cpu' declared at 'C:/Users/steve/Desktop/CPU/cpu.vhd:13' bound to instance 'the_cpu' of component 'cpu' [C:/Users/steve/Desktop/CPU/nexys4.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'cpu' [C:/Users/steve/Desktop/CPU/cpu.vhd:30]
+	Parameter ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'immed_reg' of component 'reg' [C:/Users/steve/Desktop/CPU/cpu.vhd:173]
+INFO: [Synth 8-638] synthesizing module '\reg ' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module '\reg ' (1#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'instr_reg' of component 'reg' [C:/Users/steve/Desktop/CPU/cpu.vhd:180]
+INFO: [Synth 8-3491] module 'prog_cntr' declared at 'C:/Users/steve/Desktop/CPU/prog_cntr.vhd:9' bound to instance 'pc' of component 'prog_cntr' [C:/Users/steve/Desktop/CPU/cpu.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'prog_cntr' [C:/Users/steve/Desktop/CPU/prog_cntr.vhd:25]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'pcreg' of component 'reg' [C:/Users/steve/Desktop/CPU/prog_cntr.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized2' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized2' (1#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+INFO: [Synth 8-226] default block is never used [C:/Users/steve/Desktop/CPU/prog_cntr.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'prog_cntr' (2#1) [C:/Users/steve/Desktop/CPU/prog_cntr.vhd:25]
+INFO: [Synth 8-3491] module 'regfile' declared at 'C:/Users/steve/Desktop/CPU/regfile.vhd:6' bound to instance 'regs' of component 'regfile' [C:/Users/steve/Desktop/CPU/cpu.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'regfile' [C:/Users/steve/Desktop/CPU/regfile.vhd:31]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r0' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized4' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized4' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r1' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized6' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized6' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r2' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized8' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized8' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r3' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized10' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized10' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r4' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized12' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized12' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r5' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized14' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized14' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r6' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized16' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized16' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'r7' of component 'reg' [C:/Users/steve/Desktop/CPU/regfile.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized18' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized18' (2#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'regfile' (3#1) [C:/Users/steve/Desktop/CPU/regfile.vhd:31]
+INFO: [Synth 8-3491] module 'alu' declared at 'C:/Users/steve/Desktop/CPU/alu.vhd:7' bound to instance 'alunit' of component 'alu' [C:/Users/steve/Desktop/CPU/cpu.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/steve/Desktop/CPU/alu.vhd:19]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/steve/Desktop/CPU/alu.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'alu' (4#1) [C:/Users/steve/Desktop/CPU/alu.vhd:19]
+INFO: [Synth 8-3491] module 'memory' declared at 'C:/Users/steve/Desktop/CPU/memory.vhd:19' bound to instance 'mem' of component 'memory' [C:/Users/steve/Desktop/CPU/cpu.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'memory' [C:/Users/steve/Desktop/CPU/memory.vhd:35]
+	Parameter ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'mainrom' declared at 'C:/Users/steve/Desktop/CPU/mainrom.vhd:5' bound to instance 'romchip' of component 'mainrom' [C:/Users/steve/Desktop/CPU/memory.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'mainrom' [C:/Users/steve/Desktop/CPU/mainrom.vhd:11]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/steve/Desktop/CPU/mainrom.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'mainrom' (5#1) [C:/Users/steve/Desktop/CPU/mainrom.vhd:11]
+	Parameter ADDR_WIDTH bound to: 14 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'ram' declared at 'C:/Users/steve/Desktop/CPU/ram.vhd:12' bound to instance 'ramchip' of component 'ram' [C:/Users/steve/Desktop/CPU/memory.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'ram' [C:/Users/steve/Desktop/CPU/ram.vhd:24]
+	Parameter ADDR_WIDTH bound to: 14 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ram' (6#1) [C:/Users/steve/Desktop/CPU/ram.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'memory' (7#1) [C:/Users/steve/Desktop/CPU/memory.vhd:35]
+INFO: [Synth 8-3491] module 'ulogic' declared at 'C:/Users/steve/Desktop/CPU/ulogic.vhd:9' bound to instance 'ucode' of component 'ulogic' [C:/Users/steve/Desktop/CPU/cpu.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'ulogic' [C:/Users/steve/Desktop/CPU/ulogic.vhd:34]
+	Parameter CONTROL_WIDTH bound to: 32 - type: integer 
+	Parameter DECISION_WIDTH bound to: 16 - type: integer 
+	Parameter ROM_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'controlrom' declared at 'C:/Users/steve/Desktop/CPU/controlrom.vhd:5' bound to instance 'control' of component 'controlrom' [C:/Users/steve/Desktop/CPU/ulogic.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'controlrom' [C:/Users/steve/Desktop/CPU/controlrom.vhd:11]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/steve/Desktop/CPU/controlrom.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'controlrom' (8#1) [C:/Users/steve/Desktop/CPU/controlrom.vhd:11]
+INFO: [Synth 8-3491] module 'decisionrom' declared at 'C:/Users/steve/Desktop/CPU/decisionrom.vhd:5' bound to instance 'decision' of component 'decisionrom' [C:/Users/steve/Desktop/CPU/ulogic.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'decisionrom' [C:/Users/steve/Desktop/CPU/decisionrom.vhd:11]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/steve/Desktop/CPU/decisionrom.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'decisionrom' (9#1) [C:/Users/steve/Desktop/CPU/decisionrom.vhd:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'reg' declared at 'C:/Users/steve/Desktop/CPU/reg.vhd:7' bound to instance 'microcounter' of component 'reg' [C:/Users/steve/Desktop/CPU/ulogic.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized20' [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized20' (9#1) [C:/Users/steve/Desktop/CPU/reg.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ulogic' (10#1) [C:/Users/steve/Desktop/CPU/ulogic.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (11#1) [C:/Users/steve/Desktop/CPU/cpu.vhd:30]
+	Parameter DEBNC_CLOCKS bound to: 65536 - type: integer 
+	Parameter PORT_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/steve/Desktop/CPU/debouncer.vhd:42' bound to instance 'inst_btn_debounce' of component 'debouncer' [C:/Users/steve/Desktop/CPU/nexys4.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/steve/Desktop/CPU/debouncer.vhd:50]
+	Parameter DEBNC_CLOCKS bound to: 65536 - type: integer 
+	Parameter PORT_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (12#1) [C:/Users/steve/Desktop/CPU/debouncer.vhd:50]
+INFO: [Synth 8-3491] module 'UART_TX_CTRL' declared at 'C:/Users/steve/Desktop/CPU/UART_TX_CTRL.vhd:42' bound to instance 'inst_UART_TX_CTRL' of component 'UART_TX_CTRL' [C:/Users/steve/Desktop/CPU/nexys4.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'UART_TX_CTRL' [C:/Users/steve/Desktop/CPU/UART_TX_CTRL.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'UART_TX_CTRL' (13#1) [C:/Users/steve/Desktop/CPU/UART_TX_CTRL.vhd:50]
+INFO: [Synth 8-3491] module 'UART_RX_CTRL' declared at 'C:/Users/steve/Desktop/CPU/UART_RX_CTRL.vhd:25' bound to instance 'inst_UART_RX_CTRL' of component 'UART_RX_CTRL' [C:/Users/steve/Desktop/CPU/nexys4.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'UART_RX_CTRL' [C:/Users/steve/Desktop/CPU/UART_RX_CTRL.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'UART_RX_CTRL' (14#1) [C:/Users/steve/Desktop/CPU/UART_RX_CTRL.vhd:34]
+INFO: [Synth 8-226] default block is never used [C:/Users/steve/Desktop/CPU/nexys4.vhd:283]
+INFO: [Synth 8-226] default block is never used [C:/Users/steve/Desktop/CPU/nexys4.vhd:303]
+WARNING: [Synth 8-5787] Register sys_clk_reg in module nexys4 is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/steve/Desktop/CPU/nexys4.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'nexys4' (15#1) [C:/Users/steve/Desktop/CPU/nexys4.vhd:43]
+WARNING: [Synth 8-3331] design decisionrom has unconnected port clk
+WARNING: [Synth 8-3331] design controlrom has unconnected port clk
+WARNING: [Synth 8-3331] design mainrom has unconnected port clk
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[8]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[7]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[6]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[5]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[4]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[3]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[2]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[1]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 323.629 ; gain = 113.305
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 323.629 ; gain = 113.305
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/steve/Desktop/CPU/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Blue'. [C:/Users/steve/Desktop/CPU/Nexys4DDR_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/steve/Desktop/CPU/Nexys4DDR_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/steve/Desktop/CPU/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/steve/Desktop/CPU/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/nexys4_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/nexys4_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 638.902 ; gain = 0.004
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 638.902 ; gain = 428.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 638.902 ; gain = 428.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 638.902 ; gain = 428.578
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/CPU/prog_cntr.vhd:57]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/CPU/alu.vhd:56]
+INFO: [Synth 8-5544] ROM "CARRY0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5547] Trying to map ROM "ROM" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5546] ROM "uart_ctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "uart_ctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5547] Trying to map ROM "ROM" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "ROM" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5544] ROM "READY" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "txState" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "bitIndex" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "byte" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'anode_reg' in module 'nexys4'
+INFO: [Synth 8-5587] ROM size for "DIVIDE_RATIO" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5545] ROM "sys_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sseg_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "led_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "SSEG_AN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "anode" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+                 iSTATE4 |                              101 |                              101
+                 iSTATE5 |                              110 |                              110
+                 iSTATE6 |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'anode_reg' using encoding 'sequential' in module 'nexys4'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 638.902 ; gain = 428.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 5     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 11    
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   7 Input     28 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 6     
+	   2 Input     16 Bit        Muxes := 10    
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 52    
+	   4 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module nexys4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   7 Input     28 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 5     
+Module reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module prog_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module reg__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized14 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized16 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module reg__parameterized18 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module regfile 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 24    
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Muxes : 
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 4     
+Module mainrom 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module memory 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module reg__parameterized20 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module ulogic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module cpu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 4     
+Module debouncer 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+Module UART_TX_CTRL 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+Module UART_RX_CTRL 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP r0, operation Mode is: A*B.
+DSP Report: operator r0 is absorbed into DSP r0.
+INFO: [Synth 8-5546] ROM "mem/uart_ctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem/uart_ctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5547] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "p_0_out" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5545] ROM "txState" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "byte" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "sseg_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "led_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5587] ROM size for "DIVIDE_RATIO" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5545] ROM "sys_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[8]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[7]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[6]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[5]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[4]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[3]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[2]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[1]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SW[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_UART_TX_CTRL/txData_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_UART_TX_CTRL/txData_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][0]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][1]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][2]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][3]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][4]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][5]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][6]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][7]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][8]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][9]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][10]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][11]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][12]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][13]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][14]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[0][15]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][0]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][1]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][2]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][3]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][4]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][5]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][6]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][7]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][8]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][9]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][10]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][11]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][12]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][13]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][14]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[1][15]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][0]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][1]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][2]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][3]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][4]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][5]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][6]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][7]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][8]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][9]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][10]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][11]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][12]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][13]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][14]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[3][15]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][0]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][1]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][2]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][3]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][4]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][5]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][6]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][7]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][8]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][9]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][10]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][11]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][12]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][13]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][14]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_cntrs_ary_reg[4][15]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_out_reg_reg[4]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_out_reg_reg[3]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_out_reg_reg[1]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_btn_debounce/sig_out_reg_reg[0]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_UART_TX_CTRL/txData_reg[9]) is unused and will be removed from module nexys4.
+WARNING: [Synth 8-3332] Sequential element (inst_UART_TX_CTRL/txData_reg[0]) is unused and will be removed from module nexys4.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 638.902 ; gain = 428.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|mainrom     | p_0_out    | 256x16        | LUT            | 
+|controlrom  | p_0_out    | 256x32        | LUT            | 
+|decisionrom | p_0_out    | 256x16        | LUT            | 
+|cpu         | p_0_out    | 256x16        | LUT            | 
+|cpu         | p_0_out    | 256x32        | LUT            | 
+|cpu         | p_0_out    | 256x16        | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+---------------------+-----------+----------------------+--------------------+
+|Module Name | RTL Object          | Inference | Size (Depth x Width) | Primitives         | 
++------------+---------------------+-----------+----------------------+--------------------+
+|cpu         | mem/ramchip/mem_reg | Implied   | 16 K x 16            | RAM256X1S x 1024   | 
++------------+---------------------+-----------+----------------------+--------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|alu         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 683.137 ; gain = 472.813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 696.109 ; gain = 485.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |   244|
+|3     |DSP48E1   |     1|
+|4     |LUT1      |   273|
+|5     |LUT2      |   195|
+|6     |LUT3      |   595|
+|7     |LUT4      |   102|
+|8     |LUT5      |   293|
+|9     |LUT6      |  1153|
+|10    |MUXF7     |   193|
+|11    |MUXF8     |    64|
+|12    |RAM256X1S |  1024|
+|13    |FDCE      |     1|
+|14    |FDPE      |     1|
+|15    |FDRE      |   405|
+|16    |FDSE      |     6|
+|17    |LDC       |     1|
+|18    |IBUF      |    11|
+|19    |OBUF      |    38|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------+---------------------+------+
+|      |Instance            |Module               |Cells |
++------+--------------------+---------------------+------+
+|1     |top                 |                     |  4602|
+|2     |  inst_UART_RX_CTRL |UART_RX_CTRL         |   126|
+|3     |  inst_UART_TX_CTRL |UART_TX_CTRL         |   133|
+|4     |  inst_btn_debounce |debouncer            |    87|
+|5     |  the_cpu           |cpu                  |  3938|
+|6     |    alunit          |alu                  |     6|
+|7     |    immed_reg       |\reg                 |    41|
+|8     |    instr_reg       |reg_0                |    31|
+|9     |    mem             |memory               |  1473|
+|10    |      ramchip       |ram__3               |  1471|
+|11    |      romchip       |mainrom              |     2|
+|12    |    pc              |prog_cntr            |    20|
+|13    |      pcreg         |reg__parameterized2  |    16|
+|14    |    regs            |regfile              |   562|
+|15    |      r0            |reg__parameterized4  |    20|
+|16    |      r1__0         |reg__parameterized6  |    16|
+|17    |      r2            |reg__parameterized8  |    16|
+|18    |      r3            |reg__parameterized10 |    89|
+|19    |      r4            |reg__parameterized12 |    16|
+|20    |      r5            |reg__parameterized14 |    16|
+|21    |      r6            |reg__parameterized16 |    16|
+|22    |      r7            |reg__parameterized18 |   373|
+|23    |    ucode           |ulogic               |  1546|
+|24    |      microcounter  |reg__parameterized20 |  1539|
++------+--------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 740.730 ; gain = 530.406
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 740.730 ; gain = 215.133
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 740.730 ; gain = 530.406
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1281 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1025 instances were transformed.
+  LDC => LDCE: 1 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 1024 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+143 Infos, 93 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 740.730 ; gain = 530.406
+INFO: [Common 17-1381] The checkpoint 'C:/Users/steve/Desktop/RISC_CPU/RISC_CPU.runs/synth_1/nexys4.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 740.730 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 07 14:36:27 2017...

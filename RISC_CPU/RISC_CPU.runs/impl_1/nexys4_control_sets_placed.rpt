@@ -1,0 +1,160 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Dec 07 14:37:33 2017
+| Host         : Steven-Surface running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file nexys4_control_sets_placed.rpt
+| Design       : nexys4
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    94 |
+| Unused register locations in slices containing registers |    45 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              32 |           19 |
+| No           | No                    | Yes                    |               2 |            2 |
+| No           | Yes                   | No                     |              84 |           25 |
+| Yes          | No                    | No                     |             220 |          143 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              89 |           28 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+---------------------------------------------+-----------------------------------------------+------------------+----------------+
+|          Clock Signal         |                Enable Signal                |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++-------------------------------+---------------------------------------------+-----------------------------------------------+------------------+----------------+
+|  CLK_IBUF_BUFG                |                                             | sys_clk_reg_LDC_i_1_n_1                       |                1 |              1 |
+|  CLK_IBUF_BUFG                |                                             | sys_clk_reg_LDC_i_2_n_1                       |                1 |              1 |
+|  inst_btn_debounce/deb_btn[0] |                                             |                                               |                1 |              1 |
+|  sys_clk_reg_LDC_i_1_n_1      |                                             | sys_clk_reg_LDC_i_2_n_1                       |                1 |              1 |
+|  led_clk_reg_n_1              |                                             | RGB1_Red_i_1_n_1                              |                4 |              5 |
+|  led_clk_reg_n_1              |                                             |                                               |                6 |              7 |
+|  CLK_IBUF_BUFG                |                                             |                                               |                7 |              8 |
+|  CLK_IBUF_BUFG                | inst_UART_RX_CTRL/byte[7]_i_1_n_1           |                                               |                2 |              8 |
+|  CLK_IBUF_BUFG                | inst_UART_RX_CTRL/DATA[7]_i_1_n_1           |                                               |                1 |              8 |
+|  CLK_IBUF_BUFG                | uart_send_reg_n_1                           |                                               |                7 |              8 |
+|  CLK_IBUF_BUFG                | clk_counter[26]_i_1_n_1                     | clk_counter[31]_i_1_n_1                       |                4 |              9 |
+|  CLK_IBUF_BUFG                |                                             | inst_UART_TX_CTRL/bitTmr[0]_i_1_n_1           |                4 |             14 |
+|  CLK_IBUF_BUFG                |                                             | inst_btn_debounce/sig_cntrs_ary[2][0]_i_1_n_1 |                4 |             16 |
+|  CLK_IBUF_BUFG                |                                             | inst_btn_debounce/sig_cntrs_ary[5][0]_i_1_n_1 |                4 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/D_OUT_reg[0]_4[0]         |                                               |               12 |             16 |
+|  n_0_2837_BUFG                |                                             |                                               |                5 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/D_OUT_reg[0]_0[0]         |                                               |                9 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/D_OUT_reg[0]_1[0]         |                                               |               11 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/D_OUT_reg[0]_2[0]         |                                               |               11 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/D_OUT_reg[0]_3[0]         |                                               |               10 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/D_OUT_reg[0]_5[0]         |                                               |               13 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/D_OUT_reg[0]_6[0]         |                                               |               11 |             16 |
+|  n_0_2837_BUFG                | the_cpu/instr_reg/E[0]                      |                                               |               11 |             16 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_0  | inst_btn_debounce/D_OUT_reg[0]                |                6 |             16 |
+|  n_0_2837_BUFG                | the_cpu/im_load                             |                                               |                9 |             16 |
+|  CLK_IBUF_BUFG                | clk_counter[26]_i_1_n_1                     |                                               |                8 |             23 |
+|  n_0_2837_BUFG                | the_cpu/ir_load                             |                                               |               28 |             29 |
+|  CLK_IBUF_BUFG                |                                             | led_clk                                       |                8 |             32 |
+|  CLK_IBUF_BUFG                | inst_UART_TX_CTRL/txBit                     | inst_UART_TX_CTRL/READY                       |                9 |             32 |
+|  CLK_IBUF_BUFG                | inst_UART_RX_CTRL/count0                    | inst_UART_RX_CTRL/count[31]_i_1_n_1           |                9 |             32 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_12 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_13 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_14 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_15 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_16 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_17 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_18 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_19 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_2  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_20 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_21 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_22 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_23 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_24 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_25 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_26 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_27 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_28 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_29 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_3  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_30 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_31 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_32 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_33 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_34 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_35 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_36 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_37 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_38 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_39 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_4  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_40 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_41 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_42 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_43 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_44 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_45 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_46 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_47 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_48 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_49 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_1  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_50 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_51 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_52 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_53 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_54 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_55 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_56 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_57 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_58 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_59 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_5  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_60 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_61 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_62 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_63 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_64 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_7  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_8  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_9  |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_10 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_11 |                                               |               16 |             64 |
+|  n_0_2837_BUFG                | the_cpu/ucode/microcounter/D_OUT_reg[15]_6  |                                               |               16 |             64 |
++-------------------------------+---------------------------------------------+-----------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     4 |
+| 5      |                     1 |
+| 7      |                     1 |
+| 8      |                     4 |
+| 9      |                     1 |
+| 14     |                     1 |
+| 16+    |                    82 |
++--------+-----------------------+
+
+

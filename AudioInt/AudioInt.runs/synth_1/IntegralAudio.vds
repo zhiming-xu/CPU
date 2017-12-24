@@ -1,0 +1,307 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Dec 22 09:54:07 2017
+# Process ID: 23796
+# Current directory: C:/Users/steve/Desktop/AudioInt/AudioInt.runs/synth_1
+# Command line: vivado.exe -log IntegralAudio.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source IntegralAudio.tcl
+# Log file: C:/Users/steve/Desktop/AudioInt/AudioInt.runs/synth_1/IntegralAudio.vds
+# Journal file: C:/Users/steve/Desktop/AudioInt/AudioInt.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source IntegralAudio.tcl -notrace
+Command: synth_design -top IntegralAudio -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24052 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 282.059 ; gain = 72.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'IntegralAudio' [C:/Users/steve/Desktop/AudioInt/AudioInt.srcs/sources_1/new/A.v:23]
+INFO: [Synth 8-3876] $readmem data file 'E:/steve/Documents/audio.txt' is read successfully [C:/Users/steve/Desktop/AudioInt/AudioInt.srcs/sources_1/new/A.v:59]
+INFO: [Synth 8-256] done synthesizing module 'IntegralAudio' (1#1) [C:/Users/steve/Desktop/AudioInt/AudioInt.srcs/sources_1/new/A.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 319.484 ; gain = 109.527
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 319.484 ; gain = 109.527
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/steve/Desktop/AudioInt/AudioInt.srcs/constrs_1/new/Acons.xdc]
+Finished Parsing XDC File [C:/Users/steve/Desktop/AudioInt/AudioInt.srcs/constrs_1/new/Acons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/steve/Desktop/AudioInt/AudioInt.srcs/constrs_1/new/Acons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/IntegralAudio_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/IntegralAudio_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 629.785 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clk_48khz" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "n1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "n2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module IntegralAudio 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "n1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_48khz" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "n2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------+------------+---------------+----------------+
+|Module Name   | RTL Object | Depth x Width | Implemented As | 
++--------------+------------+---------------+----------------+
+|IntegralAudio | f          | 32x9          | LUT            | 
+|IntegralAudio | k_reg      | 256x8         | Block RAM      | 
+|IntegralAudio | f          | 32x9          | LUT            | 
+|IntegralAudio | k_reg      | 256x8         | Block RAM      | 
++--------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance k_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:57 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |   251|
+|3     |LUT1     |   102|
+|4     |LUT2     |   549|
+|5     |LUT3     |   228|
+|6     |LUT4     |    34|
+|7     |LUT5     |    96|
+|8     |LUT6     |    49|
+|9     |RAMB18E1 |     1|
+|10    |FDRE     |    97|
+|11    |IBUF     |     8|
+|12    |OBUF     |     2|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1419|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:57 . Memory (MB): peak = 629.785 ; gain = 419.828
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 629.785 ; gain = 109.527
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 629.785 ; gain = 419.828
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 260 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'IntegralAudio' is not ideal for floorplanning, since the cellview 'IntegralAudio' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 629.785 ; gain = 419.828
+INFO: [Common 17-1381] The checkpoint 'C:/Users/steve/Desktop/AudioInt/AudioInt.runs/synth_1/IntegralAudio.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 629.785 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 22 09:55:09 2017...
