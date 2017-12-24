@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date         : Sat Dec 23 16:38:30 2017
-| Host         : stu49c8b0 running 64-bit Service Pack 1  (build 7601)
+| Date         : Sat Dec 23 21:27:59 2017
+| Host         : stu49c856 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_methodology -file testtop_methodology_drc_routed.rpt -rpx testtop_methodology_drc_routed.rpx
 | Design       : testtop
 | Device       : xc7a100tcsg324-1

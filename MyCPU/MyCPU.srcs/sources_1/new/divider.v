@@ -40,11 +40,11 @@ module divider(
                 3'b010:
                 begin num=10_00000; cnt=0; end
                 3'b011:
-                begin num=3_20000; cnt=0; end
+                begin num=3_50000; cnt=0; end
                 3'b100:
                 begin num=1_00000; cnt=0; end
                 3'b101:
-                begin num=5_0000; cnt=0; end
+                begin num=4_0000; cnt=0; end
                 3'b110:
                 begin num=700; cnt=0; end
             endcase

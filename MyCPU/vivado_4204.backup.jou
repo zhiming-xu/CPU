@@ -2,15 +2,25 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Sat Dec 23 20:46:53 2017
-# Process ID: 6124
+# Start of session at: Sat Dec 23 15:31:02 2017
+# Process ID: 4204
 # Current directory: C:/Users/User/Desktop/MyCPU
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6060 C:\Users\User\Desktop\MyCPU\MyCPU.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3924 C:\Users\User\Desktop\MyCPU\MyCPU.xpr
 # Log file: C:/Users/User/Desktop/MyCPU/vivado.log
 # Journal file: C:/Users/User/Desktop/MyCPU\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/User/Desktop/MyCPU/MyCPU.xpr
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
 open_hw
 connect_hw_server
 open_hw_target
@@ -22,8 +32,51 @@ set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop
 program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
+launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 reset_run impl_1 -prev_step 
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
@@ -31,9 +84,6 @@ set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
 set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
 program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
 set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
 set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
 program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
@@ -52,25 +102,7 @@ set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
 set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
 program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
 set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
 set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
 program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
-program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROGRAM.FILE {C:/Users/User/Desktop/MyCPU/MyCPU.runs/impl_1/testtop.bit} [lindex [get_hw_devices xc7a100t_0] 0]
-program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-disconnect_hw_server localhost:3121

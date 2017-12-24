@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date             : Sat Dec 23 16:38:31 2017
-| Host             : stu49c8b0 running 64-bit Service Pack 1  (build 7601)
+| Date             : Sat Dec 23 21:28:00 2017
+| Host             : stu49c856 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file testtop_power_routed.rpt -pb testtop_power_summary_routed.pb -rpx testtop_power_routed.rpx
 | Design           : testtop
 | Device           : xc7a100tcsg324-1
@@ -51,14 +51,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.002 |        3 |       --- |             --- |
 | Slice Logic              |     0.011 |     3320 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     1950 |     63400 |            3.08 |
+|   LUT as Logic           |     0.010 |     1946 |     63400 |            3.07 |
 |   CARRY4                 |     0.001 |      385 |     15850 |            2.43 |
-|   Register               |    <0.001 |      605 |    126800 |            0.48 |
+|   Register               |    <0.001 |      606 |    126800 |            0.48 |
 |   LUT as Distributed RAM |    <0.001 |       96 |     19000 |            0.51 |
-|   F7/F8 Muxes            |    <0.001 |       54 |     63400 |            0.09 |
+|   F7/F8 Muxes            |    <0.001 |       51 |     63400 |            0.08 |
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   Others                 |     0.000 |       27 |       --- |             --- |
-| Signals                  |     0.012 |     2730 |       --- |             --- |
+| Signals                  |     0.012 |     2734 |       --- |             --- |
 | Block RAM                |     0.000 |      0.5 |       135 |            0.37 |
 | DSPs                     |     0.001 |        1 |       240 |            0.42 |
 | I/O                      |     0.017 |       43 |       210 |           20.48 |
