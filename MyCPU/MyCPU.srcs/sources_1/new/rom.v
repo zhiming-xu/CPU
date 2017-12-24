@@ -39,6 +39,7 @@ module rom(
 //        rom[16'd18]=16'b00101_010_001_00000;
 //        rom[16'd19]=16'b11011_100_0000_0011;
 //        rom[16'd20]=16'b11111_000_0000_0000;
+
        rom[16'd74]=16'b01111_010_0110_0101;    //movil r2, 0110 0101
        rom[16'd75]=16'b10000_010_0000_0000;    //movih r2, 0000 0000
        rom[16'd76]=16'b01111_111_0000_0001;    //movil r7, 0000 0001
@@ -68,8 +69,9 @@ module rom(
         rom[16'd55]=16'b11011_100_000_00100;    //jrnz PC-4
         rom[16'd56]=16'b10011_111_000_00000;    //load M[r0]->r7
         rom[16'd57]=16'b11111_000_000_00000;    //hlt
-        //sum_i=1^100
-       
-    end
+//        //sum_i=1^100
+       //initial begin
+         //   $readmemh("C:/Users/steve/Desktop/tmp.txt", rom, 0, 255);
+        end
     assign data=(read&&ena)?rom[addr]:16'hzzzz;
 endmodule
