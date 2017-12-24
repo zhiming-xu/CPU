@@ -49,7 +49,7 @@ module integralaudio(
         integer n, k;
         integer f=0;
         initial begin
-            $readmemh("E:/steve/Documents/audio.txt", sin, 0, 255);
+            $readmemh("C:/Users/User/Downloads/audio.txt", sin, 0, 255);
         end
         
         always @ (posedge clk_48khz)
