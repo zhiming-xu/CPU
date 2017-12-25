@@ -1,0 +1,80 @@
+\documentclass[titlepage, 11pt]{article}
+\usepackage[fntef]{ctexcap}
+\usepackage{txfonts}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage{txfonts}
+\usepackage{clrscode3e}
+\CTEXsetup[name={第,节},number={\chinese{section}}]{section}
+\CTEXsetup[number={\chinese{subsection}}]{subsection}
+%\CTEXsetup[number={\chinese{subsubsection}}]{subsubsection}
+%\setmainfont{Microsoft YaHei}
+\setmainfont{Times New Roman}
+\geometry{bottom=2.5cm,top=2.5cm,left=3.5cm,right=2.5cm}
+\pagestyle{fancy}
+\begin{document}
+	\title{\vspace{-15mm}数字逻辑电路实验报告\\\vspace{15mm}\Huge\textbf{第十三次实验：简易计算机系统}\vspace{50mm}}
+	\author{张铭方\\161220169\\16级计算机系5班\\\texttt{161220169@smail.nju.edu.cn}\and 许致明\\161180162\\16级计算机系5班\\\texttt{161180162@smail.nju.edu.cn}}\date{\vspace{70mm}\today}
+	\maketitle
+	\section{实验目的}
+	本实验的目标是在Nexys 4开发板上实现一个简单的计算机系统，能够运行简单的指令，包括循环、整数计算、函数调用、递归等。这些指令使用RISC方式编写，存储在开发板的存储器（ROM）中。开发板的另一部分存储器（RAM）用来保存程序运行中所需的数据。此外，在完成后，开发板还具有一定的输出功能，程序输入通过向ROM中初始化相应的机器码实现。
+	\section{实验原理}
+	\subsection{计算机系统简介}
+	计算机系统主要由CPU和外部设备组成。CPU是系统中最重要的部分，它负责控制系统运行和信息处理。外部设备负责和外界进行交互，使得计算机的可以接受输入，产生相应的输出。本实验需要实现一个简化的计算机系统。下面对两种基本的系统结构做简要介绍。\par 
+	%\begin{enumerate}	
+	%\end{enumerate}
+	第一种是冯·诺伊曼结构，这种结构被现代的大多数CPU所使用。在这种结构下，处理器使用同一个存储器，经过同一个总线传输，具有以下特点：
+	\begin{enumerate}
+		\item 结构上由运算器、控制器、存储器和输入/输出设备组成；
+		\item 存储器是按地址访问的，每个地址是唯一的；
+		\item 指令和数据都是以二进制形式存储的；
+		\item 指令按顺序执行，即一般指令按照存储顺序执行，程序的分支、循环由转移指令实现；
+		\item 以运算器为中心，在输入输出设备与控制器之间的数据传送都途径运算器。运算器、存储器、输入输出设备的操作以及它们之间的联系都由控制器集中控制。
+	\end{enumerate}\par 
+	%\end{enumerate}
+	第二种是哈佛结构，它使用两个独立的存储模块，分别存储指令和数据，并具有一条独立的地址总线和一条独立的数据总线，具有以下特点：
+	\begin{enumerate}
+		\item 每个存储块都不允许指令和数据并存，以便实现并行处理；
+		\item 利用公共地址总线访问两个存储模块（程序存储模块ROM和输出存储模块RAM），公用数据总线则被用来完成程序存储模块或数据存储模块与CPU之间的数据传输；
+		\item 地址总线和数据总线由程序存储器和数据存储器分时共用。
+	\end{enumerate}\par 
+	数字信号处理一般需要较大的运算量和较高的运算速度，为了提高数据吞吐量，在数字信号处理中大多采用哈佛结构。本实验所构建的计算机系统就采用了哈佛结构。
+	\subsection{RISC CPU简介}
+	\subsubsection{RISC CPU的基本特征}
+	RISC，即Reduced Instruction Set Computer，是精简指令集计算机的简称，与它相对的是CISC（Complex Instruction Set Computer）。RISC架构主要具有以下特点：
+	\begin{enumerate}
+	\item 只包含一些使用频率较高的指令，并用这些指令的组合来实现较为复杂指令的功能；
+	\item 指令长度固定，指令格式、寻址方式比CICS少；
+	\item 只有加载、存储两条指令需要访问内存，其他指令都是在寄存器和寄存器或寄存器和立即数之间进行操作；
+	\item CPU中包含多个通用寄存器，执行指令过程中的数据均暂存在寄存器中，提高指令的执行速度；
+	\item 常常采用流水线技术，这样大部分指令可以在一个时钟周期内完成。还可以采用超标量和超流水线技术，使指令平均执行时间小于一个时钟周期；
+	\item 控制器采用组合逻辑的控制方式，不使用微程序控制的方式。
+	\end{enumerate}\par 
+	CPU是计算机中的核心部件。RISC架构中的CPU进行信息处理时，主要进行如下两个步骤：
+	\begin{enumerate}
+		\item 将数据和指令（二进制串）读入到计算机的存储器中；
+		\item 从第一条开始，按顺序执行程序，直至停机，结束运行。
+	\end{enumerate}
+	这一过程还可以用伪代码表示如下：
+	\begin{codebox}
+		\zi\proc{CPU-Execute}
+		\li\While\const{true}
+		\Do\li\proc{Fetch} instruction $Instr[PC]$
+		\li \proc{Decode}  $Instr[PC]$
+		\li\proc{Execute} $Instr[PC]$
+		\li $PC\gets PC+1$
+	\end{codebox}\par 
+	为了实现这些操作，CPU至少需要具有以下功能：
+	\begin{enumerate}
+		\item 取指令：当程序已经在存储器（ROM）时，首先根据程序入口地址取出一条指令。需要CPU能发出正确的地址信息和产生控制读取存储器的信号；
+		\item 指令译码：这一操作即需要分析出此二进制串的意义，获得
+		它指示的操作内容，并且产生相应的操作控制命令；		
+		\item 执行指令：根据指令译码得到的结果，产生相应的操作控制信号序列，控制运算器、存储器、输入输出设备的动作，完成这条指令的功能。其中包含对运算结果的处理（如设置标志位）以及下一条指令的地址的形成（如根据跳转指令更改PC的值）
+	\end{enumerate}\par 
+	总而言之，CPU做为计算机系统的核心，主要的任务就是取出指令，解释指令，然后根据得到的结果执行相应的指令。在这些过程中，可能涉及到存储器（例如内存、内部寄存器）的读取、写入，PC内容更改（自增1或按条件跳转），以及和外部设备的数据交换（接收外设传来的输入信号，将输出信号发送给外设）。同时，CPU也需要产生相应的控制信号，使得其他部件能正确的工作。
+\end{document}
