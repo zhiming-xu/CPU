@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2016.4 (64-bit)
-# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
-# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Sat Dec 23 21:26:17 2017
-# Process ID: 5752
-# Current directory: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Dec 24 15:34:23 2017
+# Process ID: 18740
+# Current directory: C:/Users/steve/Desktop/MyCPU/MyCPU.runs/synth_1
 # Command line: vivado.exe -log testtop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source testtop.tcl
-# Log file: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.vds
-# Journal file: C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1\vivado.jou
+# Log file: C:/Users/steve/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.vds
+# Journal file: C:/Users/steve/Desktop/MyCPU/MyCPU.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source testtop.tcl -notrace
 Command: synth_design -top testtop -part xc7a100tcsg324-1
@@ -15,20 +15,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7160 
+INFO: Helper process launched with PID 9928 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 285.031 ; gain = 73.793
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 282.340 ; gain = 71.828
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'testtop' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
-INFO: [Synth 8-638] synthesizing module 'risc_cpu' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
-INFO: [Synth 8-638] synthesizing module 'divider' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:35]
-INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
-INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
-INFO: [Synth 8-256] done synthesizing module 'clock' (2#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
-INFO: [Synth 8-638] synthesizing module 'cu_contrl' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
-INFO: [Synth 8-256] done synthesizing module 'cu_contrl' (3#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
-INFO: [Synth 8-638] synthesizing module 'cu' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
+INFO: [Synth 8-638] synthesizing module 'testtop' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
+INFO: [Synth 8-638] synthesizing module 'risc_cpu' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
+INFO: [Synth 8-638] synthesizing module 'divider' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:35]
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clock' (2#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/clock.v:23]
+INFO: [Synth 8-638] synthesizing module 'cu_contrl' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
+INFO: [Synth 8-256] done synthesizing module 'cu_contrl' (3#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu_contrl.v:23]
+INFO: [Synth 8-638] synthesizing module 'cu' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
 	Parameter adc bound to: 5'b00000 
 	Parameter sbb bound to: 5'b00001 
 	Parameter mul bound to: 5'b00010 
@@ -61,32 +61,32 @@ INFO: [Synth 8-638] synthesizing module 'cu' [C:/Users/User/Desktop/MyCPU/MyCPU.
 	Parameter jrnz bound to: 5'b11011 
 	Parameter nop bound to: 5'b11110 
 	Parameter halt bound to: 5'b11111 
-INFO: [Synth 8-256] done synthesizing module 'cu' (4#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
-INFO: [Synth 8-638] synthesizing module 'instreg' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
-INFO: [Synth 8-256] done synthesizing module 'instreg' (5#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
-INFO: [Synth 8-638] synthesizing module 'pc' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
-WARNING: [Synth 8-5788] Register pc_value_reg in module pc is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:36]
-INFO: [Synth 8-256] done synthesizing module 'pc' (6#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
-INFO: [Synth 8-638] synthesizing module 'sp' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
-INFO: [Synth 8-256] done synthesizing module 'sp' (7#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
-INFO: [Synth 8-638] synthesizing module 'flags' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
-INFO: [Synth 8-256] done synthesizing module 'flags' (8#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
-INFO: [Synth 8-638] synthesizing module 'regarray' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
+INFO: [Synth 8-256] done synthesizing module 'cu' (4#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:23]
+INFO: [Synth 8-638] synthesizing module 'instreg' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'instreg' (5#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/instreg.v:23]
+INFO: [Synth 8-638] synthesizing module 'pc' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
+WARNING: [Synth 8-5788] Register pc_value_reg in module pc is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:36]
+INFO: [Synth 8-256] done synthesizing module 'pc' (6#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:23]
+INFO: [Synth 8-638] synthesizing module 'sp' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
+INFO: [Synth 8-256] done synthesizing module 'sp' (7#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:23]
+INFO: [Synth 8-638] synthesizing module 'flags' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
+INFO: [Synth 8-256] done synthesizing module 'flags' (8#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/flags.v:23]
+INFO: [Synth 8-638] synthesizing module 'regarray' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
 	Parameter num bound to: 8 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:67]
-INFO: [Synth 8-256] done synthesizing module 'regarray' (9#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
-INFO: [Synth 8-638] synthesizing module 'mar' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:67]
+INFO: [Synth 8-256] done synthesizing module 'regarray' (9#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/regarray.v:23]
+INFO: [Synth 8-638] synthesizing module 'mar' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
 	Parameter pc bound to: 2'b00 
 	Parameter dr bound to: 2'b01 
 	Parameter sr bound to: 2'b10 
 	Parameter sp bound to: 2'b11 
-INFO: [Synth 8-256] done synthesizing module 'mar' (10#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
-INFO: [Synth 8-638] synthesizing module 'mdr' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mar' (10#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mar.v:23]
+INFO: [Synth 8-638] synthesizing module 'mdr' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
 	Parameter regin1 bound to: 2'b01 
 	Parameter regin2 bound to: 2'b10 
 	Parameter memin bound to: 2'b11 
-INFO: [Synth 8-256] done synthesizing module 'mdr' (11#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
-INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mdr' (11#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/mdr.v:23]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
 	Parameter adc bound to: 5'b00000 
 	Parameter sbb bound to: 5'b00001 
 	Parameter mul bound to: 5'b00010 
@@ -106,32 +106,33 @@ INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/User/Desktop/MyCPU/MyCPU
 	Parameter movih bound to: 5'b10000 
 	Parameter clc bound to: 5'b11100 
 	Parameter stc bound to: 5'b11101 
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:32]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:33]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:34]
-INFO: [Synth 8-256] done synthesizing module 'alu' (12#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
-INFO: [Synth 8-638] synthesizing module 'alu_in_contrl' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:29]
-INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:30]
-INFO: [Synth 8-256] done synthesizing module 'alu_in_contrl' (13#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
-INFO: [Synth 8-256] done synthesizing module 'risc_cpu' (14#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
-INFO: [Synth 8-638] synthesizing module 'addr_decode' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
-INFO: [Synth 8-256] done synthesizing module 'addr_decode' (15#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
-INFO: [Synth 8-638] synthesizing module 'rom' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-256] done synthesizing module 'rom' (16#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-638] synthesizing module 'ram' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
-INFO: [Synth 8-256] done synthesizing module 'ram' (17#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
-INFO: [Synth 8-638] synthesizing module 'display_control' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
-WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
-WARNING: [Synth 8-567] referenced signal 'ir' should be on the sensitivity list [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
-INFO: [Synth 8-256] done synthesizing module 'display_control' (18#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
-INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
-INFO: [Synth 8-226] default block is never used [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:29]
-INFO: [Synth 8-256] done synthesizing module 'display' (19#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
-INFO: [Synth 8-638] synthesizing module 'integralaudio' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:23]
-INFO: [Synth 8-3876] $readmem data file 'C:/Users/User/Downloads/audio.txt' is read successfully [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:52]
-INFO: [Synth 8-256] done synthesizing module 'integralaudio' (20#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:23]
-INFO: [Synth 8-256] done synthesizing module 'testtop' (21#1) [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:32]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:33]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:34]
+INFO: [Synth 8-256] done synthesizing module 'alu' (12#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu.v:23]
+INFO: [Synth 8-638] synthesizing module 'alu_in_contrl' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:29]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "1" *) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:30]
+INFO: [Synth 8-256] done synthesizing module 'alu_in_contrl' (13#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/alu_contrl.v:23]
+INFO: [Synth 8-256] done synthesizing module 'risc_cpu' (14#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/risc_cpu.v:23]
+INFO: [Synth 8-638] synthesizing module 'addr_decode' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
+INFO: [Synth 8-256] done synthesizing module 'addr_decode' (15#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/addr_decode.v:23]
+INFO: [Synth 8-638] synthesizing module 'rom' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
+INFO: [Synth 8-256] done synthesizing module 'rom' (16#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/rom.v:23]
+INFO: [Synth 8-638] synthesizing module 'ram' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/steve/Desktop/tmp1.txt' is read successfully [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:395]
+INFO: [Synth 8-256] done synthesizing module 'ram' (17#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-638] synthesizing module 'display_control' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
+WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
+WARNING: [Synth 8-567] referenced signal 'ir' should be on the sensitivity list [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:43]
+INFO: [Synth 8-256] done synthesizing module 'display_control' (18#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/display.v:23]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:29]
+INFO: [Synth 8-256] done synthesizing module 'display' (19#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/disp.v:23]
+INFO: [Synth 8-638] synthesizing module 'integralaudio' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:23]
+INFO: [Synth 8-3876] $readmem data file 'E:/steve/Documents/audio.txt' is read successfully [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:52]
+INFO: [Synth 8-256] done synthesizing module 'integralaudio' (20#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/Audio.v:23]
+INFO: [Synth 8-256] done synthesizing module 'testtop' (21#1) [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/testtop.v:23]
 WARNING: [Synth 8-3331] design ram has unconnected port addr[15]
 WARNING: [Synth 8-3331] design ram has unconnected port addr[14]
 WARNING: [Synth 8-3331] design ram has unconnected port addr[13]
@@ -146,7 +147,7 @@ WARNING: [Synth 8-3331] design cu has unconnected port flag_in[4]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[1]
 WARNING: [Synth 8-3331] design cu has unconnected port flag_in[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 324.063 ; gain = 112.824
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 321.348 ; gain = 110.836
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -156,41 +157,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 324.063 ; gain = 112.824
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 321.348 ; gain = 110.836
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
-Finished Parsing XDC File [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/testtop_propImpl.xdc].
+Parsing XDC File [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
+Finished Parsing XDC File [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/constrs_1/new/fordisplay.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/testtop_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/testtop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 642.359 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 639.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 642.359 ; gain = 431.121
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 639.531 ; gain = 429.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 642.359 ; gain = 431.121
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 639.531 ; gain = 429.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 642.359 ; gain = 431.121
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 639.531 ; gain = 429.020
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "fetch" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-4471] merging register 'reg_read1_reg' into 'reg_read2_reg' [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:92]
+INFO: [Synth 8-4471] merging register 'reg_read1_reg' into 'reg_read2_reg' [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/cu.v:92]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'cu'
 INFO: [Synth 8-5546] ROM "reg_write2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "reg_write1" is below threshold of ROM address width. It will be mapped to LUTs
@@ -216,9 +217,9 @@ INFO: [Synth 8-5544] ROM "reg_read2" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "ir_ena" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "run" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:41]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:39]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:39]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:41]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/pc.v:39]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/steve/Desktop/MyCPU/MyCPU.srcs/sources_1/new/sp.v:39]
 INFO: [Synth 8-5544] ROM "register_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "register_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "register_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -250,7 +251,7 @@ INFO: [Synth 8-5545] ROM "n2" won't be mapped to RAM because address size (32) i
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'cu'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 642.359 ; gain = 431.121
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 639.531 ; gain = 429.020
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -536,7 +537,7 @@ INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_107' (FDPE) to 'MyC
 INFO: [Synth 8-3886] merging instance 'MyCPU/mem_out_reg__0i_103' (FDPE) to 'MyCPU/mem_out_reg__0i_111'
 WARNING: [Synth 8-3332] Sequential element (DIVIDER/num_reg[31]) is unused and will be removed from module risc_cpu.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 642.359 ; gain = 431.121
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 639.531 ; gain = 429.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -587,10 +588,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 652.770 ; gain = 441.531
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 647.914 ; gain = 437.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 713.910 ; gain = 502.672
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 711.516 ; gain = 501.004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -603,7 +604,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance k_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -627,7 +628,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -640,7 +641,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -652,25 +653,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -734,11 +735,11 @@ Report Instance Areas:
 |18    |  RAM        |ram__4          |    96|
 +------+-------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 715.684 ; gain = 185.629
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 715.684 ; gain = 504.445
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 712.535 ; gain = 183.840
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 477 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -753,9 +754,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1S => RAM64X1S (RAMS64E): 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-215 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+216 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 715.684 ; gain = 504.445
-INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 715.684 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 23 21:26:54 2017...
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 712.535 ; gain = 502.023
+INFO: [Common 17-1381] The checkpoint 'C:/Users/steve/Desktop/MyCPU/MyCPU.runs/synth_1/testtop.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 712.535 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 24 15:35:17 2017...
