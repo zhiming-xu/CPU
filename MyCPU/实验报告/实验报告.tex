@@ -10,16 +10,17 @@
 \usepackage{enumerate}
 \usepackage{txfonts}
 \usepackage{clrscode3e}
+\usepackage{float}
 \CTEXsetup[name={第,节},number={\chinese{section}}]{section}
 \CTEXsetup[number={\chinese{subsection}}]{subsection}
 %\CTEXsetup[number={\chinese{subsubsection}}]{subsubsection}
 %\setmainfont{Microsoft YaHei}
 \setmainfont{Times New Roman}
-\geometry{bottom=2.5cm,top=2.5cm,left=3.5cm,right=2.5cm}
+\geometry{bottom=2.5cm,top=3.5cm,left=2.5cm,right=2.5cm}
 \pagestyle{fancy}
 \begin{document}
-	\title{\vspace{-15mm}数字逻辑电路实验报告\\\vspace{15mm}\Huge\textbf{第十三次实验：简易计算机系统}\vspace{50mm}}
-	\author{张铭方\\161220169\\16级计算机系5班\\\texttt{161220169@smail.nju.edu.cn}\and 许致明\\161180162\\16级计算机系5班\\\texttt{161180162@smail.nju.edu.cn}}\date{\vspace{70mm}\today}
+	\title{\vspace{-25mm}数字逻辑电路实验报告\\\vspace{15mm}\Huge\textbf{第十三次实验：简易计算机系统}\vspace{60mm}}
+	\author{张铭方\\161220169\\16级计算机系5班\\\texttt{161220169@smail.nju.edu.cn}\and 许致明\\161180162\\16级计算机系5班\\\texttt{161180162@smail.nju.edu.cn}}\date{\vspace{30mm}\today}
 	\maketitle
 	\section{实验目的}
 	本实验的目标是在Nexys 4开发板上实现一个简单的计算机系统，能够运行简单的指令，包括循环、整数计算、函数调用、递归等。这些指令使用RISC方式编写，存储在开发板的存储器（ROM）中。开发板的另一部分存储器（RAM）用来保存程序运行中所需的数据。此外，在完成后，开发板还具有一定的输出功能，程序输入通过向ROM中初始化相应的机器码实现。
@@ -44,8 +45,8 @@
 		\item 地址总线和数据总线由程序存储器和数据存储器分时共用。
 	\end{enumerate}\par 
 	数字信号处理一般需要较大的运算量和较高的运算速度，为了提高数据吞吐量，在数字信号处理中大多采用哈佛结构。本实验所构建的计算机系统就采用了哈佛结构。
-	\subsection{RISC CPU简介}
-	\subsubsection{RISC CPU的基本特征}
+	\subsection{RISC架构简介}
+	\subsubsection{RISC架构的基本特征}
 	RISC，即Reduced Instruction Set Computer，是精简指令集计算机的简称，与它相对的是CISC（Complex Instruction Set Computer）。RISC架构主要具有以下特点：
 	\begin{enumerate}
 	\item 只包含一些使用频率较高的指令，并用这些指令的组合来实现较为复杂指令的功能；
@@ -74,7 +75,162 @@
 		\item 取指令：当程序已经在存储器（ROM）时，首先根据程序入口地址取出一条指令。需要CPU能发出正确的地址信息和产生控制读取存储器的信号；
 		\item 指令译码：这一操作即需要分析出此二进制串的意义，获得
 		它指示的操作内容，并且产生相应的操作控制命令；		
-		\item 执行指令：根据指令译码得到的结果，产生相应的操作控制信号序列，控制运算器、存储器、输入输出设备的动作，完成这条指令的功能。其中包含对运算结果的处理（如设置标志位）以及下一条指令的地址的形成（如根据跳转指令更改PC的值）
+		\item 执行指令：根据指令译码得到的结果，产生相应的操作控制信号序列，控制运算器、存储器、输入输出设备的动作，完成这条指令的功能。其中包含对运算结果的处理（如设置标志位）以及下一条指令的地址的形成（如根据跳转指令更改PC的值）。
 	\end{enumerate}\par 
 	总而言之，CPU做为计算机系统的核心，主要的任务就是取出指令，解释指令，然后根据得到的结果执行相应的指令。在这些过程中，可能涉及到存储器（例如内存、内部寄存器）的读取、写入，PC内容更改（自增1或按条件跳转），以及和外部设备的数据交换（接收外设传来的输入信号，将输出信号发送给外设）。同时，CPU也需要产生相应的控制信号，使得其他部件能正确的工作。
+	\subsubsection{RISC架构下CPU的基本构成}
+	RISC CPU主要包括三方面的功能：数据存储、数据运算、时序控制。与此对应的就是三方面的硬件设备：寄存器和内存、运算器ALU、控制器。其基本结构如下面的图1所示：
+	\begin{figure}[htb]
+		\centering
+		\includegraphics[scale=0.6]{1.pdf}
+		\caption{RISC架构CPU的基本结构}
+	\end{figure}\par 
+	寄存器用于存放指令和数据，在此CPU设计中，包含了较多寄存器，这符合RISC架构的主要思想，即将指令执行过程中的各种数据存入到不同的寄存器中，减少访问速度较慢的内存的次数，从而提高处理器的运行速度。图中的箭头指明了数据在这条通路上的传输方向。通过多条通路，指令和数据能够独立传输、互不干扰，这样也能提高CPU的运行速度。
+	\subsection{CPU的指令系统设计}
+	在此次实验中，我们完成了一个16位的RISC架构指令集，共包含32条5个二进制位的定长指令，具有算术运算、存储读写、输入输出和逻辑控制这些基本功能。具体如表1所示：
+	% Please add the following required packages to your document preamble:
+	% \usepackage{multirow}
+	\begin{table}[H]
+		\centering
+		\footnotesize
+		\caption{指令系统概要}
+		\label{my-label}
+		\begin{tabular}{c|c|c|c}
+			汇编指令格式            & 操作数   & 功能描述                                                           & 类型                     \\ \hline
+			ADC \%SR, \%DR    & 00000 & R{[}DR{]}+R{[}SR{]}+CF→R{[}DR{]}                               & \multirow{14}{*}{算数逻辑} \\ \cline{1-3}
+			SBB \%SR, \%DR    & 00001 & R{[}DR{]}-R{[}SR{]}-CF→R{[}DR{]}                               &                        \\ \cline{1-3}
+			MUL \%SR, \%DR    & 00010 & R{[}DR{]}*R{[}SR{]}→R{[}DR{]}                                  &                        \\ \cline{1-3}
+			DIV \%SR, \%DR    & 00011 & R{[}DR{]}/D{[}SR{]}→D{[}DR{]}（无符号）                             &                        \\ \cline{1-3}
+			ADDI \$IMM, \%DR  & 00100 & R{[}DR{]}+\$IMM→R{[}DR{]}（寄存器与立即数相加）                           &                        \\ \cline{1-3}
+			CMP \%SR, \%DR    & 00101 & R{[}DR{]}-R{[}SR{]}（只改变标志寄存器，若相等，则ZF=1）                        &                        \\ \cline{1-3}
+			AND \%SR, \%DR    & 00110 & R{[}DR{]}\&R{[}SR{]}→R{[}DR{]}（按位与）                            &                        \\ \cline{1-3}
+			OR \%SR, \%DR     & 00111 & R{[}DR{]}|R{[}SR{]}→R{[}DR{]}（按位或）                             &                        \\ \cline{1-3}
+			NOT \%DR          & 01000 & $\sim$R{[}DR{]}→R{[}DR{]}（按位取反）                                &                        \\ \cline{1-3}
+			XOR \%SR, \%DR    & 01001 & R{[}DR{]}\textasciicircum R{[}SR{]}→R{[}DR{]}（按位异或）            &                        \\ \cline{1-3}
+			TEST \%SR, \%DR   & 01010 & R{[}DR{]}\textasciicircum R{[}SR{]}（根据结果改变标志寄存器ZF）             &                        \\ \cline{1-3}
+			SHL \%DR          & 01011 & R{[}DR{]}$<<$1→R{[}DR{]}（逻辑或算数左移，最高位入CF）         &                        \\ \cline{1-3}
+			SHR \%DR          & 01100 & R{[}DR{]}$>>$1→R{[}DR{]}（逻辑右移，高位补0，最低位入CF） &                        \\ \cline{1-3}
+			SAR \%DR          & 01101 & R{[}DR{]}$>>$1→R{[}DR{]}（算术右移，高位补符）        &                        \\ \hline
+			IN PORT, \%DR     & 01110 & {[}PORT{]}→R{[}DR{]}                                           & \multirow{2}{*}{I/O}   \\ \cline{1-3}
+			OUT \%SR, PORT    & 01111 & R{[}SR{]}→PORT                                                 &                        \\ \hline
+			MOV \%SR, \%DR    & 01110 & R{[}SR{]}→R{[}DR{]}                                            & \multirow{3}{*}{数据传送}  \\ \cline{1-3}
+			MOVIL \$IMM, \%DR & 01111 & IMM→R{[}DR{]}{[}0..7{]}（8位立即数移入寄存器高8位）                         &                        \\ \cline{1-3}
+			MOVIH \$IMM, \%DR & 10000 & IMM→R{[}DR{]}{[}8..15{]}（8位立即数移入寄存器低8位）                        &                        \\ \hline
+			LOAD \%SR, \%DR   & 10001 & M{[}R{[}SR{]}{]}→R{[}DR{]}                                     & \multirow{2}{*}{访存}    \\ \cline{1-3}
+			STORE \%SR, \%DR  & 10010 & R{[}SR{]}→M{[}R{[}DR{]}{]}                                     &                        \\ \hline
+			PUSH \%SR         & 10101 & R{[}SR{]}→M{[}R{[}SP{]}{]}, R{[}SP{]}-1→R{[}SP{]}（SR入栈）        & \multirow{2}{*}{栈操作}   \\ \cline{1-3}
+			POP \%DR          & 10110 & M{[}R{[}SP{]}{]}→R{[}DR{]}, R{[}SP{]}+1→R{[}SP{]}（DR出栈）        &                        \\ \hline
+			JMP OFFSET       & 10111 & PC+OFFSET→PC，无条件跳转指令，OFFSET有符号                                 & \multirow{7}{*}{控制转移}  \\ \cline{1-3}
+			JMPC              & 11000 & 当CF=1时进行跳转                                                     &                        \\ \cline{1-3}
+			JNC               & 11001 & 当CF≠1时进行跳转                                                     &                        \\ \cline{1-3}
+			JMPZ              & 11010 & 当ZF=1时进行跳转                                                     &                        \\ \cline{1-3}
+			JNZ               & 11011 & 当ZF≠1时进行跳转                                                     &                        \\ \cline{1-3}
+			CALL              & 11100 &                                                                &                        \\ \cline{1-3}
+			RET               & 11101 &                                                                &                        \\ \hline
+			NOP               & 11110 & 空操作，PC+1→PC                                                    & \multirow{2}{*}{处理器}   \\ \cline{1-3}
+			HALT              & 11111 & 停机                                                             &                        \\ 
+		\end{tabular}
+	\end{table}\par \normalsize
+	我们设计出的这个指令规定数据字长也为16位。指令格式固定，操作数寻址方式共有3种。大多数均为寄存器寻址和立即数寻址，只有LOAD/STORE两条指令涉及到内存寻址。指令的格式有图2所示的三种，对其中的符号做如下说明：
+	\begin{enumerate}
+		\item $\id{Opcode}$为操作数，即指令表中对应的第二栏；
+		\item $\%SR$是源操作数所在的寄存器，$\%\id{DR}$是目的操作数所在的寄存器；
+		\item $\$\id{IMM}$是立即数，受指令长度限制，所有的立即数均为8位二进制数；
+		\item $\id{Offset}$是偏移量，为有符号数，符号由$\id{Offset}$域的最高位决定，0为负，1为正，由此给定后8位立即数的符号。
+	\end{enumerate}\par
+	\begin{figure}[htb]
+		\includegraphics[scale=0.5]{2.pdf}
+		\caption{指令格式类型}
+	\end{figure}
+	\section{实验器材和环境}
+	\subsection{硬件}
+	Nexys 4开发板
+	\subsection{环境}
+	运行在Windows 10下的Vivado 2016.4
+	\section{实验设计思路}
+	\subsection{RISC CPU的数据通路图}
+	我们设计的CPU数据通路如下图所示：
+	\begin{figure}[htb]
+		\centering
+		\includegraphics[scale=0.7]{3.pdf}
+		\caption{CPU的数据通路}
+	\end{figure}\par 
+	我们在这个CPU中设计了8个16位的按照16位可读写的通用寄存器组（图中REG\_BANK）。除此之外，还包含指令寄存器（图中IR REG），地址寄存器（图中MAR），数据寄存器（图中MDR），栈指针寄存器（图中SP, Stack Pointer）以及标志寄存器（图中FLAG）。运算器为算术逻辑单元（图中ALU），负责进行数学运算和逻辑运算。程序计数器在图中为PC。控制部分为图中的Control Unit (CU)，时钟信号由图中Clock发生。
+	\subsection{模块划分}
+	按照功能，我们将CPU划分为如下11个功能模块，下面逐个介绍这些模块的功能：
+	\begin{enumerate}%	[(1)]
+		\item 时钟发生器（Clock）：时钟发生器的功能是根据外部时钟信号，产生一系列的特定时钟信号，送往其他部件，控制它们进行操作；
+		\item 控制器（Control Unit, CU）：控制器是CPU最核心的部件。CPU通过它来产生控制时序和控制信号，用来控制CPU中其他模块（例如ALU、寄存器）按照一定的时序关系工作。这一部分由两部分组成：状态机（CU）和状态机的控制器（CU\_Control）；
+		\item 指令寄存器（IR REG）：指令寄存器用来存放当前正在执行的（PC指向的）指令；
+		\item 通用寄存器组（REG ARRAY）：这个寄存器组全部用于存储数据，它由8个16位寄存器组组成。此部件支持双端口读出、双端口写入操作。这些寄存器用来保存程序执行过程中需要的数据、中间变量和最后的结果，在访问时，必须一次性读出全部16位数据；
+		\item 程序计数器（PC, Program Counter）：程序计数器保存下一条指令的地址，CPU使用它在相应的ROM中取出指令；
+		\item 算术逻辑运算器（ALU, Arithmetic and Logic Unit）：算数逻辑运算器是一个16位定点运算器，支持基本的加减乘除、与或非等14算数、逻辑运算；
+		\item 运算输入控制部件：此部件用来控制运算器的输入数据。送入ALU的数据只有两种：来自数据寄存器的16位数据和来自立即数的8位数据；
+		\item 标志寄存器（FLAG）：标志寄存器共有8位，但是只使用了4位。高4位未定义，低4位存储运算过程中产生的标志位。低4位由高到低依次为：进位（CF）、零（ZF）、溢出（OF）和符号（SF）；
+		\item 地址寄存器（MAR, Main Address Register）：地址寄存器用来存储CPU访存时给出的地址，访存时的地址来源于此部件；
+		\item 数据寄存器（MDR, Main Data Register）：数据寄存器用来存储需要向地址总线输出的数据，或存储从总线上读取到的数据。它是双向输入输出的；
+		\item 栈指针寄存器（SP, Stack Pointer）：栈指针寄存器用于存储当前1的16位栈顶地址。每次出栈或入栈操作后，都要更新它的值。\par 
+		这些模块的具体实现将在4.4节介绍。
+	\end{enumerate}
+	\subsection{指令执行流程}
+	为了更清楚的描述此CPU的运行过程，下面介绍指令的执行流程。总体上，所有指令的执行均包含3个阶段：取出指令、指令译码和取出操作数、执行和回写。这其中每个阶段又分为3个小阶段，所以执行中共经历了9个阶段。负责此模块实现的控制单元（CU）中的状态机也就在9个状态间进行转移。\par 
+	\begin{enumerate}
+		\item 算数逻辑运算指令：先把数据从寄存器中取出，然后经过运算器处理后再将结果写回寄存器，或设置相应的标志位。下面以带进位的加法指令ADC为例，介绍执行过程的各个阶段：\footnote{与ADC执行过程相似的指令还有：SBB, DIV, MUL, AND, NOT, OR, XOR, SHL, SHR, SAR, CMP, TEST和ADDI等。}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{4.pdf}
+			\caption{算数和逻辑运算指令执行过程，以ADC为例}
+		\end{figure}
+		\item 数据传送类指令：此类指令包含在寄存器之间传输数据的MOV，寄存器的高8位或低8位的加载指令（MOVIH/L \$IMM, \%DR）。下面以寄存器间的传送指令MOV为例，介绍执行过程的各个阶段：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{5.pdf}
+			\caption{数据传送类指令执行过程，以MOV为例}
+		\end{figure}
+		\item I/O类指令：此类指令包含写I/O端口指令（OUT \%SR, PORT）和读I/O端口指令（IN PORT, \%DR）。下面以OUT指令为例，介绍执行过程的各个阶段：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{6.pdf}
+			\caption{I/O指令执行过程，以OUT为例}
+		\end{figure}
+		\item 控制转移类指令：可以分为有条件转移指令\footnote{此类指令包括JMPC, JNC, JMPZ和JNZ。}和无条件转移指令\footnote{此类指令为JMP}两大类。下面以JMPC为例，介绍执行过程的各个阶段：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{7.pdf}
+			\caption{条件转移类指令执行过程，以JMPC为例}
+		\end{figure}
+		\item 栈操作指令：包含入栈（PUSH \%SR）和出栈（POP \%DR）指令。下面以出栈指令POP为例，介绍执行过程的各个阶段：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{8.pdf}
+			\caption{栈操作指令执行过程，以POP为例}
+		\end{figure}
+		\item 访问内存类指令：包含取操作数指令（LOAD \%SR, \%DR）和存操作数指令（STORE \%SR, \%DR）。LOAD指令的作用是将源操作数寄存器中的数据当作地址，将这个内存地址中的数据装入目的寄存器\%DR；STORE指令的作用是将目的操作数寄存器中的数据当作地址，将源操作数中的数据存入此地址指向的内存。LOAD和STORE的执行过程分别如下所示：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{9.pdf}
+			\caption{LOAD指令执行过程}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{10.pdf}
+			\caption{STORE指令执行过程}
+		\end{figure}
+		\item 处理器控制类指令：包含空操作（NOP）和停机（HALT）两个指令。NOP不执行任何操作，只将PC增加1；HALT指令负责停止CPU的运行。它们的执行过程分别如下图所示：
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{11.pdf}
+			\caption{NOP指令执行过程}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{12.pdf}
+			\caption{HALT指令执行过程}
+		\end{figure}
+	\end{enumerate}
+	
+	
+	
+	
+	
 \end{document}
