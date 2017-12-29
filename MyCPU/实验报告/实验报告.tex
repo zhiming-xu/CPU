@@ -11,19 +11,23 @@
 \usepackage{txfonts}
 \usepackage{clrscode3e}
 \usepackage{float}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{fontspec}
+%\usepackage{fontspec-xetex}
 \CTEXsetup[name={第,节},number={\chinese{section}}]{section}
 \CTEXsetup[number={\chinese{subsection}}]{subsection}
-%\CTEXsetup[number={\chinese{subsubsection}}]{subsubsection}
-%\setmainfont{Microsoft YaHei}
 \setmainfont{Times New Roman}
 \geometry{bottom=2.5cm,top=3.5cm,left=2.5cm,right=2.5cm}
 \pagestyle{fancy}
+%\hyperref{colorlinks,linkcolor=red, anchorcolor=blue, citecolor=green}
 \begin{document}
 	\title{\vspace{-25mm}数字逻辑电路实验报告\\\vspace{15mm}\Huge\textbf{第十三次实验：简易计算机系统}\vspace{60mm}}
 	\author{张铭方\\161220169\\16级计算机系5班\\\texttt{161220169@smail.nju.edu.cn}\and 许致明\\161180162\\16级计算机系5班\\\texttt{161180162@smail.nju.edu.cn}}\date{\vspace{30mm}\today}
 	\maketitle
 	\section{实验目的}
-	本实验的目标是在Nexys 4开发板上实现一个简单的计算机系统，能够运行简单的指令，包括循环、整数计算、函数调用、递归等。这些指令使用RISC方式编写，存储在开发板的存储器（ROM）中。开发板的另一部分存储器（RAM）用来保存程序运行中所需的数据。此外，在完成后，开发板还具有一定的输出功能，程序输入通过向ROM中初始化相应的机器码实现。
+	本实验的目标是在Nexys 4开发板上实现一个简易的计算机系统，能够运行简单的指令，包括循环、整数计算、函数调用、递归等。这些指令使用RISC方式编写，存储在开发板的存储器（ROM）中。开发板的另一部分存储器（RAM）用来保存程序运行中所需的数据。此外，在完成后，开发板还具有一定的输出功能，程序输入通过向ROM中初始化相应的机器码实现。
 	\section{实验原理}
 	\subsection{计算机系统简介}
 	计算机系统主要由CPU和外部设备组成。CPU是系统中最重要的部分，它负责控制系统运行和信息处理。外部设备负责和外界进行交互，使得计算机的可以接受输入，产生相应的输出。本实验需要实现一个简化的计算机系统。下面对两种基本的系统结构做简要介绍。\par 
@@ -170,7 +174,7 @@
 		\item 地址寄存器（MAR, Main Address Register）：地址寄存器用来存储CPU访存时给出的地址，访存时的地址来源于此部件；
 		\item 数据寄存器（MDR, Main Data Register）：数据寄存器用来存储需要向地址总线输出的数据，或存储从总线上读取到的数据。它是双向输入输出的；
 		\item 栈指针寄存器（SP, Stack Pointer）：栈指针寄存器用于存储当前1的16位栈顶地址。每次出栈或入栈操作后，都要更新它的值。\par 
-		这些模块的具体实现将在4.4节介绍。
+		这些模块的具体实现将在第五节介绍。
 	\end{enumerate}
 	\subsection{指令执行流程}
 	为了更清楚的描述此CPU的运行过程，下面介绍指令的执行流程。总体上，所有指令的执行均包含3个阶段：取出指令、指令译码和取出操作数、执行和回写。这其中每个阶段又分为3个小阶段，所以执行中共经历了9个阶段。负责此模块实现的控制单元（CU）中的状态机也就在9个状态间进行转移。\par 
@@ -228,9 +232,248 @@
 			\caption{HALT指令执行过程}
 		\end{figure}
 	\end{enumerate}
-	
-	
-	
-	
-	
+	\section{实验过程}
+	本节介绍图3\footnote{第6页}中标出的各个模块的主要构成和\emph{Verilog HDL}代码实现。
+		\subsection{时钟发生器}
+		时钟发生器（Clock）模块利用外来的时钟信号$\id{clkin}$来生成一系列的时钟信号$\id{clkout},id{fetch}$送往CPU的其他部件。实现代码如下所示，为了简化CPU频率控制功能的实现，分成了分频器和时钟信号发生器。下面先说明分频器的信号端口：
+		\begin{quote}
+		输入信号：\\
+		$\id{clkin}$——时钟信号；\\
+		$\id{clkcon}$——频率控制信号；\\
+		$\id{reset}$——复位信号。\\
+		输出信号：\\
+		$\id{clkout}$——分频后的时钟信号。
+		\end{quote}\par 
+		和时钟发生器的信号端口：
+		\begin{quote}
+		输入信号：\\
+		$\id{clk}$——分频后的时钟信号；\\
+		$\id{reset}$——复位信号。\\
+		输出信号：\\
+		$\id{clk\_r}$——$\id{clk}$取反后的时钟信号；\\
+		$\id{fetch}$——$\id{clk}$的八分频，取指令信号。
+		\end{quote}
+		\begin{figure}[H] 
+			\begin{minipage}[H]{0.5\linewidth}  
+			\centerfirst
+			\includegraphics[scale=1]{13.pdf}  
+			\caption*{}  
+			%\label{fig:side:a}  
+			\end{minipage}
+			\begin{minipage}[H]{0.5\linewidth}  
+			\centerfirst
+			\includegraphics[scale=1]{14.pdf}  
+			\caption*{}  
+			%\label{fig:side:b}  
+			\end{minipage}
+			\caption*{代码1: 时钟模块}  
+		\end{figure} 
+		下面是此时钟发生器的模块符号，以及仿真结果。
+		\begin{figure}[H]
+			\includegraphics[scale=0.5]{15.pdf}
+			\caption{时钟模块符号}
+		\end{figure}
+		\subsection{程序计数器}
+		程序计数器（PC, Program Counter）用于提供执行指令的地址。指令按顺序存放在存储器（ROM）中，在控制器的控制下按顺序读取并执行指令。CPU的控制逻辑有两种生成指令地址的方法：
+		\begin{enumerate}[(1)]
+			\item 顺序执行时，$\id{PC}\gets \id{PC}+1$（规定每条指令长度都为1个字，16位）；
+			\item 需要跳转时，根据跳转指令改变PC的值。
+		\end{enumerate}
+		\par 端口说明如下：
+		\begin{quote}
+			输入信号：\\
+		    $\id{clk}$——时钟信号；\\
+		    $\id{rst}$——复位信号；\\
+		    $\id{offset}$——转移时的偏移量；\\
+		    $\id{pc\_inc}$——自增1控制信号（低电平时PC加1）；\\
+		    $\id{pc\_ena}$——PC更新使能信号；\\
+		    $\id{sw}$——程序选择信号。\\
+		    输出信号：\\
+		    $\id{pc\_value}$——PC的值，即指令地址。
+		\end{quote}\par 
+		复位（rst置高位后），$\id{PC}\gets \id{sw}\times 32+10$. 即每次CPU重新启动时，将根据程序选择信号sw读取相应起始地址中的指令，然后执行。在指令执行阶段，译码过后根据指令内容对程序计数器进行更新。如果执行的是跳转指令，则控制器（CU）根据标志寄存器（FLAGS）中的相关状态位来判断是否发生跳转，具体过程如下表所示。如果需要发生跳转，控制器将pc\_ena和pc\_inc信号输出为高电位，PC的值在本模块中得到更新；如果跳转条件不满足或不是跳转指令，则CU将pc\_ena置位高电位，pc\_inc置为低电位，此时PC自增1。
+		% Please add the following required packages to your document preamble:
+		% \usepackage{multirow}
+		\begin{table}[htb]
+			\centering
+			\caption{指令操作码与指令寄存器更新的逻辑关系}
+			\begin{tabular}{c|c|c|c|c|c}
+				指令                    & 操作码                    & 零标识ZF & 进位标志CF & 是否跳转 & 更新后的PC值                            \\ \hline
+				JMP                   & 10111                  & X     & X      & 是    & $\id{PC}\gets \id{PC}+\id{offset}$ \\ \hline
+				\multirow{2}{*}{JMPC} & \multirow{2}{*}{11000} & X     & 0      & 否    & $\id{PC}\gets \id{PC}+1$           \\ \cline{3-6} 
+				&                        & X     & 1      & 是    & $\id{PC}\gets \id{PC}+\id{offset}$ \\ \hline
+				\multirow{2}{*}{JNC}  & \multirow{2}{*}{11001} & X     & 0      & 是    & $\id{PC}\gets \id{PC}+\id{offset}$ \\ \cline{3-6} 
+				&                        & X     & 1      & 否    & $\id{PC}\gets \id{PC}+1$           \\ \hline
+				\multirow{2}{*}{JMPZ} & \multirow{2}{*}{11010} & 0     & X      & 否    & $\id{PC}\gets \id{PC}+1$           \\ \cline{3-6} 
+				&                        & 1     & X      & 是    & $\id{PC}\gets \id{PC}+\id{offset}$ \\ \hline
+				\multirow{2}{*}{JNZ}  & \multirow{2}{*}{11011} & 0     & X      & 是    & $\id{PC}\gets \id{PC}+\id{offset}$ \\ \cline{3-6} 
+				&                        & 1     & X      & 否    & $\id{PC}\gets \id{PC}+1$           \\ \hline
+				其他                    & --                     & X     & X      & 否    & $\id{PC}\gets \id{PC}+1$          
+			\end{tabular}
+		\end{table}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{16.pdf}
+			\caption*{代码2: PC模块}
+		\end{figure}
+		\par 下面是此模块的符号和仿真结果。
+		\begin{figure}[H]
+			\includegraphics[scale=0.5]{17.pdf}
+			\caption{PC模块符号}
+		\end{figure}
+	\subsection{指令寄存器}
+		指令寄存器（Instruction Register, instreg）用于暂存当前正在执行的指令。它的时钟信号是clk，在clk的上升沿触发。指令寄存器将数据总线送来的指令存入16位寄存器中。但总线上传输的数据不需要寄存，因此控制器的ir\_ena信号用来指示数据类型，控制总线数据是否需要寄存。复位（rst置为高位）时，指令寄存器被清零。\par 
+		由于每条指令为2个字节，16位，其中高5为为操作码，低11位是偏移地址或目的操作数寄存器和源操作数寄存器，设计中采用的数据总线为16位，每取出一条指令就访存一次。其中，各端口的说明如下：
+		\begin{quote}
+			输入信号：\\
+			$\id{clk}$——时钟信号；\\
+			$\id{rst}$——复位信号；\\
+			$\id{data}$——数据总线输入；\\
+			$\id{ir\_ena}$——IR更新控制。\\
+			输出信号：\\
+			$\id{ir\_out}$——当前执行的指令，16位二进制串。
+		\end{quote}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{18.pdf}
+			\caption*{代码3: 指令寄存器模块}
+		\end{figure}
+		\par 下面是此模块的符号和仿真结果。
+		\begin{figure}[H]
+			\includegraphics[scale=0.5]{19.pdf}
+			\caption*{指令寄存器模块符号}
+		\end{figure}
+	\subsection{地址寄存器}
+	地址寄存器（MAR）是CPU与存储器的一个接口，用于存放待访问的寄存器单元的地址。它的输入和输出关系如下表所示。
+		\begin{table}[htb]
+		\centering
+		\caption{地址寄存器的输入、输出逻辑关系}
+		\begin{tabular}{c|c|c|c|c}
+			\multicolumn{4}{c|}{输入}         & 输出              \\ \hline
+			clk & rst & mar\_ena & mar\_ena & mar\_addr       \\ \hline
+			1   & 1   & X        & XX       & 0x0000          \\ \hline
+			1   & 0   & 1        & 00       & $\id{pc\_addr}$  \\ \hline
+			1   & 0   & 1        & 01       & $\id{ir\_addr1}$ \\ \hline
+			1   & 0   & 1        & 10       & $\id{ir\_addr2}$ \\ \hline
+			1   & 0   & 1        & 11       & $\id{sp}$       \\ \hline
+			0   & X   & X        & X        & 0xXXXX         
+		\end{tabular}
+	\end{table}\par 
+		其各端口信号如下：
+		\begin{quote}
+		输入信号：\\
+		$\id{clk}$——时钟信号；\\
+		$\id{rst}$——复位信号；\\
+		$\id{mar\_ena}$——MAR输入使能信号；\\
+		$\id{mar\_sel}$——MAR输入选择信号，用于选择地址输入；\\
+		$\id{ir\_addr1,ir\_addr2}$——来自寄存器的地址；\\
+		$\id{pc\_addr}$——PC数据；\\
+		$\id{sp\_addr}$——栈指针（SP）数据。\\
+		输出信号：\\
+		$\id{mar\_addr}$——地址寄存器的输出。
+		\end{quote}
+		下面是此模块的符号和仿真结果。
+		\begin{figure}[H]
+			\includegraphics[scale=0.5]{21.pdf}
+			\caption{地址寄存器模块的符号}
+		\end{figure}
+		\begin{figure}[H]
+		\includegraphics[scale=1]{20.pdf}
+		\caption*{代码4: 地址寄存器模块}
+		\end{figure}
+	\subsection{数据寄存器}
+		数据寄存器（MDR）用于将寄存将要被输出到数据总线或送往ALU的数据。各端口的说明如下：
+		\begin{quote}
+		输入信号：\\
+		$\id{clk}$——时钟信号；\\
+		$\id{rst}$——复位信号；\\
+		$\id{mdr\_ena}$——MDR输入使能信号；\\
+		$\id{mdr\_sel}$——MDR输入选择信号，用于选择地址输入；\\
+		$\id{reg\_in1,reg\_in2}$——来自寄存器的输入数据；\\
+		$\id{mem\_in}$——来自存储器的输入数据。\\
+		输出信号：\\
+		$\id{mar\_addr}$——向数据总线的数据输出；\\
+		$\id{reg\_out}$——向指令寄存器（instreg）的输出。
+		\end{quote}
+		\begin{table}[htb]
+		\centering
+		\caption{地址寄存器的输入、输出逻辑关系}
+			\begin{tabular}{c|c|c|c|c|c}
+			\multicolumn{4}{c|}{输入}         & 输出              \\ \hline
+			clk & rst & mdr\_ena & mdr\_ena & mar\_addr&mem\_out       \\ \hline
+			1   & 1   & X        & XX       & 0xXXXX&0xXXXX          \\ \hline
+			1   & 0   & 1        & 00       & 0xXXXX&0xXXXX  \\ \hline
+			1   & 0   & 1        & 01       & $\id{reg\_in1}$&0xXXXX \\ \hline
+			1   & 0   & 1        & 10       & $\id{reg\_in2}$&0xXXXX \\ \hline
+			1   & 0   & 1        & 11       & 0xXXXX&$\id{mem\_in}$       \\ \hline
+			0   & X   & X        & X        & 0xXXXX&0xXXXXX        
+			\end{tabular}
+		\end{table}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.856]{22.pdf}
+			\caption*{代码5: 数据寄存器模块}
+		\end{figure}
+		下面是此模块的符号和仿真结果。
+		\begin{figure}[H]
+			\includegraphics[scale=0.5]{23.pdf}
+			\caption*{代码5: 数据寄存器的模块符号}
+		\end{figure}
+	\subsection{寄存器组}
+		寄存器组（Register Array, regarray）用于存储指令执行过程中需要的数据以及指令的执行结果。它一共包含8个16位的通用寄存器，双端口读出、双端口写入，只能按字访问，即一次性读写16位数据。其端口信号说明如下：
+		\begin{quote}
+			输入信号：\\
+			$\id{clk}$——时钟信号；\\
+			$\id{rst}$——复位信号；\\
+			$\id{reg\_read1}$——端口1读取控制信号（高电平有效）；\\
+			$\id{reg\_read2}$——端口2读取控制信号（高电平有效）；\\
+			$\id{addr1}$——端口1地址信号；\\
+			$\id{addr2}$——端口2地址信号；\\
+			$\id{reg\_write1}$——端口1写入控制信号（高电平有效）；\\
+			$\id{reg\_write2}$——端口2写入控制信号（高电平有效）；\\
+			$\id{data\_in1,data\_in2,data\_in3}$——3个输入信号。\\
+			输出信号：\\
+			$\id{reg\_out1}$——读端口1输出数据；\\
+			$\id{reg\_out2}$——读端口2输出数据。	
+		\end{quote}\par 
+		寄存器组的3路16位输入数据分别为data\_in1, data\_in2, data\_in3。2路16位读出数据分别为reg\_out1, reg\_out2。2个端口的读取控制信号分别为reg\_read1, reg\_read2，写入控制信号分别为reg\_write1, reg\_write2。从寄存器组读出的数据可以送到ALU的数据输入端的多路选择器，也可以是访存指令地址。数据寄存器原理上只能按字节读写，但是为了支持涉及到8位数据的操作指令\footnote{MOVIL \$IMM, \%DR，MOVIH \$IMM, \%DR，具体功能见第\hyperpage{4}页表格。}，使用以下方法来支持它们。当进行8位数据的写操作时：
+		\begin{enumerate}
+			\item 读数据阶段：将目的寄存器（DR）的数据取出；
+			\item 指令执行阶段：将指令中的8位立即数（IMM）拼接到目的寄存器（DR）的相应1字节的位置上；
+			\item 回写阶段：将拼接后的结果写回目的寄存器（DR）中。
+		\end{enumerate}
+		\par 这样的设计可以简化寄存器组的读写控制逻辑，实现代码如下：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.961]{24.pdf}
+			\caption*{代码6: 寄存器组模块}
+		\end{figure}
+		此模块的符号如下：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{25.pdf}
+			\caption{寄存器组的模块符号}
+		\end{figure}
+	\subsection{栈指针寄存器}
+		栈指针寄存器（SP）是用于存储栈顶地址的。入栈（PUSH）和出栈（POP）指令访问的存储单元是由SP发出的。我们规定CPU栈顶起始地址为0x0200，也即初始化时SP的值。当执行入栈指令（PUSH）时，控制信号sp\_push有效，SP自增1；执行出栈（POP）指令时，控制信号sp\_pop有效，SP自减1。其各端口信号说明如下：
+			\begin{quote}
+				输入信号：\\
+				$\id{clk}$——时钟信号；\\
+				$\id{rst}$——复位信号；\\
+				$\id{sp\_push}$——入栈控制信号；\\
+				$\id{sp\_pop}$——出栈控制信号。\\
+				输出信号：\\
+				$\id{sp\_value}$——栈顶地址。
+			\end{quote}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{27.pdf}
+				\caption{栈指针寄存器的模块符号}
+			\end{figure}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{26.pdf}
+				\caption*{代码7: 栈指针寄存器模块}
+			\end{figure}
+			
 \end{document}
