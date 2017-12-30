@@ -26,8 +26,9 @@
 	\title{\vspace{-25mm}数字逻辑电路实验报告\\\vspace{15mm}\Huge\textbf{第十三次实验：简易计算机系统}\vspace{60mm}}
 	\author{张铭方\\161220169\\16级计算机系5班\\\texttt{161220169@smail.nju.edu.cn}\and 许致明\\161180162\\16级计算机系5班\\\texttt{161180162@smail.nju.edu.cn}}\date{\vspace{30mm}\today}
 	\maketitle
+	\tableofcontents\newpage
 	\section{实验目的}
-	本实验的目标是在Nexys 4开发板上实现一个简易的计算机系统，能够运行简单的指令，包括循环、整数计算、函数调用、递归等。这些指令使用RISC方式编写，存储在开发板的存储器（ROM）中。开发板的另一部分存储器（RAM）用来保存程序运行中所需的数据。此外，在完成后，开发板还具有一定的输出功能，程序输入通过向ROM中初始化相应的机器码实现。
+	本实验的目的是在Nexys 4开发板上实现一个简易的计算机系统，使它能够运行简单的指令，包括循环、整数计算、函数调用、递归等。这些指令使用RISC方式编写，存储在开发板的存储器（ROM）中。开发板的另一部分存储器（RAM）用来保存程序运行中所需的数据。此外，在完成后，开发板还具有一定的输出功能，程序输入通过向ROM中初始化相应的机器码实现。
 	\section{实验原理}
 	\subsection{计算机系统简介}
 	计算机系统主要由CPU和外部设备组成。CPU是系统中最重要的部分，它负责控制系统运行和信息处理。外部设备负责和外界进行交互，使得计算机的可以接受输入，产生相应的输出。本实验需要实现一个简化的计算机系统。下面对两种基本的系统结构做简要介绍。\par 
@@ -268,8 +269,9 @@
 			\end{minipage}
 			\caption*{代码1: 时钟模块}  
 		\end{figure} 
-		下面是此时钟发生器的模块符号，以及仿真结果。
+		下面是此时钟发生器的模块符号：
 		\begin{figure}[H]
+			\centering
 			\includegraphics[scale=0.5]{15.pdf}
 			\caption{时钟模块符号}
 		\end{figure}
@@ -317,9 +319,17 @@
 			\caption*{代码2: PC模块}
 		\end{figure}
 		\par 下面是此模块的符号和仿真结果。
-		\begin{figure}[H]
-			\includegraphics[scale=0.5]{17.pdf}
-			\caption{PC模块符号}
+		\begin{figure}[H] 
+				\centering
+				\includegraphics[scale=0.5]{17.pdf}  
+				\caption{PC模块符号}
+		\end{figure} 
+		\begin{figure}[H]  
+				\centering
+				\includegraphics[scale=0.4]{pc.png}  
+				\caption{PC模块的仿真结果}
+				在 50ns 时，完成根据 sw 跳转到另一程序的起始地址；\\
+				在 100ns 时，开始进行 jmp，在这里我们令其跳两次，每次 $\id{pc\_value}\gets\id{pc\_value}+8$。
 		\end{figure}
 	\subsection{指令寄存器}
 		指令寄存器（Instruction Register, instreg）用于暂存当前正在执行的指令。它的时钟信号是clk，在clk的上升沿触发。指令寄存器将数据总线送来的指令存入16位寄存器中。但总线上传输的数据不需要寄存，因此控制器的ir\_ena信号用来指示数据类型，控制总线数据是否需要寄存。复位（rst置为高位）时，指令寄存器被清零。\par 
@@ -338,8 +348,9 @@
 			\includegraphics[scale=1]{18.pdf}
 			\caption*{代码3: 指令寄存器模块}
 		\end{figure}
-		\par 下面是此模块的符号和仿真结果。
+		\par 下面是此模块的符号：
 		\begin{figure}[H]
+			\centering
 			\includegraphics[scale=0.5]{19.pdf}
 			\caption*{指令寄存器模块符号}
 		\end{figure}
@@ -374,8 +385,16 @@
 		\end{quote}
 		下面是此模块的符号和仿真结果。
 		\begin{figure}[H]
-			\includegraphics[scale=0.5]{21.pdf}
-			\caption{地址寄存器模块的符号}
+		
+				\centering
+				\includegraphics[scale=0.5]{21.pdf}
+				\caption{地址寄存器模块的符号}
+		\end{figure}	
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{mar.png}
+				\caption{地址寄存器的仿真结果}
+				{在 4 个周期内，根据 sel 变量选择输入，输出相应的地址信息。}
 		\end{figure}
 		\begin{figure}[H]
 		\includegraphics[scale=1]{20.pdf}
@@ -414,13 +433,20 @@
 			\includegraphics[scale=0.856]{22.pdf}
 			\caption*{代码5: 数据寄存器模块}
 		\end{figure}
-		下面是此模块的符号和仿真结果。
+		下面是此模块的符号和仿真结果：
 		\begin{figure}[H]
+			\centering
 			\includegraphics[scale=0.5]{23.pdf}
 			\caption*{代码5: 数据寄存器的模块符号}
 		\end{figure}
-	\subsection{寄存器组}
-		寄存器组（Register Array, regarray）用于存储指令执行过程中需要的数据以及指令的执行结果。它一共包含8个16位的通用寄存器，双端口读出、双端口写入，只能按字访问，即一次性读写16位数据。其端口信号说明如下：
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{mdr.png}
+			\caption{数据寄存器的仿真结果}
+			{在 4 个周期内，根据 sel 变量选择相应的输入，完成数据输出到总线的操作。}
+		\end{figure}
+	\subsection{通用寄存器组}
+		通用寄存器组（Register Array, regarray）用于存储指令执行过程中需要的数据以及指令的执行结果。它一共包含8个16位的通用寄存器，双端口读出、双端口写入，只能按字访问，即一次性读写16位数据。其端口信号说明如下：
 		\begin{quote}
 			输入信号：\\
 			$\id{clk}$——时钟信号；\\
@@ -475,5 +501,108 @@
 				\includegraphics[scale=1]{26.pdf}
 				\caption*{代码7: 栈指针寄存器模块}
 			\end{figure}
-			
+		\subsection{控制器}
+		控制器（Control Unit, CU）是CPU的核心部件，它通过分析指令的操作码（来自指令寄存器instreg的Opcode）和状态位（来自标识寄存器FLAG）产生一系列按一定时序关系排列的控制信号，通过这些控制信号来控制整个CPU中各功能部件的运行。我们设计的控制器由两部分构成 — 控制器引导模块（cu\_contrl）和控制器模块（cu）。
+		\subsubsection{控制器引导模块}
+			此模块用来引导控制器的启动与停止。当复位信号有效后，若在clk的上升沿检测到fetch信号为高电平，则设置cu\_ena为有效（高电平），表明一条新的指令又从取指开始了。它的端口说明如下：
+			\begin{quote}
+				输入信号：\\
+				$\id{clk}$——来自时钟发生器的时钟信号；\\
+				$\id{rst}$——复位信号；\\
+				$\id{fetch}$——来自时钟模块的取指信号。\\
+				输出信号：\\
+				$\id{cu\_ena}$——用于引导控制器工作的信号。
+			\end{quote}
+			实现代码如下：
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{28.pdf}
+				\caption*{代码8: 控制器引导模块}
+			\end{figure}
+		\subsubsection{控制器}
+		CU通过分析指令的操作码（指令寄存器 instreg的Opcode）和状态位（FLAG寄存器），产生有时序关系的控制信号来控制整个 CPU 的运行。即在 cu\_ena 有效的情况下，CPU 开始工作，每一个指令周期由 9 个时钟周期组成。前4个周期对于所有的指令来说执行的操作都一样，即取指令，并将指令的操作码送往控制器，指令中的寄存器地址或立即数送往寄存器组或运算器输入端；后5个时钟周期则根据指令的不同而产生不同的操作时序控制信号。其各状态的具体操作功能如下：
+			\begin{enumerate}[状态1]
+				\item：指令寄存器 PC 与地址寄存器之间的通路打开，将 PC 中的数据送入地址寄存器；
+				\item：给出读存储器信号，用于读取存储器中的指令；
+				\item：将存储器中读出的数据（指令）送往数据寄存器中；
+				\item：将数据寄存器中的数据（指令）送到指令寄存器中；
+				\item：将指令的操作码从指令寄存器送至控制器中进行指令译码，依次产生当前指令在执行时所必需的所有控制信号。指令字中的源寄存器地址、目标寄存器地址送至寄存器组；立即数送至 ALU 的输入控制端；
+				\item：根据控制器产生的控制信号，即是否要发生跳转，来更新程序计数器 PC（不论当前指令是否为JMP等）。除此以外，若当前指令是逻辑算数类指令，则根据指令类型选择相应的数据传给 ALU；否则，再根据指令类型分为访存类、堆栈操作类、转移类、程序控制类指令等，从而做出相应的动作：若为访存类或者堆栈操作类指令，则将访存地址、数据分别送至地址寄存器和数据寄存器；若为转移类或程序控制类指令，则保持原来的状态；
+				\item：逻辑算数类指令：执行逻辑、算数相应操作；\\
+				访存类指令：执行访存类操作；
+				\item：若当前指令需要上一状态执行的结果回写寄存器组，则执行相应操作；
+				\\
+				若当前指令是取数指令（LOAD）或出栈指令（POP），则将数据写入通用数据寄存器组中；
+				\item：若当前指令是 LOAD 或 POP，则将数据写入通用数据寄存器组中。
+			\end{enumerate}\par 
+		    由于此模块较复杂，不在正文中列出端口信号和代码。模块符号仿真结果如下：
+		    \begin{figure}[H]
+		    	\centering
+		    	\includegraphics[scale=0.4]{cu.png}
+		    	\caption{控制器的仿真结果}
+		    	前 100ns，CU不在有效状态
+		    	接下来，CU完成了重复的两个大周期的 9 状态转移，完成的是操作码 00000，即 带进位加法ADC。
+		    \end{figure}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{29.pdf}
+				\caption{控制器的模块符号，由Vivado 2016.4的布线生成}
+			\end{figure}
+		\subsection{算数逻辑运算单元}
+			算数逻辑运算单元（ALU）可以进行两种运算：整数的四则运算和基本的逻辑运算。其中，整数运算类型具体有：带进位的加法ADC，带借位的减法SBB，无符号除法DIV，无符号乘法MUL和立即数加法ADDI；逻辑运算具体有：按位与AND，按位或OR，按位取反NOT，按位异或XOR，算数/逻辑左移SHL，算数右移SAR，逻辑右移SHR，比较（相减，置符号位）CMP，测试TEST（相异或置符号位）。各端口的说明如下：
+			\begin{quote}
+				输入信号：\\
+				$\id{data\_a,data\_b}$——ALU的2路16位输入数据；\\
+				$\id{alu\_ena}$——ALU使能信号；\\
+				$\id{alu\_opr}$——5位\footnote{即操作码，具体见第\hyperpage{5}页表格。}运算控制输入；\\
+				$\id{clk}$——输入时钟信号；\\
+				$\id{flag\_in}$——8位标志寄存器。\\
+				输出信号：\\
+				$\id{flag\_out}$——运算器的标志位输出；\\
+				$\id{alu\_out}$——运算器的低16位运算结果输出；\\
+				$\id{hi}$——运算器的高16位结果输出。
+			\end{quote}
+		由于此模块较为复杂，下面只列出仿真结果和模块符号：
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.32]{alu.png}
+				\caption{算数逻辑运算器的仿真结果}
+				前 10ns alu 不在有效状态。
+				接下来，ALU 完成的是操作码 00001，即带借位减法SBB ，5-5-0 (CF)= 0，并设置 ZF 位为 1。
+			\end{figure}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1.8]{30.pdf}
+				\caption{控制器的模块符号，由Vivado 2016.4的布线生成}
+			\end{figure}
+		为了方便控制ALU的输入数据来源，又设计了一个引导模块，如下代码所示：
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{31.pdf}
+				\caption*{代码9: ALU引导模块}
+			\end{figure}
+		\subsection{标志寄存器}
+		标志寄存器（FLAGS）是一个8位寄存器，用于寄存程序执行产生的标志位，其高4位保留不用，低4位由高到低依次为：符号标志SF，溢出标志OF，零标志ZF和进位标志CF。各位的含义如下：
+			\begin{enumerate}
+				\item 符号标志SF（Sign Flag）。此位指出运算结果的符号，1为正，0为负；
+				\item 溢出标志位OF（Overflow Flag）。此位指出运算结果是否溢出。当结果溢出时置1，否则置0；
+				\item 零标志位ZF（Zero Flag）。此位指出结果是否为0，若为0，则置1，否则置0；
+				\item 进位标志CF（Carry Flag）。此位指出结果是否产生进位或借位，若有，则置1，否则置0。
+			\end{enumerate}\par 
+		端口说明如下：
+			\begin{quote}
+				输入信号：\\
+				$\id{clk}$——时钟输入信号；\\
+				$\id{rst}$——复位信号；\\
+				$\id{flag\_set}$——标志寄存器更新信号；\\
+				$\id{flag\_in}$——8位输入标志。\\
+				输出信号：\\
+				$\id{flag\_value}$——标志位数据输出。
+			\end{quote}\par  
+		模块符号已经体现在图24右上角，实现代码如下：
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{32.pdf}
+				\caption*{代码10: 标志寄存器模块}
+			\end{figure}
 \end{document}

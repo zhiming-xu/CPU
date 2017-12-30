@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {第一节}实验目的}{2}{section.1}
+\contentsline {section}{\numberline {第二节}实验原理}{2}{section.2}
+\contentsline {subsection}{\numberline {一}计算机系统简介}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {二}RISC架构简介}{3}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}RISC架构的基本特征}{3}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}RISC架构下CPU的基本构成}{4}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {三}CPU的指令系统设计}{5}{subsection.2.3}
+\contentsline {section}{\numberline {第三节}实验器材和环境}{6}{section.3}
+\contentsline {subsection}{\numberline {一}硬件}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {二}环境}{6}{subsection.3.2}
+\contentsline {section}{\numberline {第四节}实验设计思路}{7}{section.4}
+\contentsline {subsection}{\numberline {一}RISC CPU的数据通路图}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {二}模块划分}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {三}指令执行流程}{9}{subsection.4.3}
+\contentsline {section}{\numberline {第五节}实验过程}{12}{section.5}
+\contentsline {subsection}{\numberline {一}时钟发生器}{12}{subsection.5.1}
+\contentsline {subsection}{\numberline {二}程序计数器}{14}{subsection.5.2}
+\contentsline {subsection}{\numberline {三}指令寄存器}{16}{subsection.5.3}
+\contentsline {subsection}{\numberline {四}地址寄存器}{18}{subsection.5.4}
+\contentsline {subsection}{\numberline {五}数据寄存器}{20}{subsection.5.5}
+\contentsline {subsection}{\numberline {六}通用寄存器组}{22}{subsection.5.6}
+\contentsline {subsection}{\numberline {七}栈指针寄存器}{25}{subsection.5.7}
+\contentsline {subsection}{\numberline {八}控制器}{26}{subsection.5.8}
+\contentsline {subsubsection}{\numberline {5.8.1}控制器引导模块}{26}{subsubsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.2}控制器}{27}{subsubsection.5.8.2}
+\contentsline {subsection}{\numberline {九}算数逻辑运算单元}{30}{subsection.5.9}
+\contentsline {subsection}{\numberline {十}标志寄存器}{32}{subsection.5.10}
