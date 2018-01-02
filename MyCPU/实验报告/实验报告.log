@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.12.17)  30 DEC 2017 14:05
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.12.17)  2 JAN 2018 16:02
 entering extended mode
 **./实验报告.tex
 (实验报告.tex
@@ -1581,6 +1581,56 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfig@top=\skip79
 \subfig@bottom=\skip80
 )
+("D:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count292
+\calc@Bcount=\count293
+\calc@Adimen=\dimen266
+\calc@Bdimen=\dimen267
+\calc@Askip=\skip81
+\calc@Bskip=\skip82
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count294
+\calc@Cskip=\skip83
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen268
+\AM@pageheight=\dimen269
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\ppxetex.def"
+File: ppxetex.def 2017/10/31 v0.5l Pdfpages driver for XeTeX (AM)
+)
+\AM@pagebox=\box58
+\AM@global@opts=\toks23
+\AM@toc@title=\toks24
+\c@AM@survey=\count295
+\AM@templatesizebox=\box59
+)
 *************************************************
 * ctex warning: "deprecated-command"
 * 
@@ -1593,7 +1643,7 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 * Command \CTEXsetup is deprecated.
 * \ctexset { subsection = { number={\chinese {subsection}} } } is set.
 *************************************************
-\g__fontspec_family_TimesNewRoman_int=\count292
+\g__fontspec_family_TimesNewRoman_int=\count296
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1619,62 +1669,62 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"Times New
 . Roman/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 .................................................
-LaTeX Info: Redefining \rmfamily on input line 21.
+LaTeX Info: Redefining \rmfamily on input line 22.
 (实验报告.aux)
 \openout1 = `实验报告.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 25.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 25.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 27.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 27.
 
  ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omltxmi.fd"
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 27.
 
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omstxsy.fd"
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 27.
 
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omxtxex.fd"
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 27.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\utxexa.fd"
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 27.
 
 (C:\Users\steve\AppData\Roaming\MiKTeX\2.9\tex\latex\tipa\t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 25.
+LaTeX Info: Redefining \selectfont on input line 27.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1682,66 +1732,66 @@ LaTeX Info: Redefining \selectfont on input line 25.
 .................................................
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 25.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 25.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 25.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 25.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 25.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 25.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 25.
-LaTeX Font Info:    Redeclaring math accent \check on input line 25.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 25.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 25.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 25.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 25.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 25.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 27.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 27.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 27.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 27.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 27.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 27.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 27.
+LaTeX Font Info:    Redeclaring math accent \check on input line 27.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 27.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 27.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 27.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 27.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 25.
+(Font)              `operators' in the math version `normal' on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/txr/m/n --> TU/TimesNewRoman(0)/m/n on input line 2
-5.
+7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 25.
+(Font)              `operators' in the math version `bold' on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/txr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-25.
+27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 25.
+input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/txr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 25.
+ 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/txr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
- 25.
+ 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/txss/m/n --> TU/txss/m/n on input line 25.
+(Font)                  OT1/txss/m/n --> TU/txss/m/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/txtt/m/n --> TU/txtt/m/n on input line 25.
+(Font)                  OT1/txtt/m/n --> TU/txtt/m/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on
- input line 25.
+ input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/txr/bx/it --> TU/TimesNewRoman(0)/bx/it on input li
-ne 25.
+ne 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/txss/b/n --> TU/txss/bx/n on input line 25.
+(Font)                  OT1/txss/b/n --> TU/txss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/txtt/b/n --> TU/txtt/bx/n on input line 25.
-\AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 25.
+(Font)                  OT1/txtt/b/n --> TU/txtt/bx/n on input line 27.
+\AtBeginShipoutBox=\box60
+Package hyperref Info: Link coloring OFF on input line 27.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1749,11 +1799,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count293
+\c@section@level=\count297
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (实验报告.out) (实验报告.out)
 \@outlinefile=\write3
@@ -1796,31 +1846,41 @@ LaTeX Info: Redefining \nameref on input line 25.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 29.
+("D:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 99.
+
+)
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 31.
+
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\ot1txr.fd"
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 29.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 31.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\utxmia.fd"
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 29.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 31.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\utxsya.fd"
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 29.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 31.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\utxsyb.fd"
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 29.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 31.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\txfonts\utxsyc.fd"
 File: utxsyc.fd 2000/12/15 v3.1
 )
-\g__fontspec_family_FangSong_int=\count294
+\g__fontspec_family_FangSong_int=\count298
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1836,12 +1896,12 @@ File: utxsyc.fd 2000/12/15 v3.1
 . 
 . Could not resolve font "FangSong/I" (it probably doesn't exist).
 .................................................
-LaTeX Font Info:    Try loading font information for TU+txtt on input line 29.
-LaTeX Font Info:    No file TUtxtt.fd. on input line 29.
+LaTeX Font Info:    Try loading font information for TU+txtt on input line 31.
+LaTeX Font Info:    No file TUtxtt.fd. on input line 31.
 
 
 LaTeX Font Warning: Font shape `TU/txtt/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 29.
+(Font)              using `TU/lmr/m/n' instead on input line 31.
 
 .................................................
 . fontspec info: "defining-font"
@@ -1857,18 +1917,15 @@ LaTeX Font Warning: Font shape `TU/txtt/m/n' undefined
 .................................................
 [1
 
-] (实验报告.toc)
-\tf@toc=\write4
-\openout4 = `实验报告.toc'.
-
+] (实验报告.toc
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <10.95> not a
 vailable
 (Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on inpu
-t line 29.
+t line 32.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.95> not availabl
 e
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-29.
+32.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1876,125 +1933,450 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1] [2]
-Warning: Indentation ends at level 1 in codebox on page 3.
+[1])
+\tf@toc=\write4
+\openout4 = `实验报告.toc'.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [3]
+Warning: Indentation ends at level 1 in codebox on page 4.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4]
 File: 1.pdf Graphic file (type QTm)
- <use  "1.pdf" > [4] [5]
+ <use  "1.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
 File: 2.pdf Graphic file (type QTm)
  <use  "2.pdf" >
 File: 3.pdf Graphic file (type QTm)
  <use  "3.pdf" >
-Overfull \hbox (33.36533pt too wide) in paragraph at lines 160--161
+Overfull \hbox (33.36533pt too wide) in paragraph at lines 162--163
  [][] 
  []
 
-[6] [7] [8]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
 File: 4.pdf Graphic file (type QTm)
  <use  "4.pdf" >
 File: 5.pdf Graphic file (type QTm)
  <use  "5.pdf" >
 File: 6.pdf Graphic file (type QTm)
- <use  "6.pdf" > [9]
-File: 7.pdf Graphic file (type QTm)
+ <use  "6.pdf" >
 
-<use  "7.pdf" >
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+File: 7.pdf Graphic file (type QTm)
+ <use  "7.pdf" >
 File: 8.pdf Graphic file (type QTm)
  <use  "8.pdf" >
 File: 9.pdf Graphic file (type QTm)
- <use  "9.pdf" > [10]
+ <use  "9.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
 File: 10.pdf Graphic file (type QTm)
  <use  "10.pdf" >
 File: 11.pdf Graphic file (type QTm)
-
-<use  "11.pdf" >
+ <use  "11.pdf" >
 File: 12.pdf Graphic file (type QTm)
- <use  "12.pdf" > [11]
+ <use  "12.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
 File: 13.pdf Graphic file (type QTm)
  <use  "13.pdf" >
-Overfull \hbox (73.98363pt too wide) in paragraph at lines 259--261
+Overfull \hbox (73.98363pt too wide) in paragraph at lines 261--263
   [] 
  []
 
 File: 14.pdf Graphic file (type QTm)
 <use  "14.pdf" >
-Overfull \hbox (1.825pt too wide) in paragraph at lines 258--270
+Overfull \hbox (1.825pt too wide) in paragraph at lines 260--272
 []$[]$ $[]$ 
  []
 
-[12]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
 File: 15.pdf Graphic file (type QTm)
- <use  "15.pdf" > [13]
+ <use  "15.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
 File: 16.pdf Graphic file (type QTm)
- <use  "16.pdf" > [14]
+ <use  "16.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
 File: 17.pdf Graphic file (type QTm)
  <use  "17.pdf" >
 File: pc.png Graphic file (type QTm)
+ <use  "pc.png" >
 
-<use  "pc.png" > [15] [16]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
 File: 18.pdf Graphic file (type QTm)
  <use  "18.pdf" >
 File: 19.pdf Graphic file (type QTm)
- <use  "19.pdf" > [17]
+ <use  "19.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
 File: 21.pdf Graphic file (type QTm)
-
-<use  "21.pdf" >
+ <use  "21.pdf" >
 File: mar.png Graphic file (type QTm)
- <use  "mar.png" > [18]
-File: 20.pdf Graphic file (type QTm)
- <use  "20.pdf" > [19] [20]
-File: 22.pdf Graphic file (type QTm)
+ <use  "mar.png" >
 
-<use  "22.pdf" >
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+File: 20.pdf Graphic file (type QTm)
+ <use  "20.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
+File: 22.pdf Graphic file (type QTm)
+ <use  "22.pdf" >
 File: 23.pdf Graphic file (type QTm)
- <use  "23.pdf" > [21]
+ <use  "23.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
 File: mdr.png Graphic file (type QTm)
- <use  "mdr.png" > [22]
+ <use  "mdr.png" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
 File: 24.pdf Graphic file (type QTm)
  <use  "24.pdf" >
-[23]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24]
 File: 25.pdf Graphic file (type QTm)
- <use  "25.pdf" > [24]
+ <use  "25.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25]
 File: 27.pdf Graphic file (type QTm)
  <use  "27.pdf" >
 File: 26.pdf Graphic file (type QTm)
- <use  "26.pdf" > [25] [26]
-File: 28.pdf Graphic file (type QTm)
+ <use  "26.pdf" >
 
-<use  "28.pdf" > [27]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+File: 28.pdf Graphic file (type QTm)
+ <use  "28.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
 File: cu.png Graphic file (type QTm)
  <use  "cu.png" >
 File: 29.pdf Graphic file (type QTm)
- <use  "29.pdf" > [28] [29]
-File: alu.png Graphic file (type QTm)
+ <use  "29.pdf" >
 
-<use  "alu.png" >
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+File: alu.png Graphic file (type QTm)
+ <use  "alu.png" >
 File: 30.pdf Graphic file (type QTm)
- <use  "30.pdf" > [30]
+ <use  "30.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
 File: 31.pdf Graphic file (type QTm)
- <use  "31.pdf" > [31]
-File: 32.pdf Graphic file (type QTm)
- <use  "32.pdf" >
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 608.
+ <use  "31.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 608.
+File: 32.pdf Graphic file (type QTm)
+ <use  "32.pdf" >
+File: 33.pdf Graphic file (type QTm)
+ <use  "33.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33]
+File: 34.pdf Graphic file (type QTm)
+ <use  "34.pdf" >
+File: 36.pdf Graphic file (type QTm)
+ <use  "36.pdf" >
+File: 35.pdf Graphic file (type QTm)
+ <use  "35.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35]
+File: 37.pdf Graphic file (type QTm)
+ <use  "37.pdf" >
+File: 38.pdf Graphic file (type QTm)
+ <use  "38.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf" >
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf" >
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf" >
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf" >
+File: fib.pdf Graphic file (type QTm)
+
+<use  "fib.pdf" >
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf" >
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf" >
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page1>
+File: fib.pdf Graphic file (type QTm)
+
+<use  "fib.pdf"  page1>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page1>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page1>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page1>
+[38]
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page2>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page2>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page2>
+[39]
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page3>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page3>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page3>
+[40]
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page4>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page4>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page4>
+[41]
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page5>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page5>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page5>
+[42]
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page6>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page6>
+File: fib.pdf Graphic file (type QTm)
+ <use  "fib.pdf"  page6>
+[43]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 661.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 661.
  (实验报告.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 608.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 608.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 661.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 661.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 608.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 661.
  ) 
 Here is how much of TeX's memory you used:
- 29299 strings out of 427834
- 566357 string characters out of 3152469
- 620339 words of memory out of 3000000
- 32952 multiletter control sequences out of 15000+200000
+ 30484 strings out of 427834
+ 582879 string characters out of 3152469
+ 645913 words of memory out of 3000000
+ 34102 multiletter control sequences out of 15000+200000
  548973 words of font info for 127 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 62i,12n,70p,10432b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,18n,70p,10432b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 实验报告.pdf (33 pages).
+Output written on 实验报告.pdf (45 pages).

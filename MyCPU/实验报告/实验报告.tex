@@ -15,10 +15,12 @@
 \usepackage{subfigure}
 \usepackage{hyperref}
 \usepackage{fontspec}
+\usepackage{pdfpages}
 %\usepackage{fontspec-xetex}
 \CTEXsetup[name={第,节},number={\chinese{section}}]{section}
 \CTEXsetup[number={\chinese{subsection}}]{subsection}
 \setmainfont{Times New Roman}
+%\setmainfont{Microsoft YaHei}
 \geometry{bottom=2.5cm,top=3.5cm,left=2.5cm,right=2.5cm}
 \pagestyle{fancy}
 %\hyperref{colorlinks,linkcolor=red, anchorcolor=blue, citecolor=green}
@@ -462,7 +464,7 @@
 			$\id{reg\_out1}$——读端口1输出数据；\\
 			$\id{reg\_out2}$——读端口2输出数据。	
 		\end{quote}\par 
-		寄存器组的3路16位输入数据分别为data\_in1, data\_in2, data\_in3。2路16位读出数据分别为reg\_out1, reg\_out2。2个端口的读取控制信号分别为reg\_read1, reg\_read2，写入控制信号分别为reg\_write1, reg\_write2。从寄存器组读出的数据可以送到ALU的数据输入端的多路选择器，也可以是访存指令地址。数据寄存器原理上只能按字节读写，但是为了支持涉及到8位数据的操作指令\footnote{MOVIL \$IMM, \%DR，MOVIH \$IMM, \%DR，具体功能见第\hyperpage{4}页表格。}，使用以下方法来支持它们。当进行8位数据的写操作时：
+		通用寄存器组的3路16位输入数据分别为data\_in1, data\_in2, data\_in3。2路16位读出数据分别为reg\_out1, reg\_out2。2个端口的读取控制信号分别为reg\_read1, reg\_read2，写入控制信号分别为reg\_write1, reg\_write2。从寄存器组读出的数据可以送到ALU的数据输入端的多路选择器，也可以是访存指令地址。数据寄存器原理上只能按字节读写，但是为了支持涉及到8位数据的操作指令\footnote{MOVIL \$IMM, \%DR，MOVIH \$IMM, \%DR，具体功能见第\hyperpage{4}页表格。}，使用以下方法来支持它们。当进行8位数据的写操作时：
 		\begin{enumerate}
 			\item 读数据阶段：将目的寄存器（DR）的数据取出；
 			\item 指令执行阶段：将指令中的8位立即数（IMM）拼接到目的寄存器（DR）的相应1字节的位置上；
@@ -472,13 +474,13 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.961]{24.pdf}
-			\caption*{代码6: 寄存器组模块}
+			\caption*{代码6: 通用寄存器组模块}
 		\end{figure}
 		此模块的符号如下：
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.5]{25.pdf}
-			\caption{寄存器组的模块符号}
+			\caption{通用寄存器组的模块符号}
 		\end{figure}
 	\subsection{栈指针寄存器}
 		栈指针寄存器（SP）是用于存储栈顶地址的。入栈（PUSH）和出栈（POP）指令访问的存储单元是由SP发出的。我们规定CPU栈顶起始地址为0x0200，也即初始化时SP的值。当执行入栈指令（PUSH）时，控制信号sp\_push有效，SP自增1；执行出栈（POP）指令时，控制信号sp\_pop有效，SP自减1。其各端口信号说明如下：
@@ -605,4 +607,55 @@
 				\includegraphics[scale=1]{32.pdf}
 				\caption*{代码10: 标志寄存器模块}
 			\end{figure}
+		\subsection{顶层模块}
+			为了构成完整的计算机系统，我们还需要添加存储器，例如RAM和ROM。
+			它们的声明如下所示：
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{33.pdf}
+				\caption*{代码11: ROM和RAM的声明}
+				ROM 存储测试程序，字长为16 位，地址空间0x0000$~$0x00FF；
+				RAM 存储程序运行过程中的数据，字长为16位。0x0100$~$0x01FF，存储一般数据，0x0200~0x02FF作为堆栈区。
+			\end{figure}
+			此外，还需要一个地址译码器，来根据CPU传来的地址决定读取ROM或RAM。代码如下所示：
+				\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{34.pdf}
+				\caption*{代码12: 地址译码器}
+				%ROM 存储测试程序，字长为16 位，地址空间0x0000$~$0x00FF；
+				%RAM 存储程序运行过程中的数据，字长为16位。0x0100$~$0x01FF，存储一般数据，0x0200~0x02FF作为堆栈区。
+			\end{figure}
+			为了将运行的过程显示在开发板上，我们还设计了七段数码管的显示程序，将当前的PC和运行的指令显示在数码管上。还将一个通用寄存器（R7, regarray[7]\footnote{详细见5.6节，通用寄存器，第\hyperpage{22}页。}）内存储的数据显示在了开发板的LED上。以及实现播放音乐功能的AudioInt模块，由于这些模块在之前的实验中涉及到过，具体原理不再详述。\par 
+			下面给出我们的计算机系统的顶层代码，其中risc\_cpu模块是对5.1-5.10节介绍的模块的综合。
+				\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1.05]{36.pdf}
+				\caption*{代码13: risc\_cpu模块}
+				%ROM 存储测试程序，字长为16 位，地址空间0x0000$~$0x00FF；
+				%RAM 存储程序运行过程中的数据，字长为16位。0x0100$~$0x01FF，存储一般数据，0x0200~0x02FF作为堆栈区。
+			\end{figure}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{35.pdf}
+				\caption*{代码14: risc\_cpu模块}
+			\end{figure}
+	\section{测试程序}
+		\subsection{算数运算、循环和内存读取}
+			代码15展示的是一段简易测试程序的代码，实现的功能是r7=$\sum_{i=1}^{100}i$。每条指令执行的功能在行内注释中进行说明。代码16类似，通过将r0中存储的内容作为地址，读取内存中存储的音符信息，然后通过r7寄存器传给AudioInt模块发出声音。
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{37.pdf}
+				\caption*{代码15: 累加程序}
+			\end{figure}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{38.pdf}
+				\caption*{代码16: 音乐播放}
+			\end{figure}
+		\subsection{综合应用}
+		数码管
+		\includepdf[pages={1,2,3,4,5,6}]{fib.pdf}
+	\section{实验结论}
+		在此次实验中，我们实现了一个简易的计算机系统。其中包括一个简化的、自行设计指令集的RISC架构CPU，和外部存储设备（ROM和RAM），以及一定的输出设备（音频、LED灯和数码管）。通过此次实验，我们对计算机系统的理解更加深入，明白了从简单的加法器到ALU，加上控制模块，到CPU，再加上内存、
+		I/O设备等，最终构成完成的计算机系统的全过程。最后，我们衷心感谢各位老师设计的难度梯度适当、内容充实、讲义详尽的本学期实验。感谢蔡老师和其他几位助教的讲解、答疑等辛勤付出。
 \end{document}
